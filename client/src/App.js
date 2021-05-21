@@ -1,8 +1,9 @@
 import './App.css';
+import TopTrumpsBox from './containers/TopTrumpsBox'
 
 function App() {
   return (
-    <h1>Hi Craig</h1>
+    <TopTrumpsBox />
   );
 }
 
