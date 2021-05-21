@@ -1,15 +1,7 @@
 import React from 'react';
 
-function CardItem({card}){
-
-    return(
-        <div>
-        <h1>Card Item Content</h1>
-        <p>{card.name}</p>
-        </div>
-
-    );
-
+const CardItem = ({card}) => {
+    return <li>{card}</li>
 };
 
 export default CardItem;

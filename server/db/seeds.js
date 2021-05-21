@@ -168,5 +168,50 @@ db.simpsons.insertMany ([
         greatest_anarchist: 90,
         walk_of_fame: 84
     },
+    {
+        name: "Moe Szyslak",
+        most_lovable: 76,
+        smartest: 72,
+        fattest: 44, 
+        biggest_nerd: 72,
+        greatest_anarchist: 82,
+        walk_of_fame: 82
+    },
+    {
+        name: "Todd & Rod Flanders",
+        most_lovable: 60,
+        smartest: 68,
+        fattest: 80, 
+        biggest_nerd: 96,
+        greatest_anarchist: 44,
+        walk_of_fame: 48
+    },
+    {
+        name: "Marge Simpson",
+        most_lovable: 94,
+        smartest: 94,
+        fattest: 68, 
+        biggest_nerd: 46,
+        greatest_anarchist: 62,
+        walk_of_fame: 90
+    },
+    {
+        name: "Otto",
+        most_lovable: 66,
+        smartest: 58,
+        fattest: 62, 
+        biggest_nerd: 84,
+        greatest_anarchist: 76,
+        walk_of_fame: 60
+    },
+    {
+        name: "Edna Krabappel",
+        most_lovable: 48,
+        smartest: 64,
+        fattest: 56, 
+        biggest_nerd: 62,
+        greatest_anarchist: 72,
+        walk_of_fame: 52
+    },
 
 ]);

@@ -1,24 +1,20 @@
 import React from 'react';
 import CardItem from './CardItem';
 
-
-
-function Cards({cards}){
-    const cardsNodes = cards.map(card => {
-        return <CardItem card={card}/>
+const Cards = ({cards}) => {
+    const cardItems = cards.map((card, index) => {
+        return <CardItem card={card} key={index}/>
     })
 
-
     return (
-        <section id="simpsonsCards">
-            <h2>Simpsons Cards</h2>
-            <div>
-                {cardsNodes}
-            </div>
-        </section>
+        <div>
+            <ul>
+                <p>{cardItems}</p>
+            </ul>
+        </div>
     )
+}
 
 
-};
 
 export default Cards;
