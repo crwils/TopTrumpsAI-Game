@@ -1,5 +1,5 @@
 import React from 'react';
-import CardItem from './CardItem'
+import CardItem from './CardItem';
 
 function Cards(){
 
@@ -8,7 +8,7 @@ function Cards(){
             <h1>Cards Content</h1>
             <CardItem />
         </div>
-    )
+    );
 
 };
 

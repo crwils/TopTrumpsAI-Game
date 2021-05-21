@@ -4,7 +4,7 @@ function CreateCardComponent(){
 
     return(
         <h1>Create Card Content</h1>
-    )
+    );
 
 };
 

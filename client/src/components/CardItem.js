@@ -6,8 +6,8 @@ function CardItem(){
 
         <h1>Card Item Content</h1>
 
-    )
+    );
 
-}
+};
 
 export default CardItem;

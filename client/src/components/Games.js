@@ -1,5 +1,5 @@
 import React from 'react';
-import Cards from './Cards'
+import Cards from './Cards';
 
 function Games(){
 
@@ -8,7 +8,7 @@ function Games(){
             <h1>Games Content</h1>
             <Cards />
         </div>
-    )
+    );
 
 };
 

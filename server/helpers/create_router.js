@@ -21,25 +21,23 @@ const createRouter = function (collection) {
         const id = req.params.id;
         collection
             .findOne({ _id: ObjectID(id) })
-            .then((doc) => res.json(doc))
-            .catch((err) => {
+            .then(doc => res.json(doc))
+            .catch(err  => {
                 console.error(err);
                 res.status(500);
                 res.json({ status: 500, error: err });
-            })
+            });
     });
 
     router.post('/', (req, res) => {
-        const newBooking = req.body;
+        const newCard = req.body;
         collection
-        .insertOne(newBooking)
-        .then((booking)=> {
-            res.json(booking.ops[0])
-        })
-            .catch((err) => {
-                console.error(err);
-                res.status(500);
-                res.json({ status: 500, error: err });
+        .insertOne(newCard)
+        .then(card => res.json(card.ops[0]))
+        .catch(err  => {
+            console.error(err);
+            res.status(500);
+            res.json({ status: 500, error: err });
         }) 
     }) 
 
@@ -47,16 +45,16 @@ const createRouter = function (collection) {
         const id = req.params.id;
         collection
         .deleteOne({ _id: ObjectID(id)})
-        .then(booking => {
-            res.json(booking)
-        })
+        .then(card => res.json(card))
         .catch((err) => {
             console.error(err);
             res.status(500);
             res.json({ status: 500, error: err });
+        })
     })
-    })
+
     return router;
+    
 }
 
 module.exports = createRouter;
