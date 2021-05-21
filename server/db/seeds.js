@@ -233,12 +233,65 @@ db.simpsons.insertMany ([
     },
     {
         name: "Bart Simpson",
-        most_lovable: 80,
-        smartest: 80,
-        fattest: 90, 
-        biggest_nerd: 70,
-        greatest_anarchist: 72,
-        walk_of_fame: 52
+        most_lovable: 90,
+        smartest: 72,
+        fattest: 50, 
+        biggest_nerd: 44,
+        greatest_anarchist: 98,
+        walk_of_fame: 96
     },
-
+    {
+        name: "Lisa Simpson",
+        most_lovable: 98,
+        smartest: 98,
+        fattest: 48, 
+        biggest_nerd: 42,
+        greatest_anarchist: 96,
+        walk_of_fame: 94
+    },
+    {
+        name: "Sideshow Bob",
+        most_lovable: 82,
+        smartest: 62,
+        fattest: 76, 
+        biggest_nerd: 90,
+        greatest_anarchist: 54,
+        walk_of_fame: 40
+    },
+    {
+        name: "Dr. Julius Hibbert",
+        most_lovable: 58,
+        smartest: 66,
+        fattest: 88, 
+        biggest_nerd: 64,
+        greatest_anarchist: 64,
+        walk_of_fame: 46
+    },
+    {
+        name: "Chief Wiggum",
+        most_lovable: 76,
+        smartest: 40,
+        fattest: 98, 
+        biggest_nerd: 82,
+        greatest_anarchist: 46,
+        walk_of_fame: 72
+    },
+    {
+        name: "Ned Flanders",
+        most_lovable: 50,
+        smartest: 88,
+        fattest: 84, 
+        biggest_nerd: 98,
+        greatest_anarchist: 62,
+        walk_of_fame: 74
+    },
+    {
+        name: "Waylon Smithers",
+        most_lovable: 56,
+        smartest: 42,
+        fattest: 83, 
+        biggest_nerd: 92,
+        greatest_anarchist: 58,
+        walk_of_fame: 42
+    },
 ]);
