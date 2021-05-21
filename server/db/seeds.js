@@ -1,7 +1,7 @@
 use top_trumps;
 db.dropDatabase();
 
-db.cards.football.insertMany ([
+db.football.insertMany ([
     { 
         name: "Hernan Crespo",
         height: 184,
@@ -22,7 +22,7 @@ db.cards.football.insertMany ([
     }
 ]);
 
-db.cards.simpsons.insertMany ([
+db.simpsons.insertMany ([
     { 
         name: "Hernan Crespo",
         height: 184,

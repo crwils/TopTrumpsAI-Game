@@ -1,10 +1,13 @@
 import React from 'react';
-import Cards from './components/Cards'
+import Cards from './Cards'
 
 function Games(){
 
     return(
-        <h1>Games Content</h1>
+        <div>
+            <h1>Games Content</h1>
+            <Cards />
+        </div>
     )
 
 };
