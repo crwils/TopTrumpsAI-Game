@@ -44,5 +44,4 @@ const SimpsonsService = {
   }
 }
 
-export default FootballService;
 export default SimpsonsService;
