@@ -24,10 +24,13 @@ db.football.insertMany ([
 
 db.simpsons.insertMany ([
     { 
-        name: "Hernan Crespo",
-        height: 184,
-        caps: 20,
-        goals: 10
+        name: "Principal Skinner",
+        most_lovable: 74,
+        smartest: 74,
+        fattest: 64, 
+        biggest_nerd: 80,
+        greatest_anarchist: 48,
+        walk_of_fame: 70
     },
     { 
         name: "Francesco Totti",
