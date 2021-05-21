@@ -1,15 +1,20 @@
 import React from 'react';
 import CardItem from './CardItem';
 
-function Cards(){
+const Cards = ({cards}) => {
+    const cardItems = cards.map((card, index) => {
+        return <CardItem card={card} key={index}/>
+    })
 
-    return(
+    return (
         <div>
-            <h1>Cards Content</h1>
-            <CardItem />
+            <ul>
+                <p>{cardItems}</p>
+            </ul>
         </div>
-    );
+    )
+}
 
-};
+
 
 export default Cards;

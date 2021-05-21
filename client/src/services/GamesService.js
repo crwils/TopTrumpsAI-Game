@@ -5,7 +5,7 @@ const FootballService = {
     return fetch(baseURL + "football/")
     .then(res => res.json())
   },
-
+  // postCard & deleteCard are only needed for the extensions
   postCard(payload) {
     return fetch(baseURL + "football/", {
       method: 'POST',
@@ -27,7 +27,7 @@ const SimpsonsService = {
     return fetch(baseURL + "simpsons/")
     .then(res => res.json())
   },
-
+  // postCard & deleteCard are only needed for the extensions
   postCard(payload) {
     return fetch(baseURL + "simpsons/", {
       method: 'POST',
@@ -44,5 +44,4 @@ const SimpsonsService = {
   }
 }
 
-export default FootballService;
 export default SimpsonsService;
