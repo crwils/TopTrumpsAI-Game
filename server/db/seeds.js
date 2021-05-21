@@ -210,6 +210,33 @@ db.simpsons.insertMany ([
         smartest: 64,
         fattest: 56, 
         biggest_nerd: 62,
+        greatest_anarchist: 60,
+        walk_of_fame: 44
+    },
+    {
+        name: "Barney Gumble",
+        most_lovable: 86,
+        smartest: 50,
+        fattest: 96, 
+        biggest_nerd: 86,
+        greatest_anarchist: 74,
+        walk_of_fame: 80
+    },
+    {
+        name: "Lenny & Carl",
+        most_lovable: 82,
+        smartest: 60,
+        fattest: 54, 
+        biggest_nerd: 94,
+        greatest_anarchist: 56,
+        walk_of_fame: 54
+    },
+    {
+        name: "Bart Simpson",
+        most_lovable: 80,
+        smartest: 80,
+        fattest: 90, 
+        biggest_nerd: 70,
         greatest_anarchist: 72,
         walk_of_fame: 52
     },
