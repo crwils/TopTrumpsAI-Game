@@ -7,6 +7,7 @@ db.football.insertMany ([
         height: 184,
         caps: 20,
         goals: 10
+    
     },
     { 
         name: "Francesco Totti",
@@ -33,16 +34,22 @@ db.simpsons.insertMany ([
         walk_of_fame: 70
     },
     { 
-        name: "Francesco Totti",
-        height: 180,
-        caps: 24,
-        goals: 5
+        name: "Groundskeeper Willie",
+        most_lovable: 62,
+        smartest: 48,
+        fattest: 70, 
+        biggest_nerd: 66,
+        greatest_anarchist: 80,
+        walk_of_fame: 64
     },
     { 
-        name: "Luis Figo",
-        height: 180,
-        caps: 70,
-        goals: 21
-    }
+        name: "Milhouse",
+        most_lovable: 78,
+        smartest: 84,
+        fattest: 74, 
+        biggest_nerd: 88,
+        greatest_anarchist: 68,
+        walk_of_fame: 62
+    },
 
 ]);
