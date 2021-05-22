@@ -9,23 +9,23 @@ import {shuffleCards, decideWinner, playRound} from '../services/GameFunctions';
 //         return (
 //             <CardItem card={card} />
 //         )
-const Cards = ({cards, setPlayerOneCards, setPlayerTwoCards}) => {
+const Cards = ({cards, playerOneCards, playerTwoCards, setPlayerOneCards, setPlayerTwoCards}) => {
 
     shuffleCards(cards)
 
-    const playerOneCards = []
-    const playerTwoCards = []
+    // const playerOneCards = []
+    // const playerTwoCards = []
     const attributeSelection = 'smartest'
 
-    cards.map((card, index) => {
-        if(index === 0 || index%2 === 0){
-            playerOneCards.push(card)
-            // return setPlayerOneCards(tempVariable)
-        }else{
-            playerTwoCards.push(card)
-            // return setPlayerTwoCards(tempVariables)
-        }
-    });
+    // cards.map((card, index) => {
+    //     if(index === 0 || index%2 === 0){
+    //         playerOneCards.push(card)
+    //         // return setPlayerOneCards(tempVariable)
+    //     }else{
+    //         playerTwoCards.push(card)
+    //         // return setPlayerTwoCards(tempVariables)
+    //     }
+    // });
 
     // const addBooking = (booking) => {
     //     let temp = bookings.map(b => b);
@@ -61,14 +61,27 @@ const Cards = ({cards, setPlayerOneCards, setPlayerTwoCards}) => {
     //     console.log('player Two Deck length', playerTwoCards.length)
     // };
 
+    // let cardItems1;
+    // let cardItems2;
 
+    // if (playerOneCards.length !== 0){
+    //     cardItems1 = playerOneCards.map((card, index) => {
+    //         return <CardItem card={card} key={index} handleClick={handleClick}/>
+    //     })    
+    // }
 
-    const cardItems1 = playerOneCards.map((card, index) => {
-        return <CardItem card={card} key={index} handleClick={handleClick}/>
-    })
-    const cardItems2 = playerTwoCards.map((card, index) => {
-        return <CardItem card={card} key={index} handleClick={handleClick}/>
-    })
+    // if(playerTwoCards.length !== 0){
+    //     cardItems2 = playerTwoCards.map((card, index) => {
+    //         return <CardItem card={card} key={index} handleClick={handleClick}/>
+    //     })  
+    // }
+
+    // const cardItems1 = playerOneCards.map((card, index) => {
+    //     return <CardItem card={card} key={index} handleClick={handleClick}/>
+    // })
+    // const cardItems2 = playerTwoCards.map((card, index) => {
+    //     return <CardItem card={card} key={index} handleClick={handleClick}/>
+    // })
     // const cardItems = cards.map((card, index) => {
     //     return <CardItem card={card} key={index}/>
     // })
@@ -86,11 +99,11 @@ const Cards = ({cards, setPlayerOneCards, setPlayerTwoCards}) => {
         <div>
             <h1>Player 1</h1>
             <ul>
-                {cardItems1}
+            {playerOneCards.length !== 0 ? <li>{playerOneCards[0].name}</li> : <li>failed</li>}
             </ul>
             <h1>Player 2</h1>
             <ul>
-                {cardItems2}
+            {playerTwoCards.length !== 0 ? <li>{playerTwoCards[0].name}</li> : <li>failed</li>}
             </ul>
         </div>
     )

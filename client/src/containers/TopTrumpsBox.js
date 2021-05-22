@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Games from '../components/Games';
+import CardItem from '../components/CardItem'
 import CreateCardComponent from '../components/CreateCardComponent';
 import HeaderComponent from '../components/HeaderComponent';
 import SimpsonsService, {getCard} from '../services/GamesService';
@@ -11,7 +12,6 @@ import {shuffleCards, decideWinner, playRound} from '../services/GameFunctions';
 
 function TopTrumpsBox(){
     const [cards, setCards] = useState([]);
-
     const [playerOneCards, setPlayerOneCards] = useState([])
     const [playerTwoCards, setPlayerTwoCards] = useState([])
     // const attributeSelection = 'smartest'
@@ -19,15 +19,36 @@ function TopTrumpsBox(){
     useEffect (() => {
         SimpsonsService.getCard()
             .then(cards => setCards(cards))
-            .then(playerCards => {
-                setPlayerOneCards(playerCards)
-                console.log(playerOneCards)
-            })
-            
-            // setPlayerOneCards(cards[0])
-            // setPlayerTwoCards(cards[1])
         
     }, []);
+
+    useEffect(() => {
+        const temporaryPlayerOneCards = [];
+        const temporaryPlayerTwoCards = [];
+        cards.map((card, index) => {
+            if(index === 0 || index%2 === 0){
+                temporaryPlayerOneCards.push(card)
+                // return setPlayerOneCards(tempVariable)
+            }else{
+                temporaryPlayerTwoCards.push(card)
+                // return setPlayerTwoCards(tempVariables)
+            }
+        });
+        console.log('temporaryPlayerOne', temporaryPlayerOneCards)
+        console.log('temporaryPlayerTwo',temporaryPlayerTwoCards)
+        setPlayerOneCards([...temporaryPlayerOneCards])
+        setPlayerTwoCards([...temporaryPlayerTwoCards])
+    }, [cards])
+
+    // useEffect(() => {
+    //     const cardItems1 = playerOneCards.map((card, index) => {
+    //         return <CardItem card={card} key={index}/>
+    //     })
+    //     const cardItems2 = playerTwoCards.map((card, index) => {
+    //         return <CardItem card={card} key={index}/>
+    //     })
+    // }, [playerOneCards, playerTwoCards])
+
     
 
     return(
