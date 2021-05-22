@@ -12,8 +12,8 @@ import {shuffleCards, decideWinner, playRound} from '../services/GameFunctions';
 function TopTrumpsBox(){
     const [cards, setCards] = useState([]);
 
-    // const [playerOneCards, setPlayerOneCards] = useState([])
-    // const [playerTwoCards, setPlayerTwoCards] = useState([])
+    const [playerOneCards, setPlayerOneCards] = useState([])
+    const [playerTwoCards, setPlayerTwoCards] = useState([])
     // const attributeSelection = 'smartest'
 
     useEffect (() => {
@@ -31,7 +31,7 @@ function TopTrumpsBox(){
         <div className="tt__box--header">
             <h1>Top Trumps Game!</h1>
             <HeaderComponent />
-            <Games cards={cards}/>
+            <Games playerOneCards= {playerOneCards} playerTwoCards={playerTwoCards} setPlayerOneCards={setPlayerOneCards} setPlayerTwoCards= {setPlayerTwoCards} cards={cards}/>
             <CreateCardComponent />
         </div>
 

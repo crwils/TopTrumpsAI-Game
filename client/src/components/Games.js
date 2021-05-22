@@ -9,31 +9,50 @@ import {shuffleCards, decideWinner, playRound} from '../services/GameFunctions';
 //         return (
 //             <CardItem card={card} />
 //         )
-const Cards = ({cards}) => {
+const Cards = ({cards, playerOneCards, playerTwoCards, setPlayerOneCards, setPlayerTwoCards}) => {
 
     shuffleCards(cards)
 
-    const playerOneCards = []
-    const playerTwoCards = []
+    // const playerOneCards = []
+    // const playerTwoCards = []
     const attributeSelection = 'smartest'
+
+    const tempPlayerOneCards = []
+    const tempPlayerTwoCards = []
 
     cards.map((card, index) => {
         if(index === 0 || index%2 === 0){
-            return playerOneCards.push(card)
+            tempPlayerOneCards.push(card)
+            // return setPlayerOneCards(tempVariable)
         }else{
-            return playerTwoCards.push(card)
+            tempPlayerTwoCards.push(card)
+            // return setPlayerTwoCards(tempVariables)
+        }
+        if(index === cards.length-1){
+            setPlayerOneCards(tempPlayerOneCards)
+            setPlayerTwoCards(tempPlayerTwoCards)
         }
     });
 
-    const handleClick = () => {
-        // const userValue = event.target.value 
+    // const addBooking = (booking) => {
+    //     let temp = bookings.map(b => b);
+    //     temp.push(booking);
+    //     setBookings(temp);
+    // }
 
-        playRound(playerOneCards, playerTwoCards, attributeSelection)
-        console.log('player One Deck', playerOneCards[0].name)
-        console.log('player One Deck length', playerOneCards.length)
-        console.log('player Two Deck', playerTwoCards[0].name)
-        console.log('player Two Deck length', playerTwoCards.length)
+    const handleClick = () =>{
+        return
     };
+
+    // const handleClick = () => {
+    //     // const userValue = event.target.value 
+
+    //     playRound(playerOneCards, playerTwoCards, attributeSelection)
+    //     console.log('player One Deck', playerOneCards[0].name)
+    //     console.log('player One Deck length', playerOneCards.length)
+    //     console.log('player Two Deck', playerTwoCards[0].name)
+    //     console.log('player Two Deck length', playerTwoCards.length)
+    // };
 
     // if(playerOneCards.length !== 0 && playerTwoCards !== 0){
     //     playRound(playerOneCards, playerTwoCards, attributeSelection)
