@@ -1,33 +1,13 @@
 import React from 'react';
 import CardItem from './CardItem';
+import {shuffleCards, decideWinner, playRound} from '../services/GameFunctions';
 
 const Cards = ({cards}) => {
 
+    shuffleCards(cards)
+
     const playerOneCards = []
     const playerTwoCards = []
-
-    function shuffleCards(cardArray){
-        if(cardArray.length !==0){
-            let currentIndex = cardArray.length;
-            let temporaryValue;
-            let randomIndex;
-
-            while(0 !== currentIndex){
-
-                randomIndex = Math.floor(Math.random() * currentIndex);
-                currentIndex = currentIndex - 1;
-
-                temporaryValue = {...cardArray[currentIndex]};
-                cardArray[currentIndex] = cardArray[randomIndex];
-                cardArray[randomIndex] = temporaryValue;
-            }
-            return cardArray;
-        }else{
-            return
-        }
-    };
-
-    shuffleCards(cards)
 
     cards.map((card, index) => {
         if(index === 0 || index%2 === 0){
@@ -37,7 +17,17 @@ const Cards = ({cards}) => {
         }
     });
 
-    const cardItems = playerOneCards.map((card, index) => {
+    if(playerOneCards.length !== 0 && playerTwoCards !== 0){
+        playRound(playerOneCards, playerTwoCards, 'smartest')
+    }
+
+
+
+
+    const cardItems1 = playerOneCards.map((card, index) => {
+        return <CardItem card={card} key={index}/>
+    })
+    const cardItems2 = playerTwoCards.map((card, index) => {
         return <CardItem card={card} key={index}/>
     })
     // const cardItems = cards.map((card, index) => {
@@ -47,9 +37,16 @@ const Cards = ({cards}) => {
 
 
     return (
-        <ul>
-            {cardItems}
-        </ul>
+        <div>
+            <h1>Player 1</h1>
+            <ul>
+                {cardItems1}
+            </ul>
+            <h1>Player 2</h1>
+            <ul>
+                {cardItems2}
+            </ul>
+        </div>
     )
 }
 
