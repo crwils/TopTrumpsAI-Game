@@ -7,46 +7,41 @@ const CardItem = ({ card, cardItem, event }) => {
     // const cardOne = event.target['card'].value;
 
     // cardOne.addEventListener('click', function () {
-        // cardOne.classList.toggle('is-flipped');
+    // cardOne.classList.toggle('is-flipped');
+
 
 
     return (
         <>
             <body>
-                <div className="card">
-                    <div className="card__inner">
-                        <div className="card__face card__face--back">
+                <div class="card">
+                    <div class="card__inner">
+                        <div class="card__face card__face--back">
                             <h2>Top Trumps</h2>
                         </div>
-                        <div className="card__face card__face--front">
-                            <div className="card__content">
-                                <div className="card__header">
-                                    <img src={pp} alt="" className="pp" />
+                        <div class="card__face card__face--front">
+                            <div class="card__content">
+                                <div class="card__header">
+                                    <img src={pp} alt="" class="pp" />
                                     <h2>{card.name}</h2>
                                 </div>
-                                <div className="card__body">
-                                    <div className="card_details">
-                                        <p>Most Lovable:</p>
+                                <div class="card__body">
+                                    <div>
+                                        <p>Most Lovable: </p>
                                         <p>Smartest: </p>
                                         <p>Fattest: </p>
-                                        <p>Biggest Nerd:  </p>
+                                        <p>Biggest Nerd: </p>
                                         <p>Greatest Anarchist: </p>
                                         <p>Walk of Fame Rating: </p>
-                                        <p>{cardItem}</p>
                                     </div>
-                                    <div className="card_details">
-                                        <p>{card.most_lovable}% </p>
-                                        <p>{card.smartest}% </p>
-                                        <p>{card.fattest}% </p>
+                                    <div>
+                                        <p>{card.most_lovable}%</p>
+                                        <p>{card.smartest}%</p>
+                                        <p>{card.fattest}%</p>
                                         <p>{card.biggest_nerd}%</p>
                                         <p>{card.greatest_anarchist}%</p>
                                         <p>{card.walk_of_fame}%</p>
                                     </div>
-                                </div>
-                                <div className="char__bio">
-                                    {/* <p>Homer Simpson is a simple man. A man who through punishing trial and error has proven that
-                                    even one's loftiest goals are attainable provided you set them low enough! Homer deeply
-                                    loves and is intensely devoted to his wife and kids - when it occurs to him.</p> */}
                                 </div>
                             </div>
                         </div>

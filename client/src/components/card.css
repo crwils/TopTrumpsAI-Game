@@ -136,3 +136,12 @@ body {
     word-wrap: normal;
     padding: 0 30px;
 }
+
+.card__display {
+    display: flex;
+    flex-direction: row;
+}
+
+.card__details__flex {
+    display: flex;
+}
