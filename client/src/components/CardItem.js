@@ -3,7 +3,6 @@ import React from 'react';
 const CardItem = ({ card }) => {
     return (
         <>  
-            <hr></hr>
             <li>{card.name}</li>
             <li>{card.most_lovable}</li>
             <li>{card.smartest}</li>
