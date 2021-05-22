@@ -105,4 +105,4 @@ const Cards = ({cards, playerOneCards, playerTwoCards, setPlayerOneCards, setPla
 
 
 
-export default Cards;
+export default Cards
