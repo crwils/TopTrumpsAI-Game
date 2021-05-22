@@ -6,11 +6,34 @@ const Cards = ({cards}) => {
     const playerOneCards = []
     const playerTwoCards = []
 
+    function shuffleCards(cardArray){
+        if(cardArray.length !==0){
+            let currentIndex = cardArray.length;
+            let temporaryValue;
+            let randomIndex;
+
+            while(0 !== currentIndex){
+
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex = currentIndex - 1;
+
+                temporaryValue = {...cardArray[currentIndex]};
+                cardArray[currentIndex] = cardArray[randomIndex];
+                cardArray[randomIndex] = temporaryValue;
+            }
+            return cardArray;
+        }else{
+            return
+        }
+    };
+
+    shuffleCards(cards)
+
     cards.map((card, index) => {
         if(index === 0 || index%2 === 0){
             return playerOneCards.push(card)
         }else{
-            return playerTwoCards
+            return playerTwoCards.push(card)
         }
     });
 
