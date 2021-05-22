@@ -7,11 +7,9 @@ const Cards = ({cards}) => {
     })
 
     return (
-        <div>
-            <ul>
-                <p>{cardItems}</p>
-            </ul>
-        </div>
+        <ul>
+            {cardItems}
+        </ul>
     )
 }
 
