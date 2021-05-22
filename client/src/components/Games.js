@@ -1,15 +1,18 @@
-// import React from 'react';
-// import Cards from './Cards';
+import React from 'react';
+import CardItem from './CardItem';
 
-// function Games(){
+const Cards = ({cards}) => {
+    const cardItems = cards.map((card, index) => {
+        return <CardItem card={card} key={index}/>
+    })
 
-//     return(
-//         <div>
-//             <h1>Games Content</h1>
-//             <Cards />
-//         </div>
-//     );
+    return (
+        <ul>
+            {cardItems}
+        </ul>
+    )
+}
 
-// };
 
-// export default Games;
+
+export default Cards;
