@@ -1,3 +1,7 @@
+p:hover{
+    background-color: #F3F3F3;
+}
+
 :root {
     --primary: #FFCE00;
     --secondary: #FE4880;

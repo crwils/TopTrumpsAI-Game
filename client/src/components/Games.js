@@ -25,18 +25,37 @@ const Cards = ({cards}) => {
         }
     });
 
-    if(playerOneCards.length !== 0 && playerTwoCards !== 0){
-        playRound(playerOneCards, playerTwoCards, attributeSelection)
-    }
+    const handleClick = () => {
+        // const userValue = event.target.value 
 
+        playRound(playerOneCards, playerTwoCards, attributeSelection)
+        console.log('player One Deck', playerOneCards[0].name)
+        console.log('player One Deck length', playerOneCards.length)
+        console.log('player Two Deck', playerTwoCards[0].name)
+        console.log('player Two Deck length', playerTwoCards.length)
+    };
+
+    // if(playerOneCards.length !== 0 && playerTwoCards !== 0){
+    //     playRound(playerOneCards, playerTwoCards, attributeSelection)
+    // }
+
+    // const handleClick = () => {
+    //     // const userValue = event.target.value 
+
+    //     playRound(playerOneCards, playerTwoCards, attributeSelection)
+    //     console.log('player One Deck', playerOneCards[0].name)
+    //     console.log('player One Deck length', playerOneCards.length)
+    //     console.log('player Two Deck', playerTwoCards[0].name)
+    //     console.log('player Two Deck length', playerTwoCards.length)
+    // };
 
 
 
     const cardItems1 = playerOneCards.map((card, index) => {
-        return <CardItem card={card} key={index}/>
+        return <CardItem card={card} key={index} handleClick={handleClick}/>
     })
     const cardItems2 = playerTwoCards.map((card, index) => {
-        return <CardItem card={card} key={index}/>
+        return <CardItem card={card} key={index} handleClick={handleClick}/>
     })
     // const cardItems = cards.map((card, index) => {
     //     return <CardItem card={card} key={index}/>
