@@ -1,4 +1,4 @@
-// import './App.css';
+import './App.css';
 import TopTrumpsBox from './containers/TopTrumpsBox';
 
 function App() {

@@ -4,7 +4,7 @@ import CardItem from '../components/CardItem'
 import CreateCardComponent from '../components/CreateCardComponent';
 import HeaderComponent from '../components/HeaderComponent';
 import SimpsonsService, {getCard} from '../services/GamesService';
-// import './main-page.css';
+import './main-page.css';
 import {shuffleCards, decideWinner, playRound} from '../services/GameFunctions';
 
 
@@ -39,17 +39,6 @@ function TopTrumpsBox(){
         setPlayerOneCards([...temporaryPlayerOneCards])
         setPlayerTwoCards([...temporaryPlayerTwoCards])
     }, [cards])
-
-    // useEffect(() => {
-    //     const cardItems1 = playerOneCards.map((card, index) => {
-    //         return <CardItem card={card} key={index}/>
-    //     })
-    //     const cardItems2 = playerTwoCards.map((card, index) => {
-    //         return <CardItem card={card} key={index}/>
-    //     })
-    // }, [playerOneCards, playerTwoCards])
-
-    
 
     return(
          
