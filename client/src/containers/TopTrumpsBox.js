@@ -9,13 +9,13 @@ function TopTrumpsBox(){
     const [cards, setCards] = useState([]);
 
     useEffect (() => {
-        // SimpsonsService.getCard()
+        // SimpsonsService.getCard()            // these first two lines look correct
         //     .then(cards => setCards(cards));
         getCards();
     }, []);
 
     const getCards = function(){
-        fetch('http://localhost:5000/api/simpsons')
+        fetch('http://localhost:5000/api/simpsons') // delete this function
             .then(results => results.json())
             .then(cards => setCards(cards))
     }
