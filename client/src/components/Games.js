@@ -6,9 +6,11 @@ const Cards = ({cards, playerOneCards, playerTwoCards, setPlayerOneCards, setPla
 
     shuffleCards(cards)
 
-    const attributeSelection = 'smartest'
+    // const attributeSelection = 'smartest'
 
-    const handleClick = () =>{
+    const handleClick = (event) =>{
+        const attributeSelection = event.target.id
+        console.log(attributeSelection)
         const tempPlayerOneCards = [...playerOneCards]
         const tempPlayerTwoCards = [...playerTwoCards]
         playRound(tempPlayerOneCards, tempPlayerTwoCards, attributeSelection)

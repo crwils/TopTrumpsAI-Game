@@ -30,7 +30,7 @@ const CardItem = ({ card, handleClick }) => {
 
                                     </div>
                                     <div>
-                                        <p onClick={handleClick} value={card.most_lovable} id='most_lovable'>{card.most_lovable}%</p>
+                                        <p onClick={handleClick} id='most_lovable'>{card.most_lovable}%</p>
                                         <p onClick={handleClick} id='smartest'>{card.smartest}%</p>
                                         <p onClick={handleClick} id='fattest'>{card.fattest}%</p>
                                         <p onClick={handleClick} id='biggest_nerd'>{card.biggest_nerd}%</p>
