@@ -9,28 +9,21 @@ import {shuffleCards, decideWinner, playRound} from '../services/GameFunctions';
 //         return (
 //             <CardItem card={card} />
 //         )
-const Cards = ({cards, playerOneCards, playerTwoCards, setPlayerOneCards, setPlayerTwoCards}) => {
+const Cards = ({cards, setPlayerOneCards, setPlayerTwoCards}) => {
 
     shuffleCards(cards)
 
-    // const playerOneCards = []
-    // const playerTwoCards = []
+    const playerOneCards = []
+    const playerTwoCards = []
     const attributeSelection = 'smartest'
-
-    const tempPlayerOneCards = []
-    const tempPlayerTwoCards = []
 
     cards.map((card, index) => {
         if(index === 0 || index%2 === 0){
-            tempPlayerOneCards.push(card)
+            playerOneCards.push(card)
             // return setPlayerOneCards(tempVariable)
         }else{
-            tempPlayerTwoCards.push(card)
+            playerTwoCards.push(card)
             // return setPlayerTwoCards(tempVariables)
-        }
-        if(index === cards.length-1){
-            setPlayerOneCards(tempPlayerOneCards)
-            setPlayerTwoCards(tempPlayerTwoCards)
         }
     });
 

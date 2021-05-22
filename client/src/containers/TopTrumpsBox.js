@@ -18,7 +18,11 @@ function TopTrumpsBox(){
 
     useEffect (() => {
         SimpsonsService.getCard()
-            .then(cards => setCards(cards));
+            .then(cards => setCards(cards))
+            .then(playerCards => {
+                setPlayerOneCards(playerCards)
+                console.log(playerOneCards)
+            })
             
             // setPlayerOneCards(cards[0])
             // setPlayerTwoCards(cards[1])
