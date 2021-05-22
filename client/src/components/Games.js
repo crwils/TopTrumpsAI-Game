@@ -76,12 +76,12 @@ const Cards = ({cards, playerOneCards, playerTwoCards, setPlayerOneCards, setPla
     //     })  
     // }
 
-    // const cardItems1 = playerOneCards.map((card, index) => {
-    //     return <CardItem card={card} key={index} handleClick={handleClick}/>
-    // })
-    // const cardItems2 = playerTwoCards.map((card, index) => {
-    //     return <CardItem card={card} key={index} handleClick={handleClick}/>
-    // })
+    const cardItems1 = playerOneCards.map((card, index) => {
+        return <CardItem card={card} key={index} handleClick={handleClick}/>
+    })
+    const cardItems2 = playerTwoCards.map((card, index) => {
+        return <CardItem card={card} key={index} handleClick={handleClick}/>
+    })
     // const cardItems = cards.map((card, index) => {
     //     return <CardItem card={card} key={index}/>
     // })
@@ -97,13 +97,21 @@ const Cards = ({cards, playerOneCards, playerTwoCards, setPlayerOneCards, setPla
         //     </div>
         // </>
         <div>
-            <h1>Player 1</h1>
+            {/* <h1>Player 1</h1>
             <ul>
             {playerOneCards.length !== 0 ? <li>{playerOneCards[0].name}</li> : <li>failed</li>}
             </ul>
             <h1>Player 2</h1>
             <ul>
             {playerTwoCards.length !== 0 ? <li>{playerTwoCards[0].name}</li> : <li>failed</li>}
+            </ul> */}
+            <h1>Player One</h1>
+            <ul>
+                {cardItems1}
+            </ul>
+            <h1>Player Two</h1>
+            <ul>
+                {cardItems2}
             </ul>
         </div>
     )
