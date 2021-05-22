@@ -2,13 +2,7 @@ import React from 'react';
 import './card.css';
 import pp from './pp.jpg';
 
-const CardItem = ({ card, cardItem, event }) => {
-
-    // const cardOne = event.target['card'].value;
-
-    // cardOne.addEventListener('click', function () {
-    // cardOne.classList.toggle('is-flipped');
-
+const CardItem = ({ card }) => {
 
 
     return (
@@ -26,13 +20,14 @@ const CardItem = ({ card, cardItem, event }) => {
                                     <h2>{card.name}</h2>
                                 </div>
                                 <div class="card__body">
-                                    <div>
+                                    <div><b>
                                         <p>Most Lovable: </p>
                                         <p>Smartest: </p>
                                         <p>Fattest: </p>
                                         <p>Biggest Nerd: </p>
                                         <p>Greatest Anarchist: </p>
                                         <p>Walk of Fame Rating: </p>
+                                        </b>
                                     </div>
                                     <div>
                                         <p>{card.most_lovable}%</p>
