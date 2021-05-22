@@ -15,7 +15,7 @@ const Cards = ({cards, playerOneCards, playerTwoCards, setPlayerOneCards, setPla
 
     // const playerOneCards = []
     // const playerTwoCards = []
-    const attributeSelection = 'smartest'
+    // const attributeSelection = 'smartest'
 
     // cards.map((card, index) => {
     //     if(index === 0 || index%2 === 0){
@@ -33,9 +33,11 @@ const Cards = ({cards, playerOneCards, playerTwoCards, setPlayerOneCards, setPla
     //     setBookings(temp);
     // }
 
-    const handleClick = () =>{
+    const handleClick = (event) =>{
+        const attributeSelection = event.target.id;
         const tempPlayerOneCards = [...playerOneCards]
         const tempPlayerTwoCards = [...playerTwoCards]
+        console.log(attributeSelection)
         playRound(tempPlayerOneCards, tempPlayerTwoCards, attributeSelection)
         setPlayerOneCards(tempPlayerOneCards)
         setPlayerTwoCards(tempPlayerTwoCards)
@@ -119,9 +121,9 @@ const Cards = ({cards, playerOneCards, playerTwoCards, setPlayerOneCards, setPla
                 {cardItems2}
             </ul> */}
             <h1>Player One</h1>
-            <li>{cardItems1[0]}</li>
+            <li>{cardItems1}</li>
             <h1>Player Two</h1>
-            <li>{cardItems2[0]}</li>
+            <li>{cardItems2}</li>
         </div>
     )
 }

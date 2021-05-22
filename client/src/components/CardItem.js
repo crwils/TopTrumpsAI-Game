@@ -9,12 +9,12 @@ const CardItem = ({ card, handleClick }) => {
         <div>
             <hr></hr>
             <p onClick={handleClick}>{card.name}</p>
-            <p onClick={handleClick}>Most Lovable: {card.most_lovable} </p>
-            <p onClick={handleClick}>Smartest: {card.smartest} </p>
-            <p onClick={handleClick}>Fattest: {card.fattest} </p>
-            <p onClick={handleClick}>Biggest Nerd: {card.biggest_nerd} </p>
-            <p onClick={handleClick}>Greatest Anarchist: {card.greatest_anarchist}</p>
-            <p onClick={handleClick}>Walk of Fame Rating: {card.walk_of_fame}</p>
+            <p onClick={handleClick} id='most_lovable'>Most Lovable: {card.most_lovable} </p>
+            <p onClick={handleClick} id='smartest'>Smartest: {card.smartest} </p>
+            <p onClick={handleClick} id='fattest'>Fattest: {card.fattest} </p>
+            <p onClick={handleClick} id='biggest_nerd'>Biggest Nerd: {card.biggest_nerd} </p>
+            <p onClick={handleClick} id='greatest_anarchist'>Greatest Anarchist: {card.greatest_anarchist}</p>
+            <p onClick={handleClick} id='walk_of_fame_rating'>Walk of Fame Rating: {card.walk_of_fame}</p>
         </div>
     )
 
