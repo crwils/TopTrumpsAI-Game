@@ -3,7 +3,6 @@ const indexNumber = 0;
 
 // value comparison and winner deciding function 
 function decideWinner(player1Array, player2Array, attribute){
-    console.log(player1Array)
     if (player1Array[0][attribute] > player2Array[0][attribute]){
         player1Array.push(player1Array[0])
         player1Array.push(player2Array[0])

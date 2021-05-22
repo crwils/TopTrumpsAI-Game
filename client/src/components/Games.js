@@ -34,6 +34,11 @@ const Cards = ({cards, playerOneCards, playerTwoCards, setPlayerOneCards, setPla
     // }
 
     const handleClick = () =>{
+        const tempPlayerOneCards = [...playerOneCards]
+        const tempPlayerTwoCards = [...playerTwoCards]
+        playRound(tempPlayerOneCards, tempPlayerTwoCards, attributeSelection)
+        setPlayerOneCards(tempPlayerOneCards)
+        setPlayerTwoCards(tempPlayerTwoCards)
         return
     };
 
