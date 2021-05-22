@@ -18,7 +18,7 @@ const Cards = ({cards}) => {
     });
 
     if(playerOneCards.length !== 0 && playerTwoCards !== 0){
-        playRound(playerOneCards, playerTwoCards, 'smartest')
+        playRound(playerOneCards, playerTwoCards, 'walk_of_fame')
     }
 
 

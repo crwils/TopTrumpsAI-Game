@@ -2,14 +2,15 @@ import React from 'react';
 
 const CardItem = ({ card }) => {
     return (
-        <>
-            <li>{card.name}</li>
-            <li>{card.most_lovable}</li>
-            <li>{card.smartest}</li>
-            <li>{card.fattest}</li>
-            <li>{card.biggest_nerd}</li>
-            <li>{card.greatest_anarchist}</li>
-            <li>{card.walk_of_fame}</li>
+        <>  
+            <hr></hr>
+            <li>name: {card.name}</li>
+            <li>most lovable: {card.most_lovable}</li>
+            <li>smartest: {card.smartest}</li>
+            <li>fattest: {card.fattest}</li>
+            <li>biggest nerd: {card.biggest_nerd}</li>
+            <li>greatest anarchist: {card.greatest_anarchist}</li>
+            <li>walk of fame: {card.walk_of_fame}</li>
 
         </>
     )
