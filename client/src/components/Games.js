@@ -8,6 +8,7 @@ const Cards = ({cards}) => {
 
     const playerOneCards = []
     const playerTwoCards = []
+    const attributeSelection = 'smartest'
 
     cards.map((card, index) => {
         if(index === 0 || index%2 === 0){
@@ -18,7 +19,7 @@ const Cards = ({cards}) => {
     });
 
     if(playerOneCards.length !== 0 && playerTwoCards !== 0){
-        playRound(playerOneCards, playerTwoCards, 'walk_of_fame')
+        playRound(playerOneCards, playerTwoCards, attributeSelection)
     }
 
 
