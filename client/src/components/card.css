@@ -18,8 +18,8 @@ body {
 
 .card {
     margin: 100px auto 0;
-    width: 400px;
-    height: 600px;
+    width: 300px;
+    height: 400px;
     perspective: 1000px;
 }
 
@@ -91,8 +91,8 @@ body {
 
 .pp {
     display: block;
-    width: 128px;
-    height: 128px;
+    width: 90px;
+    height: 90px;
     margin: 0 auto 30px;
     border-radius: 50%;
     background-color: #fff;
@@ -102,7 +102,7 @@ body {
 
 .card__header h2 {
     color: rgb(255, 255, 255);
-    font-size:  22px;
+    font-size:  16px;
     font-weight: 900;
     text-transform: uppercase;
     text-align: center;
@@ -123,7 +123,7 @@ body {
 
 .card__body p {
     color: var(--dark);
-    font-size: 18px;
+    font-size: 12px;
     line-height: 1.5;
 }
 

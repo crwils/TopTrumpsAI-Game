@@ -3,7 +3,7 @@ import Games from '../components/Games';
 import CreateCardComponent from '../components/CreateCardComponent';
 import HeaderComponent from '../components/HeaderComponent';
 import SimpsonsService, {getCard} from '../services/GamesService';
-import '../components/card.css';
+import './main-page.css';
 
 
 function TopTrumpsBox(){
@@ -21,8 +21,8 @@ function TopTrumpsBox(){
 
     return(
         
-        <div>
-            <h1>Top Trumps Box Content</h1>
+        <div className="tt__box--header">
+            <h1>Top Trumps Game!</h1>
             <HeaderComponent />
             <Games cards={cards} />
             <CreateCardComponent />

@@ -3,7 +3,7 @@ import React from 'react';
 function HeaderComponent(){
 
     return(
-        <h1>Header Component Content</h1>
+        <h1> </h1>
     );
 
 };

@@ -1,0 +1,10 @@
+.tt__box--header {
+    padding-top: 20px;
+    background-color: darkslategray;
+    color: white;
+}
+
+.tt__box--header h1 {
+    text-align: center;
+}
+
