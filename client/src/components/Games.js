@@ -110,14 +110,18 @@ const Cards = ({cards, playerOneCards, playerTwoCards, setPlayerOneCards, setPla
             <ul>
             {playerTwoCards.length !== 0 ? <li>{playerTwoCards[0].name}</li> : <li>failed</li>}
             </ul> */}
-            <h1>Player One</h1>
+            {/* <h1>Player One</h1>
             <ul>
                 {cardItems1}
             </ul>
             <h1>Player Two</h1>
             <ul>
                 {cardItems2}
-            </ul>
+            </ul> */}
+            <h1>Player One</h1>
+            <li>{cardItems1[0]}</li>
+            <h1>Player Two</h1>
+            <li>{cardItems2[0]}</li>
         </div>
     )
 }
