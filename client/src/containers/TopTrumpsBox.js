@@ -15,13 +15,16 @@ function TopTrumpsBox(){
         
     }, []);
 
+  
+
     
 
     return(
+        
         <div>
             <h1>Top Trumps Box Content</h1>
             <HeaderComponent />
-            <Games cards={cards}/>
+            <Games cards={cards} />
             <CreateCardComponent />
         </div>
 
