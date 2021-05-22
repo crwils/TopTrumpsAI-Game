@@ -3,6 +3,7 @@ import Games from '../components/Games';
 import CreateCardComponent from '../components/CreateCardComponent';
 import HeaderComponent from '../components/HeaderComponent';
 import SimpsonsService, {getCard} from '../services/GamesService';
+import '../components/card.css';
 
 
 function TopTrumpsBox(){
