@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import Games from '../components/Games';
+import Cards from '../components/Games';
 import CardItem from '../components/CardItem'
 import CreateCardComponent from '../components/CreateCardComponent';
 import HeaderComponent from '../components/HeaderComponent';
@@ -14,6 +14,7 @@ function TopTrumpsBox(){
     const [cards, setCards] = useState([]);
     const [playerOneCards, setPlayerOneCards] = useState([])
     const [playerTwoCards, setPlayerTwoCards] = useState([])
+    const [playerWins, setPlayerWins] = useState(null)
     // const attributeSelection = 'smartest'
 
     useEffect (() => {
@@ -39,13 +40,12 @@ function TopTrumpsBox(){
         setPlayerOneCards([...temporaryPlayerOneCards])
         setPlayerTwoCards([...temporaryPlayerTwoCards])
     }, [cards])
-
     return(
          
         <div className="tt__box--header">
             <h1>Top Trumps Game!</h1>
             <HeaderComponent />
-            <Games playerOneCards= {playerOneCards} playerTwoCards={playerTwoCards} setPlayerOneCards={setPlayerOneCards} setPlayerTwoCards= {setPlayerTwoCards} cards={cards}/>
+            <Cards playerOneCards= {playerOneCards} playerTwoCards={playerTwoCards} setPlayerOneCards={setPlayerOneCards} setPlayerTwoCards= {setPlayerTwoCards} cards={cards}/>
             <CreateCardComponent />
         </div>
 
