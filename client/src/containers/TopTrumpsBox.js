@@ -84,14 +84,14 @@ function TopTrumpsBox(){
         // ChangeRound()
         if(player1Array.length === 0 && player2Array.length === 0) {
             setPlayerWins(true)
-            setWhoWins('Nobody')
+            setWhoWins('It\'s a draw!')
         }else if (player1Array.length === 0){
             setPlayerWins(true)
-            setWhoWins('Player Two')
+            setWhoWins('Player Two Wins!')
             return
         }else if(player2Array.length === 0){
             setPlayerWins(true)
-            setWhoWins('Player One')
+            setWhoWins('Player One Wins!')
             return
         }
     };
@@ -120,7 +120,7 @@ function TopTrumpsBox(){
     return(
         
         (playerWins ? 
-        <h1>{whoWins} has won </h1> :      
+        <h1>{whoWins}</h1> :      
         <div className="tt__box--header">
             <h1>Top Trumps Game!</h1>
             <HeaderComponent />
