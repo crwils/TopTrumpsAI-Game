@@ -60,24 +60,24 @@ db.simpsons.insertMany ([
         greatest_anarchist: 50,
         walk_of_fame: 66
     },
-    // {
-    //     name: "Krusty the Clown",
-    //     most_lovable: 70,
-    //     smartest: 86,
-    //     fattest: 92, 
-    //     biggest_nerd: 54,
-    //     greatest_anarchist: 86,
-    //     walk_of_fame: 78
-    // },
-    // {
-    //     name: "Martin",
-    //     most_lovable: 80,
-    //     smartest: 80,
-    //     fattest: 90, 
-    //     biggest_nerd: 70,
-    //     greatest_anarchist: 72,
-    //     walk_of_fame: 52
-    // },
+    {
+        name: "Krusty the Clown",
+        most_lovable: 70,
+        smartest: 86,
+        fattest: 92, 
+        biggest_nerd: 54,
+        greatest_anarchist: 86,
+        walk_of_fame: 78
+    },
+    {
+        name: "Martin",
+        most_lovable: 80,
+        smartest: 80,
+        fattest: 90, 
+        biggest_nerd: 70,
+        greatest_anarchist: 72,
+        walk_of_fame: 52
+    },
     // {
     //     name: "Patty & Selma Bouvier",
     //     most_lovable: 50,

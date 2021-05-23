@@ -50,8 +50,8 @@ function TopTrumpsBox(){
 
     const checkDraw = (player1Array, player2Array, attribute) => {
         if (player1Array[0][attribute] === player2Array[0][attribute]) {
-            drawArray.push(...drawArray, player1Array[0])
-            drawArray.push(...drawArray, player2Array[0])
+
+            drawArray.push(...drawArray, [player1Array[0], player2Array[0]])
             player2Array.splice(indexNumber, 1)
             player1Array.splice(indexNumber, 1)
         }
