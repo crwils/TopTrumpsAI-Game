@@ -97,7 +97,9 @@ function TopTrumpsBox(){
     };
 
     return(
-        (playerWins ? <h1>{whoWins} has won </h1> :      
+        
+        (playerWins ? 
+        <h1>{whoWins} has won </h1> :      
         <div className="tt__box--header">
             <h1>Top Trumps Game!</h1>
             <HeaderComponent />

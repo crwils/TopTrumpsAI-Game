@@ -27,7 +27,6 @@ const CardItem = ({ card, handleClick }) => {
                                         <p onClick={handleClick} id='biggest_nerd'>Biggest Nerd: </p>
                                         <p onClick={handleClick} id='greatest_anarchist'>Greatest Anarchist: </p>
                                         <p onClick={handleClick} id='walk_of_fame'>Walk of Fame Rating: </p>
-
                                     </div>
                                     <div>
                                         <p onClick={handleClick} id='most_lovable'>{card.most_lovable}%</p>
