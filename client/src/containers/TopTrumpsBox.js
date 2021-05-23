@@ -16,7 +16,8 @@ function TopTrumpsBox(){
     const [playerTwoCards, setPlayerTwoCards] = useState([])
     const [playerWins, setPlayerWins] = useState(false)
     const [whoWins, setWhoWins] = useState(null)
-    // const attributeSelection = 'smartest'
+    const [player1Turn, setPlayer1Turn] = useState(true)
+    
 
     useEffect (() => {
         SimpsonsService.getCard()
@@ -52,11 +53,17 @@ function TopTrumpsBox(){
             player1Array.push(player2Array[0])
             player2Array.splice(indexNumber, 1)
             player1Array.splice(indexNumber, 1)
+            if(!player1Turn){
+                changeTurn()
+            }
         }else{
             player2Array.push(player2Array[0])
             player2Array.push(player1Array[0])
             player1Array.splice(indexNumber, 1)
             player2Array.splice(indexNumber, 1)
+            if(player1Turn){
+                changeTurn()
+            }
         }
     };
 
@@ -95,6 +102,18 @@ function TopTrumpsBox(){
             return
         }
     };
+
+    // AI Below
+    function changeTurn(){
+        if(player1Turn){
+            setPlayer1Turn(false)
+        } else {
+            setPlayer1Turn(true)
+        }
+        return
+    }
+
+    // function decideHighestAttribute
 
     return(
         
