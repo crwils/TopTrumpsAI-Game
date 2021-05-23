@@ -149,3 +149,12 @@ body {
 .card__details__flex {
     display: flex;
 }
+
+.card-box {
+    display: flex;
+    justify-content:center;
+}
+
+.card-item {
+    padding: 50px;
+}

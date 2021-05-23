@@ -5,7 +5,7 @@ import CreateCardComponent from '../components/CreateCardComponent';
 import HeaderComponent from '../components/HeaderComponent';
 import SimpsonsService, {getCard} from '../services/GamesService';
 import './main-page.css';
-import {shuffleCards, decideWinner, playRound} from '../services/GameFunctions';
+
 
 
 
@@ -14,7 +14,8 @@ function TopTrumpsBox(){
     const [cards, setCards] = useState([]);
     const [playerOneCards, setPlayerOneCards] = useState([])
     const [playerTwoCards, setPlayerTwoCards] = useState([])
-    const [playerWins, setPlayerWins] = useState(null)
+    const [playerWins, setPlayerWins] = useState(false)
+    const [whoWins, setWhoWins] = useState(null)
     // const attributeSelection = 'smartest'
 
     useEffect (() => {
@@ -40,14 +41,74 @@ function TopTrumpsBox(){
         setPlayerOneCards([...temporaryPlayerOneCards])
         setPlayerTwoCards([...temporaryPlayerTwoCards])
     }, [cards])
+
+    // Decides which card is being picked DO NOT CHANGE!!!
+    const indexNumber = 0; 
+
+    // value comparison and winner deciding function 
+    function decideWinner(player1Array, player2Array, attribute){
+        if (player1Array[0][attribute] > player2Array[0][attribute]){
+            player1Array.push(player1Array[0])
+            player1Array.push(player2Array[0])
+            player2Array.splice(indexNumber, 1)
+            player1Array.splice(indexNumber, 1)
+        }else{
+            player2Array.push(player2Array[0])
+            player2Array.push(player1Array[0])
+            player1Array.splice(indexNumber, 1)
+            player2Array.splice(indexNumber, 1)
+        }
+    };
+
+    function playRound(player1Array, player2Array, attribute){
+        decideWinner(player1Array, player2Array, attribute)
+        // ChangeRound()
+        if(player1Array.length === 0){
+            setPlayerWins(true)
+            setWhoWins('Player Two')
+            return
+        }
+        if(player2Array.length === 0 ){
+            setPlayerWins(true)
+            setWhoWins('Player One')
+            return
+        }
+    };
+
+    function shuffleCards(cardArray){
+        if(cardArray.length !==0){
+            let currentIndex = cardArray.length;
+            let temporaryValue;
+            let randomIndex;
+
+            while(0 !== currentIndex){
+
+                randomIndex = Math.floor(Math.random() * currentIndex);
+                currentIndex = currentIndex - 1;
+
+                temporaryValue = {...cardArray[currentIndex]};
+                cardArray[currentIndex] = cardArray[randomIndex];
+                cardArray[randomIndex] = temporaryValue;
+            }
+            return cardArray;
+        }else{
+            return
+        }
+    };
+
     return(
-         
+        (playerWins ? <h1>{whoWins} has won </h1> :      
         <div className="tt__box--header">
             <h1>Top Trumps Game!</h1>
             <HeaderComponent />
-            <Cards playerOneCards= {playerOneCards} playerTwoCards={playerTwoCards} setPlayerOneCards={setPlayerOneCards} setPlayerTwoCards= {setPlayerTwoCards} cards={cards}/>
+            <Cards playerOneCards={playerOneCards} 
+            playerTwoCards={playerTwoCards} 
+            setPlayerOneCards={setPlayerOneCards} 
+            setPlayerTwoCards={setPlayerTwoCards} 
+            cards={cards} shuffleCards={shuffleCards} 
+            playRound={playRound}/>
             <CreateCardComponent />
-        </div>
+        </div>)
 
     );
 };

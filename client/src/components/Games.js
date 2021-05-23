@@ -1,8 +1,7 @@
 import React from 'react';
 import CardItem from './CardItem';
-import {shuffleCards, decideWinner, playRound} from '../services/GameFunctions';
 
-const Cards = ({cards, playerOneCards, playerTwoCards, setPlayerOneCards, setPlayerTwoCards}) => {
+const Cards = ({cards, playerOneCards, playerTwoCards, setPlayerOneCards, setPlayerTwoCards, shuffleCards, playRound}) => {
 
     shuffleCards(cards)
 
@@ -27,11 +26,15 @@ const Cards = ({cards, playerOneCards, playerTwoCards, setPlayerOneCards, setPla
     })
 
     return (
-        <div>
-            <h1>Player One</h1>
-            <li>{cardItems1[0]}</li>
-            <h1>Player Two</h1>
-            <li>{cardItems2[0]}</li>
+        <div className="card-box">
+            <div className="card-item">
+                <h1>Player One</h1>
+                <b>{cardItems1[0]}</b>
+            </div>
+            <div className="card-item">
+                <h1>Player Two</h1>
+                <b>{cardItems2[0]}</b>
+            </div>
         </div>
     )
 }
