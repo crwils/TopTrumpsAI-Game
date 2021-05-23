@@ -17,17 +17,26 @@ function TopTrumpsBox(){
     const [playerWins, setPlayerWins] = useState(false)
     const [whoWins, setWhoWins] = useState(null)
     const [player1Turn, setPlayer1Turn] = useState(true)
+
+    let fattest = 0;
     
 
     useEffect (() => {
         SimpsonsService.getCard()
             .then(cards => setCards(cards))
-        
+            // .then(cards.map(card => {
+            //     if(card.fattest > fattest){
+            //         fattest = card.fattest
+                    
+            //         console.log("heeey", fattest)
+            //     }
+            // }))
     }, []);
 
     useEffect(() => {
         const temporaryPlayerOneCards = [];
         const temporaryPlayerTwoCards = [];
+        decideHighestAttribute();
         cards.map((card, index) => {
             if(index === 0 || index%2 === 0){
                 temporaryPlayerOneCards.push(card)
@@ -113,7 +122,17 @@ function TopTrumpsBox(){
         return
     }
 
-    // function decideHighestAttribute
+    function decideHighestAttribute(){
+        
+        cards.map(card => {
+            if(card.fattest > fattest){
+                fattest = card.fattest
+                
+                console.log("heeey", fattest)
+            }
+        })
+        
+    }
 
     return(
         
