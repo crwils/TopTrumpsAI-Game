@@ -7,19 +7,19 @@ const CardItem = ({ card, handleClick }) => {
 
     return (
         <>
-            <body>
-                <div class="card">
-                    <div class="card__inner">
-                        <div class="card__face card__face--back">
+            <div>
+                <div className="card">
+                    <div className="card__inner">
+                        <div className="card__face card__face--back">
                             <h2>Top Trumps</h2>
                         </div>
-                        <div class="card__face card__face--front">
-                            <div class="card__content">
-                                <div class="card__header">
-                                    <img src={pp} alt="" class="pp" />
+                        <div className="card__face card__face--front">
+                            <div className="card__content">
+                                <div className="card__header">
+                                    <img src={pp} alt="" className="pp" />
                                     <h2>{card.name}</h2>
                                 </div>
-                                <div class="card__body">
+                                <div className="card__body">
                                     <div>
                                         <p onClick={handleClick} id='most_lovable'>Most Lovable: </p>
                                         <p onClick={handleClick} id='smartest'>Smartest: </p>
@@ -43,7 +43,7 @@ const CardItem = ({ card, handleClick }) => {
                 </div>
 
                 <script src="main.js"> </script>
-            </body>
+            </div>
         </>
     )
 };
