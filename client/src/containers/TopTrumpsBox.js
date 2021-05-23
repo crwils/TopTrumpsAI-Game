@@ -36,28 +36,62 @@ function TopTrumpsBox(){
                 // return setPlayerTwoCards(tempVariables)
             }
         });
-        console.log('temporaryPlayerOne', temporaryPlayerOneCards)
-        console.log('temporaryPlayerTwo',temporaryPlayerTwoCards)
+        // console.log('temporaryPlayerOne', temporaryPlayerOneCards)
+        // console.log('temporaryPlayerTwo',temporaryPlayerTwoCards)
         setPlayerOneCards([...temporaryPlayerOneCards])
         setPlayerTwoCards([...temporaryPlayerTwoCards])
     }, [cards])
 
     // Decides which card is being picked DO NOT CHANGE!!!
     const indexNumber = 0; 
+    let drawArray = []
 
+    const checkDraw = (player1Array, player2Array, attribute) => {
+        if (player1Array[0][attribute] === player2Array[0][attribute]) {
+            drawArray.push(player1Array[0])
+            drawArray.push(player2Array[0])
+        }
+    }
     // value comparison and winner deciding function 
     function decideWinner(player1Array, player2Array, attribute){
+        
+        checkDraw(player1Array, player2Array, attribute)
+        console.log('drawArray', drawArray)
+
         if (player1Array[0][attribute] > player2Array[0][attribute]){
             player1Array.push(player1Array[0])
             player1Array.push(player2Array[0])
             player2Array.splice(indexNumber, 1)
             player1Array.splice(indexNumber, 1)
-        }else{
+                if (drawArray.length > 0) {
+                    player1Array.push(...player1Array, drawArray)
+                    drawArray = []
+                    console.log('drawArray', drawArray)
+                    console.log('player1Array: ', player1Array)
+                }
+        } else {
             player2Array.push(player2Array[0])
             player2Array.push(player1Array[0])
+            player2Array.push(...player2Array, drawArray)
+            drawArray = []
+            console.log('drawArray', drawArray)
+            console.log('player2Array: ', player2Array)
             player1Array.splice(indexNumber, 1)
             player2Array.splice(indexNumber, 1)
         }
+        // } else {
+        //     if (player1Array[0][attribute] > player2Array[0][attribute]){
+        //         player1Array.push(player1Array[0])
+        //         player1Array.push(player2Array[0])
+        //         player2Array.splice(indexNumber, 1)
+        //         player1Array.splice(indexNumber, 1)
+        //     }else{
+        //         player2Array.push(player2Array[0])
+        //         player2Array.push(player1Array[0])
+        //         player1Array.splice(indexNumber, 1)
+        //         player2Array.splice(indexNumber, 1)
+        //     }
+        // }
     };
 
     function playRound(player1Array, player2Array, attribute){

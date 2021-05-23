@@ -29,37 +29,37 @@ db.simpsons.insertMany ([
         most_lovable: 74,
         smartest: 74,
         fattest: 64, 
-        biggest_nerd: 80,
+        biggest_nerd: 60,
         greatest_anarchist: 48,
         walk_of_fame: 70
     },
     { 
         name: "Groundskeeper Willie",
-        most_lovable: 62,
+        most_lovable: 74,
         smartest: 48,
         fattest: 70, 
         biggest_nerd: 66,
         greatest_anarchist: 80,
         walk_of_fame: 64
     },
-    // { 
-    //     name: "Milhouse Van Houten",
-    //     most_lovable: 78,
-    //     smartest: 84,
-    //     fattest: 74, 
-    //     biggest_nerd: 88,
-    //     greatest_anarchist: 68,
-    //     walk_of_fame: 62
-    // },
-    // {
-    //     name: "Santa's Little Helper",
-    //     most_lovable: 96,
-    //     smartest: 44,
-    //     fattest: 42, 
-    //     biggest_nerd: 60,
-    //     greatest_anarchist: 50,
-    //     walk_of_fame: 66
-    // },
+    { 
+        name: "Milhouse Van Houten",
+        most_lovable: 78,
+        smartest: 48,
+        fattest: 74, 
+        biggest_nerd: 88,
+        greatest_anarchist: 68,
+        walk_of_fame: 62
+    },
+    {
+        name: "Santa's Little Helper",
+        most_lovable: 96,
+        smartest: 44,
+        fattest: 74, 
+        biggest_nerd: 60,
+        greatest_anarchist: 50,
+        walk_of_fame: 66
+    },
     // {
     //     name: "Krusty the Clown",
     //     most_lovable: 70,
