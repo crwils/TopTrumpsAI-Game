@@ -18,19 +18,17 @@ function TopTrumpsBox(){
     const [whoWins, setWhoWins] = useState(null)
     const [player1Turn, setPlayer1Turn] = useState(true)
 
-    let fattest = 0;
+    let highestMostLovable = 0;
+    let highestSmartest = 0;
+    let highestFattest = 0;
+    let highestBiggestNerd = 0;
+    let highestGreatestAnarchist = 0;
+    let highestWalkOfFame = 0;
     
 
     useEffect (() => {
         SimpsonsService.getCard()
             .then(cards => setCards(cards))
-            // .then(cards.map(card => {
-            //     if(card.fattest > fattest){
-            //         fattest = card.fattest
-                    
-            //         console.log("heeey", fattest)
-            //     }
-            // }))
     }, []);
 
     useEffect(() => {
@@ -125,10 +123,29 @@ function TopTrumpsBox(){
     function decideHighestAttribute(){
         
         cards.map(card => {
-            if(card.fattest > fattest){
-                fattest = card.fattest
-                
-                console.log("heeey", fattest)
+            if(card.most_lovable > highestMostLovable){
+                highestMostLovable = card.most_lovable
+                console.log("Most Lovable", highestMostLovable)
+            }
+            if(card.smartest > highestSmartest){
+                highestSmartest = card.smartest
+                console.log("Smartest", highestSmartest)
+            }
+            if(card.fattest > highestFattest){
+                highestFattest = card.fattest
+                console.log("Fattest", highestFattest)
+            }
+            if(card.biggest_nerd > highestBiggestNerd){
+                highestBiggestNerd = card.biggest_nerd
+                console.log("Biggest Nerd", highestBiggestNerd)
+            }
+            if(card.greatest_anarchist > highestGreatestAnarchist){
+                highestGreatestAnarchist = card.greatest_anarchist
+                console.log("Greatest Anarchist", highestGreatestAnarchist)
+            }
+            if(card.walk_of_fame > highestWalkOfFame){
+                highestWalkOfFame = card.walk_of_fame
+                console.log("Walk Of Fame", highestWalkOfFame)
             }
         })
         
