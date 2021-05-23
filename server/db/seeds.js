@@ -31,7 +31,7 @@ db.simpsons.insertMany ([
         fattest: 64, 
         biggest_nerd: 60,
         greatest_anarchist: 48,
-        walk_of_fame: 70
+        walk_of_fame: 10,
     },
     { 
         name: "Groundskeeper Willie",
@@ -40,7 +40,7 @@ db.simpsons.insertMany ([
         fattest: 70, 
         biggest_nerd: 66,
         greatest_anarchist: 80,
-        walk_of_fame: 64
+        walk_of_fame: 10,
     },
     { 
         name: "Milhouse Van Houten",
@@ -49,7 +49,7 @@ db.simpsons.insertMany ([
         fattest: 74, 
         biggest_nerd: 88,
         greatest_anarchist: 68,
-        walk_of_fame: 62
+        walk_of_fame: 10,
     },
     {
         name: "Santa's Little Helper",
@@ -58,7 +58,7 @@ db.simpsons.insertMany ([
         fattest: 74, 
         biggest_nerd: 60,
         greatest_anarchist: 50,
-        walk_of_fame: 66
+        walk_of_fame: 10,
     },
     {
         name: "Krusty the Clown",
@@ -67,7 +67,7 @@ db.simpsons.insertMany ([
         fattest: 92, 
         biggest_nerd: 54,
         greatest_anarchist: 86,
-        walk_of_fame: 78
+        walk_of_fame: 10,
     },
     {
         name: "Martin",
@@ -76,7 +76,7 @@ db.simpsons.insertMany ([
         fattest: 90, 
         biggest_nerd: 70,
         greatest_anarchist: 72,
-        walk_of_fame: 52
+        walk_of_fame: 10,    
     },
     // {
     //     name: "Patty & Selma Bouvier",
