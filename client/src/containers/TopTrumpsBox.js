@@ -211,7 +211,7 @@ function TopTrumpsBox(){
         console.log(attributeSelection)
         const tempPlayerOneCards = [...playerOneCards]
         const tempPlayerTwoCards = [...playerTwoCards]
-        setTimeout(playRound(tempPlayerOneCards, tempPlayerTwoCards, attributeSelection), 5000)
+        playRound(tempPlayerOneCards, tempPlayerTwoCards, attributeSelection)
         setPlayerOneCards(tempPlayerOneCards)
         setPlayerTwoCards(tempPlayerTwoCards)
         return
