@@ -1,5 +1,14 @@
+p {
+    cursor: pointer;
+}
+
 p:hover{
     background-color: #F3F3F3;
+}
+
+p:active{
+    color: rgb(0, 255, 21);
+    cursor: pointer;
 }
 
 :root {

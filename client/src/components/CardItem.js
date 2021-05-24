@@ -3,12 +3,12 @@ import './card.css';
 import pp from './images/pp.jpg';
 import './test.css';
 
-const CardItem = ({ card, handleClick, isFlipped, setIsFlipped }) => {
+const CardItem = ({ playerWins, card, handleClick, handleClick2, isFlipped, setIsFlipped }) => {
 
 
 
     return (
-
+        (!playerWins ?
         <div>
             <div className="card">
                 <div id="card__inner">
@@ -46,7 +46,7 @@ const CardItem = ({ card, handleClick, isFlipped, setIsFlipped }) => {
 
             <script src="main.js"> </script>
         </div>
-
+        : null)
     )
 };
 

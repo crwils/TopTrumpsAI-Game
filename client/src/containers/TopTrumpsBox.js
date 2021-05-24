@@ -17,7 +17,6 @@ function TopTrumpsBox(){
     useEffect (() => {
         SimpsonsService.getCard()
             .then(cards => setCards(cards))
-        
     }, []);
 
     useEffect(() => {
@@ -35,8 +34,6 @@ function TopTrumpsBox(){
  
         setPlayerOneCards([...temporaryPlayerOneCards])
         setPlayerTwoCards([...temporaryPlayerTwoCards])
-        console.log('Player One Cards Before:', temporaryPlayerOneCards)
-        console.log('Player Two Cards Before:', temporaryPlayerTwoCards)
     }, [cards])
 
     // Decides which card is being picked DO NOT CHANGE!!!
@@ -123,6 +120,7 @@ function TopTrumpsBox(){
         .then(cards => setCards(cards))
         setDrawArray([])
         setIsFlipped(false)
+        setPlayerWins(false)
     }
 
     return(
@@ -131,7 +129,7 @@ function TopTrumpsBox(){
         <div className="tt__box--header">
         <h1>Top Trumps Game!</h1>
         <HeaderComponent />
-        <Games isFlipped={isFlipped} setIsFlipped={setIsFlipped} drawArray={drawArray} playerOneCards={playerOneCards} 
+        <Games playerWins={playerWins} isFlipped={isFlipped} setIsFlipped={setIsFlipped} drawArray={drawArray} playerOneCards={playerOneCards} 
         playerTwoCards={playerTwoCards} 
         setPlayerOneCards={setPlayerOneCards} 
         setPlayerTwoCards={setPlayerTwoCards} 
@@ -145,7 +143,7 @@ function TopTrumpsBox(){
         <div className="tt__box--header">
             <h1>Top Trumps Game!</h1>
             <HeaderComponent />
-            <Games isFlipped={isFlipped} setIsFlipped={setIsFlipped} drawArray={drawArray} playerOneCards={playerOneCards} 
+            <Games playerWins={playerWins} isFlipped={isFlipped} setIsFlipped={setIsFlipped} drawArray={drawArray} playerOneCards={playerOneCards} 
             playerTwoCards={playerTwoCards} 
             setPlayerOneCards={setPlayerOneCards} 
             setPlayerTwoCards={setPlayerTwoCards} 

@@ -2,31 +2,38 @@ import React from 'react';
 import CardItem from './CardItem';
 import Player2CardItem from './Player2CardItem'
 
-const Games = ({ isFlipped, setIsFlipped, drawArray, cards, playerOneCards, playerTwoCards, setPlayerOneCards, setPlayerTwoCards, shuffleCards, playRound }) => {
+const Games = ({ playerWins, isFlipped, setIsFlipped, drawArray, cards, playerOneCards, playerTwoCards, setPlayerOneCards, setPlayerTwoCards, shuffleCards, playRound }) => {
 
     shuffleCards(cards)
 
     // const attributeSelection = 'smartest'
-    const handleFlipClick = () => {
-        setIsFlipped(true)
+    const handleFlipClick = (value) => {
+        // setTimeout(() => {
+            setIsFlipped(value)
+    // }, 2000);
     }
-
     const handleClick = (event) => {
-        const attributeSelection = event.target.id
-        console.log(attributeSelection)
-        const tempPlayerOneCards = [...playerOneCards]
-        const tempPlayerTwoCards = [...playerTwoCards]
-        handleFlipClick()
-        playRound(tempPlayerOneCards, tempPlayerTwoCards, attributeSelection)
-        setPlayerOneCards(tempPlayerOneCards)
-        setPlayerTwoCards(tempPlayerTwoCards)
-        return
-    };
+        setTimeout(() => {
+            handleFlipClick(true)
+        }, 2000);
 
-    // document.getElementById('root')
+        setTimeout(() => {
+            handleFlipClick(false)
+            const attributeSelection = event.target.id
+            console.log(attributeSelection)
+
+            const tempPlayerOneCards = [...playerOneCards]
+            const tempPlayerTwoCards = [...playerTwoCards]
+            playRound(tempPlayerOneCards, tempPlayerTwoCards, attributeSelection)
+            
+            setPlayerOneCards(tempPlayerOneCards)
+            setPlayerTwoCards(tempPlayerTwoCards)
+        
+        }, 4000)
+        };
 
     const cardItems1 = playerOneCards.map((card, index) => {
-        return <CardItem isFlipped={isFlipped} setIsFlipped={setIsFlipped} card={card} key={index} handleClick={handleClick} />
+        return <CardItem playerWins={playerWins} isFlipped={isFlipped} setIsFlipped={setIsFlipped} card={card} key={index} handleClick={handleClick} />
     })
     const cardItems2 = playerTwoCards.map((card, index) => {
         return <Player2CardItem isFlipped={isFlipped} setIsFlipped={setIsFlipped} card={card} key={index} />
