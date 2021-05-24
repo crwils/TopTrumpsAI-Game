@@ -44,11 +44,18 @@ function TopTrumpsBox(){
                 // return setPlayerTwoCards(tempVariables)
             }
         });
-        console.log('temporaryPlayerOne', temporaryPlayerOneCards)
-        console.log('temporaryPlayerTwo',temporaryPlayerTwoCards)
+        // console.log('temporaryPlayerOne', temporaryPlayerOneCards)
+        // console.log('temporaryPlayerTwo',temporaryPlayerTwoCards)
         setPlayerOneCards([...temporaryPlayerOneCards])
         setPlayerTwoCards([...temporaryPlayerTwoCards])
     }, [cards])
+
+    useEffect(() => {
+        if(!player1Turn){
+            decideHighestAttribute();
+            aiSelect(highestMostLovable, highestSmartest, highestFattest, highestBiggestNerd, highestGreatestAnarchist, highestWalkOfFame, playerTwoCards)
+        }
+    }, [playerOneCards, playerTwoCards, highestMostLovable, highestSmartest, highestFattest, highestBiggestNerd, highestGreatestAnarchist, highestWalkOfFame])
 
     // Decides which card is being picked DO NOT CHANGE!!!
     const indexNumber = 0; 
@@ -125,31 +132,62 @@ function TopTrumpsBox(){
         cards.map(card => {
             if(card.most_lovable > highestMostLovable){
                 highestMostLovable = card.most_lovable
-                console.log("Most Lovable", highestMostLovable)
+                // console.log("Most Lovable", highestMostLovable)
             }
             if(card.smartest > highestSmartest){
                 highestSmartest = card.smartest
-                console.log("Smartest", highestSmartest)
+                // console.log("Smartest", highestSmartest)
             }
             if(card.fattest > highestFattest){
                 highestFattest = card.fattest
-                console.log("Fattest", highestFattest)
+                // console.log("Fattest", highestFattest)
             }
             if(card.biggest_nerd > highestBiggestNerd){
                 highestBiggestNerd = card.biggest_nerd
-                console.log("Biggest Nerd", highestBiggestNerd)
+                // console.log("Biggest Nerd", highestBiggestNerd)
             }
             if(card.greatest_anarchist > highestGreatestAnarchist){
                 highestGreatestAnarchist = card.greatest_anarchist
-                console.log("Greatest Anarchist", highestGreatestAnarchist)
+                // console.log("Greatest Anarchist", highestGreatestAnarchist)
             }
             if(card.walk_of_fame > highestWalkOfFame){
                 highestWalkOfFame = card.walk_of_fame
-                console.log("Walk Of Fame", highestWalkOfFame)
+                // console.log("Walk Of Fame", highestWalkOfFame)
             }
+            
         })
         
     }
+
+    function aiSelect(highestMostLovable, highestSmartest, highestFattest, highestBiggestNerd, highestGreatestAnarchist, highestWalkOfFame, playerTwoCards){
+        const sortingArray = []
+        const mostLovableGap = highestMostLovable - playerTwoCards[0].most_lovable
+        sortingArray.push({name:"most_lovable", value:mostLovableGap})
+        const smartestGap = highestSmartest - playerTwoCards[0].smartest;
+        sortingArray.push({name:"smartest", value:smartestGap})
+        const fattestGap = highestFattest - playerTwoCards[0].fattest;
+        sortingArray.push({name:"fattest", value:fattestGap})
+        const biggestNerdGap = highestBiggestNerd - playerTwoCards[0].biggest_nerd;
+        sortingArray.push({name:"biggest_nerd", value:biggestNerdGap})
+        const greatestAnarchistGap = highestGreatestAnarchist - playerTwoCards[0].greatest_anarchist;
+        sortingArray.push({name:"greatest_anarchist", value:greatestAnarchistGap})
+        const walkOfFameGap = highestWalkOfFame - playerTwoCards[0].walk_of_fame;
+        sortingArray.push({name:"walk_of_fame", value:walkOfFameGap})
+
+
+        console.log('before sort', sortingArray)
+        sortingArray.sort(function(a, b) {
+            return parseFloat(a.value) - parseFloat(b.value);
+        })
+        const aiSelection = sortingArray[1]
+        console.log("player 2 turn:")
+        console.log("highest smartest", highestSmartest)
+        console.log('Computer smartest', playerTwoCards[0].smartest)
+        console.log("ai choice", aiSelection)
+        console.log('after sort', sortingArray)
+        
+    }
+
 
     return(
         
