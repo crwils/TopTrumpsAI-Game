@@ -1,6 +1,7 @@
 import React from 'react';
 import './card.css';
-import pp from './pp.jpg';
+// import './images';
+import pp from './images/pp.jpg';
 import './test.css';
 
 const CardItem = ({ card, handleClick }) => { 
@@ -16,7 +17,8 @@ const CardItem = ({ card, handleClick }) => {
                         <div className="card__face card__face--front">
                             <div className="card__content">
                                 <div className="card__header">
-                                    <img src={pp} alt="" className="pp" />
+                                    {/* <img src={pp} alt="" className="pp" /> */}
+                                    <img src={card.image} className="pp" alt="" />
                                     <h2>{card.name}</h2>
                                 </div>
                                 <div className="card__body">

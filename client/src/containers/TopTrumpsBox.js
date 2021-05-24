@@ -37,8 +37,7 @@ function TopTrumpsBox(){
                 // return setPlayerTwoCards(tempVariables)
             }
         });
-        // console.log('temporaryPlayerOne', temporaryPlayerOneCards)
-        // console.log('temporaryPlayerTwo',temporaryPlayerTwoCards)
+ 
         setPlayerOneCards([...temporaryPlayerOneCards])
         setPlayerTwoCards([...temporaryPlayerTwoCards])
         console.log('Player One Cards Before:', temporaryPlayerOneCards)
@@ -47,25 +46,13 @@ function TopTrumpsBox(){
 
     // Decides which card is being picked DO NOT CHANGE!!!
     const indexNumber = 0; 
-    
-    // let drawArray = []
 
-    // const checkDraw = (player1Array, player2Array) => {
-    //         drawArray.push(player1Array[0])
-    //         drawArray.push(player2Array[0])
-    //         player2Array.splice(indexNumber, 1)
-    //         player1Array.splice(indexNumber, 1)
-    // }
-    // value comparison and winner deciding function 
     function decideWinner(player1Array, player2Array, attribute){
         
         if (player1Array[0][attribute] === player2Array[0][attribute])  {
             
-            let tempDrawArray = [];
-
-            tempDrawArray.push(player1Array[0])
-            tempDrawArray.push(player2Array[0])
-            setDrawArray(...drawArray, tempDrawArray) // add new draw cards to existing draw array
+            setDrawArray(drawArray => [...drawArray, player1Array[0]]) // add new draw careds
+            setDrawArray(drawArray => [...drawArray, player2Array[0]]) // add new draw careds
 
             player2Array.splice(indexNumber, 1)
             player1Array.splice(indexNumber, 1)
@@ -75,30 +62,16 @@ function TopTrumpsBox(){
             player1Array.push(player2Array[0])
             player2Array.splice(indexNumber, 1)
             player1Array.splice(indexNumber, 1)
-            // player1Array = [...player1Array, ...drawArray]
             drawArray.forEach(card => {player1Array.push(card)})
             setDrawArray([])
-            // if (drawArray.length > 0) {
-            //     console.log(drawArray)
-            //     drawArray.map(card => {player1Array.push(card)})
-            //     // player1Array.push(...drawArray)
-            //     drawArray = []
-            // }
+
         } else if (player2Array[0][attribute] > player1Array[0][attribute]) {
             player2Array.push(player2Array[0])
             player2Array.push(player1Array[0])
             player1Array.splice(indexNumber, 1)
             player2Array.splice(indexNumber, 1)
-            // player2Array = [...player2Array, ...drawArray]
             drawArray.forEach(card => {player2Array.push(card)})
             setDrawArray([])
-            // if (drawArray.length > 0) {
-            //     console.log(drawArray)
-            //     // player2Array.push(...player2Array, drawArray)
-            //     drawArray.map(card => {player2Array.push(card)})
-            //     // player2Array.push(...drawArray)
-            //     drawArray = []
-            // }
         }
 
         console.log('player1ArrayAfter: ', player1Array)
@@ -109,14 +82,16 @@ function TopTrumpsBox(){
     function playRound(player1Array, player2Array, attribute){
         decideWinner(player1Array, player2Array, attribute)
         // ChangeRound()
-        if(player1Array.length === 0){
+        if(player1Array.length === 0 && player2Array.length === 0) {
             setPlayerWins(true)
-            setWhoWins('Player Two')
+            setWhoWins('It\'s a draw!')
+        }else if (player1Array.length === 0){
+            setPlayerWins(true)
+            setWhoWins('Player Two Wins!')
             return
-        }
-        if(player2Array.length === 0 ){
+        }else if(player2Array.length === 0){
             setPlayerWins(true)
-            setWhoWins('Player One')
+            setWhoWins('Player One Wins!')
             return
         }
     };
@@ -145,7 +120,7 @@ function TopTrumpsBox(){
     return(
         
         (playerWins ? 
-        <h1>{whoWins} has won </h1> :      
+        <h1>{whoWins}</h1> :      
         <div className="tt__box--header">
             <h1>Top Trumps Game!</h1>
             <HeaderComponent />
