@@ -18,6 +18,7 @@ function TopTrumpsBox(){
     const [whoWins, setWhoWins] = useState(null)
     const [player1Turn, setPlayer1Turn] = useState(true)
     const [roundCounter, setRoundCounter] = useState(0)
+    
 
     let highestMostLovable = 0;
     let highestSmartest = 0;
@@ -52,19 +53,15 @@ function TopTrumpsBox(){
     }, [cards])
 
     
-    if(!whoWins){
-
-        
-    }
     useEffect(() => {
         if(!whoWins){
             if(!player1Turn){
                 decideHighestAttribute();
                 // aiSelect(highestMostLovable, highestSmartest, highestFattest, highestBiggestNerd, highestGreatestAnarchist, highestWalkOfFame, playerTwoCards)
-                setTimeout(() => {handleComputerSelect(aiSelect(highestMostLovable, highestSmartest, highestFattest, highestBiggestNerd, highestGreatestAnarchist, highestWalkOfFame, playerTwoCards))}, 5000)
+                setTimeout(() => {handleComputerSelect(aiSelect(highestMostLovable, highestSmartest, highestFattest, highestBiggestNerd, highestGreatestAnarchist, highestWalkOfFame, playerTwoCards))}, 2000)
             }
         }
-    }, [playerOneCards, playerTwoCards])
+    }, [playerTwoCards])
 
     // Decides which card is being picked DO NOT CHANGE!!!
     const indexNumber = 0; 
