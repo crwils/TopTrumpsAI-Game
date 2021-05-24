@@ -120,8 +120,10 @@ function TopTrumpsBox(){
         }
     };
 
-    function reloadPage(){
-        window.location.reload()
+    function playAgainClick(){
+        // window.location.reload()
+        SimpsonsService.getCard()
+        .then(cards => setCards(cards))
     }
 
     return(
@@ -137,7 +139,7 @@ function TopTrumpsBox(){
         setPlayerTwoCards={setPlayerTwoCards} 
         cards={cards} shuffleCards={shuffleCards} 
         playRound={playRound}/>
-        <button onClick={reloadPage}>Play Again</button>
+        <button onClick={playAgainClick}>Play Again</button>
         <CreateCardComponent />
         </div> :        
         <div className="tt__box--header">
@@ -149,6 +151,7 @@ function TopTrumpsBox(){
             setPlayerTwoCards={setPlayerTwoCards} 
             cards={cards} shuffleCards={shuffleCards} 
             playRound={playRound}/>
+            <button onClick={playAgainClick}>Restart Game</button>
             <CreateCardComponent />
         </div>)
 
