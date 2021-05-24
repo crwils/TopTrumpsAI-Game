@@ -6,11 +6,18 @@ import './test.css';
 
 const CardItem = ({ card, handleClick }) => { 
     
+    const cardFlip = document.getElementById('card__inner')
+
+    const handleFlipClick = () => {
+        cardFlip.classList.toggle('is-flipped')
+    }
+    
+
     return (
         <>
             <div>
                 <div className="card">
-                    <div className="card__inner">
+                    <div id="card__inner">
                         <div className="card__face card__face--back">
                             <h2>Top Trumps</h2>
                         </div>
@@ -18,12 +25,12 @@ const CardItem = ({ card, handleClick }) => {
                             <div className="card__content">
                                 <div className="card__header">
                                     {/* <img src={pp} alt="" className="pp" /> */}
-                                    <img src={card.image} className="pp" alt="" />
+                                    <img src={pp} className="pp" alt="" />
                                     <h2>{card.name}</h2>
                                 </div>
                                 <div className="card__body">
                                     <div>
-                                        <p onClick={handleClick} id='most_lovable'>Most Lovable: </p>
+                                        <p onClick={handleFlipClick} id='most_lovable'>Most Lovable: </p>
                                         <p onClick={handleClick} id='smartest'>Smartest: </p>
                                         <p onClick={handleClick} id='fattest'>Fattest: </p>
                                         <p onClick={handleClick} id='biggest_nerd'>Biggest Nerd: </p>

@@ -57,6 +57,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 5px 5px 5px rgb(49, 49, 49);
 }
 
 .card__face--front h2 {
@@ -157,5 +158,19 @@ body {
 }
 
 .card-item {
-    padding: 50px;
+    padding: 30px;
+}
+
+.card-counters {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.player-1-card {
+    padding-right: 400px;
+}
+
+.player-2-card {
+    padding-right: 400px;
 }
