@@ -50,33 +50,43 @@ function TopTrumpsBox(){
         setPlayerTwoCards([...temporaryPlayerTwoCards])
     }, [cards])
 
+    
+    if(!whoWins){
+
+        
+    }
     useEffect(() => {
-        if(!player1Turn){
-            decideHighestAttribute();
-            aiSelect(highestMostLovable, highestSmartest, highestFattest, highestBiggestNerd, highestGreatestAnarchist, highestWalkOfFame, playerTwoCards)
+        if(!whoWins){
+            if(!player1Turn){
+                decideHighestAttribute();
+                // aiSelect(highestMostLovable, highestSmartest, highestFattest, highestBiggestNerd, highestGreatestAnarchist, highestWalkOfFame, playerTwoCards)
+                handleComputerSelect(aiSelect(highestMostLovable, highestSmartest, highestFattest, highestBiggestNerd, highestGreatestAnarchist, highestWalkOfFame, playerTwoCards))
+            }
         }
-    }, [playerOneCards, playerTwoCards, highestMostLovable, highestSmartest, highestFattest, highestBiggestNerd, highestGreatestAnarchist, highestWalkOfFame])
+    }, [playerOneCards, playerTwoCards])
 
     // Decides which card is being picked DO NOT CHANGE!!!
     const indexNumber = 0; 
 
     // value comparison and winner deciding function 
     function decideWinner(player1Array, player2Array, attribute){
-        if (player1Array[0][attribute] > player2Array[0][attribute]){
-            player1Array.push(player1Array[0])
-            player1Array.push(player2Array[0])
-            player2Array.splice(indexNumber, 1)
-            player1Array.splice(indexNumber, 1)
-            if(!player1Turn){
-                changeTurn()
-            }
-        }else{
-            player2Array.push(player2Array[0])
-            player2Array.push(player1Array[0])
-            player1Array.splice(indexNumber, 1)
-            player2Array.splice(indexNumber, 1)
-            if(player1Turn){
-                changeTurn()
+        if(player1Array[0] !== undefined && player2Array[0] !== undefined){
+            if (player1Array[0][attribute] > player2Array[0][attribute]){
+                player1Array.push(player1Array[0])
+                player1Array.push(player2Array[0])
+                player2Array.splice(indexNumber, 1)
+                player1Array.splice(indexNumber, 1)
+                if(!player1Turn){
+                    changeTurn()
+                }
+            }else{
+                player2Array.push(player2Array[0])
+                player2Array.push(player1Array[0])
+                player1Array.splice(indexNumber, 1)
+                player2Array.splice(indexNumber, 1)
+                if(player1Turn){
+                    changeTurn()
+                }
             }
         }
     };
@@ -175,18 +185,32 @@ function TopTrumpsBox(){
         sortingArray.push({name:"walk_of_fame", value:walkOfFameGap})
 
 
-        console.log('before sort', sortingArray)
+        // console.log('before sort', sortingArray)
         sortingArray.sort(function(a, b) {
             return parseFloat(a.value) - parseFloat(b.value);
         })
-        const aiSelection = sortingArray[1]
-        console.log("player 2 turn:")
-        console.log("highest smartest", highestSmartest)
-        console.log('Computer smartest', playerTwoCards[0].smartest)
-        console.log("ai choice", aiSelection)
-        console.log('after sort', sortingArray)
+        // const aiSelection = sortingArray[0]
+        // console.log("player 2 turn:")
+        // console.log("highest smartest", highestSmartest)
+        // console.log('Computer smartest', playerTwoCards[0].smartest)
+        // console.log("ai choice", aiSelection)
+        // console.log('after sort', sortingArray)
+        const aiSelection = sortingArray[0].name
+        console.log('aiSelection', aiSelection)
+        return aiSelection
         
     }
+
+    const handleComputerSelect = (attribute) =>{
+        const attributeSelection = attribute
+        console.log(attributeSelection)
+        const tempPlayerOneCards = [...playerOneCards]
+        const tempPlayerTwoCards = [...playerTwoCards]
+        playRound(tempPlayerOneCards, tempPlayerTwoCards, attributeSelection)
+        setPlayerOneCards(tempPlayerOneCards)
+        setPlayerTwoCards(tempPlayerTwoCards)
+        return
+    };
 
 
     return(
