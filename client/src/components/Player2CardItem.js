@@ -7,7 +7,7 @@ const Player2CardItem = ({ card, handleClick, isFlipped }) => {
     
     return (
 
-        (isFlipped ?
+        (!isFlipped ?
             <div>
                 <div className="card">
                     <div className="card__inner">

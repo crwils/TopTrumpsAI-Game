@@ -21,7 +21,6 @@ const Games = ({ isFlipped, setIsFlipped, drawArray, cards, playerOneCards, play
         setPlayerOneCards(tempPlayerOneCards)
         setPlayerTwoCards(tempPlayerTwoCards)
         return
-
     };
 
     // document.getElementById('root')

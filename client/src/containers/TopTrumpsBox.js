@@ -122,6 +122,7 @@ function TopTrumpsBox(){
         SimpsonsService.getCard()
         .then(cards => setCards(cards))
         setDrawArray([])
+        setIsFlipped(false)
     }
 
     return(
