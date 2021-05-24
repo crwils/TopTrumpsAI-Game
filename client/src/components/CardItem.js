@@ -5,7 +5,7 @@ import pp from './images/pp.jpg';
 import './test.css';
 
 const CardItem = ({ card, handleClick }) => { 
-
+    
     return (
         <>
             <div>

@@ -1,9 +1,8 @@
 import React, {useState, useEffect} from 'react';
 import Games from '../components/Games';
-import CardItem from '../components/CardItem'
 import CreateCardComponent from '../components/CreateCardComponent';
 import HeaderComponent from '../components/HeaderComponent';
-import SimpsonsService, {getCard} from '../services/GamesService';
+import SimpsonsService from '../services/GamesService';
 import './main-page.css';
 
 
@@ -12,7 +11,6 @@ function TopTrumpsBox(){
     const [playerOneCards, setPlayerOneCards] = useState([])
     const [playerTwoCards, setPlayerTwoCards] = useState([])
     const [playerWins, setPlayerWins] = useState(false)
-    const [whoWins, setWhoWins] = useState(null)
     const [drawArray, setDrawArray] = useState([])
     // const attributeSelection = 'smartest'
 
@@ -121,7 +119,6 @@ function TopTrumpsBox(){
     };
 
     function playAgainClick(){
-        // window.location.reload()
         SimpsonsService.getCard()
         .then(cards => setCards(cards))
     }
@@ -130,10 +127,9 @@ function TopTrumpsBox(){
         
         (playerWins ? 
         <div className="tt__box--header">
-        {/* <h1>{whoWins}</h1> */}
         <h1>Top Trumps Game!</h1>
         <HeaderComponent />
-        <Games playerWins={playerWins} playerOneCards={playerOneCards} 
+        <Games playerOneCards={playerOneCards} 
         playerTwoCards={playerTwoCards} 
         setPlayerOneCards={setPlayerOneCards} 
         setPlayerTwoCards={setPlayerTwoCards} 
@@ -145,7 +141,7 @@ function TopTrumpsBox(){
         <div className="tt__box--header">
             <h1>Top Trumps Game!</h1>
             <HeaderComponent />
-            <Games playerWins={playerWins} playerOneCards={playerOneCards} 
+            <Games playerOneCards={playerOneCards} 
             playerTwoCards={playerTwoCards} 
             setPlayerOneCards={setPlayerOneCards} 
             setPlayerTwoCards={setPlayerTwoCards} 
