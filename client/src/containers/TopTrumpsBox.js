@@ -120,6 +120,7 @@ function TopTrumpsBox(){
     function playAgainClick(){
         SimpsonsService.getCard()
         .then(cards => setCards(cards))
+        setDrawArray([])
     }
 
     return(
@@ -128,25 +129,29 @@ function TopTrumpsBox(){
         <div className="tt__box--header">
         <h1>Top Trumps Game!</h1>
         <HeaderComponent />
-        <Games playerOneCards={playerOneCards} 
+        <Games drawArray={drawArray} playerOneCards={playerOneCards} 
         playerTwoCards={playerTwoCards} 
         setPlayerOneCards={setPlayerOneCards} 
         setPlayerTwoCards={setPlayerTwoCards} 
         cards={cards} shuffleCards={shuffleCards} 
         playRound={playRound}/>
+        <div className="btn">
         <button onClick={playAgainClick}>Play Again</button>
+        </div>
         <CreateCardComponent />
         </div> :        
         <div className="tt__box--header">
             <h1>Top Trumps Game!</h1>
             <HeaderComponent />
-            <Games playerOneCards={playerOneCards} 
+            <Games drawArray={drawArray} playerOneCards={playerOneCards} 
             playerTwoCards={playerTwoCards} 
             setPlayerOneCards={setPlayerOneCards} 
             setPlayerTwoCards={setPlayerTwoCards} 
             cards={cards} shuffleCards={shuffleCards} 
             playRound={playRound}/>
+            <div className="btn">
             <button onClick={playAgainClick}>Restart Game</button>
+            </div>
             <CreateCardComponent />
         </div>)
 

@@ -8,3 +8,23 @@
     text-align: center;
 }
 
+.btn {
+    display: flex;
+    justify-content: center;
+}
+
+button:hover {
+    background-color: white;
+    color: #FE4880;
+  }
+  
+button {
+cursor: pointer; 
+color: white;
+background-color: #FE4880;
+overflow: hidden; 
+border-radius: 50px;
+padding: 10px;
+margin: 30px;
+font-weight: bolder;
+}
