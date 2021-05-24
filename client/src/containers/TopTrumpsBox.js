@@ -7,9 +7,6 @@ import SimpsonsService, {getCard} from '../services/GamesService';
 import './main-page.css';
 
 
-
-
-
 function TopTrumpsBox(){
     const [cards, setCards] = useState([]);
     const [playerOneCards, setPlayerOneCards] = useState([])
@@ -87,16 +84,16 @@ function TopTrumpsBox(){
         // ChangeRound()
         if(player1Array.length === 0 && player2Array.length === 0) {
             setPlayerWins(true)
-            // alert('It\'s a draw!')
+            alert('It\'s a draw!')
             // setWhoWins('It\'s a draw!')
         }else if (player1Array.length === 0){
             setPlayerWins(true)
-            // alert('Player Two Wins!')
+            alert('Player Two Wins!')
             // setWhoWins('Player Two Wins!')
             // return
         }else if(player2Array.length === 0){
             setPlayerWins(true)
-            // alert('Player One Wins!')
+            alert('Player One Wins!')
             // setWhoWins('Player One Wins!')
             // return
         }
@@ -123,6 +120,10 @@ function TopTrumpsBox(){
         }
     };
 
+    function reloadPage(){
+        window.location.reload()
+    }
+
     return(
         
         (playerWins ? 
@@ -136,6 +137,7 @@ function TopTrumpsBox(){
         setPlayerTwoCards={setPlayerTwoCards} 
         cards={cards} shuffleCards={shuffleCards} 
         playRound={playRound}/>
+        <button onClick={reloadPage}>Play Again</button>
         <CreateCardComponent />
         </div> :        
         <div className="tt__box--header">
