@@ -48,30 +48,33 @@ function TopTrumpsBox(){
     const indexNumber = 0; 
 
     function decideWinner(player1Array, player2Array, attribute){
-        
-        if (player1Array[0][attribute] === player2Array[0][attribute])  {
-            
-            setDrawArray(drawArray => [...drawArray, player1Array[0]]) // add new draw careds
-            setDrawArray(drawArray => [...drawArray, player2Array[0]]) // add new draw careds
+        if ((player1Array.length && player2Array.length) > 0) {
+            if (player1Array[0][attribute] === player2Array[0][attribute])  {
+                
+                setDrawArray(drawArray => [...drawArray, player1Array[0]]) // add new draw careds
+                setDrawArray(drawArray => [...drawArray, player2Array[0]]) // add new draw careds
 
-            player2Array.splice(indexNumber, 1)
-            player1Array.splice(indexNumber, 1)
+                player2Array.splice(indexNumber, 1)
+                player1Array.splice(indexNumber, 1)
 
-        } else if (player1Array[0][attribute] > player2Array[0][attribute]){
-            player1Array.push(player1Array[0])
-            player1Array.push(player2Array[0])
-            player2Array.splice(indexNumber, 1)
-            player1Array.splice(indexNumber, 1)
-            drawArray.forEach(card => {player1Array.push(card)})
-            setDrawArray([])
+            } else if (player1Array[0][attribute] > player2Array[0][attribute]){
+                player1Array.push(player1Array[0])
+                player1Array.push(player2Array[0])
+                player2Array.splice(indexNumber, 1)
+                player1Array.splice(indexNumber, 1)
+                drawArray.forEach(card => {player1Array.push(card)})
+                setDrawArray([])
 
-        } else if (player2Array[0][attribute] > player1Array[0][attribute]) {
-            player2Array.push(player2Array[0])
-            player2Array.push(player1Array[0])
-            player1Array.splice(indexNumber, 1)
-            player2Array.splice(indexNumber, 1)
-            drawArray.forEach(card => {player2Array.push(card)})
-            setDrawArray([])
+            } else if (player2Array[0][attribute] > player1Array[0][attribute]) {
+                player2Array.push(player2Array[0])
+                player2Array.push(player1Array[0])
+                player1Array.splice(indexNumber, 1)
+                player2Array.splice(indexNumber, 1)
+                drawArray.forEach(card => {player2Array.push(card)})
+                setDrawArray([])
+            }
+        } else {
+            return alert("Game is over!")
         }
 
         console.log('player1ArrayAfter: ', player1Array)

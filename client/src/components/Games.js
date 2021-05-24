@@ -8,7 +8,7 @@ const Games = ({playerWins, cards, playerOneCards, playerTwoCards, setPlayerOneC
     // const attributeSelection = 'smartest'
 
     const handleClick = (event, playerWins) =>{
-        // if (playerWins === false) {
+        // if (!playerWins) {
         const attributeSelection = event.target.id
         console.log(attributeSelection)
         const tempPlayerOneCards = [...playerOneCards]
@@ -17,8 +17,9 @@ const Games = ({playerWins, cards, playerOneCards, playerTwoCards, setPlayerOneC
         setPlayerOneCards(tempPlayerOneCards)
         setPlayerTwoCards(tempPlayerTwoCards)
         return
-        // } else if (playerWins === true) {
-        //     alert('Game is over!')
+        
+        // if (playerWins) {
+        //    return alert('Game is over!')
         // }
         
     };
