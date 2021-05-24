@@ -65,7 +65,7 @@ function TopTrumpsBox(){
 
             tempDrawArray.push(player1Array[0])
             tempDrawArray.push(player2Array[0])
-            setDrawArray(...drawArray, tempDrawArray) // add new draw careds
+            setDrawArray(...drawArray, tempDrawArray) // add new draw cards to existing draw array
 
             player2Array.splice(indexNumber, 1)
             player1Array.splice(indexNumber, 1)
