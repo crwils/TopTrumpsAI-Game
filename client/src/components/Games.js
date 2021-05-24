@@ -1,13 +1,14 @@
 import React from 'react';
 import CardItem from './CardItem';
 
-const Cards = ({cards, playerOneCards, playerTwoCards, setPlayerOneCards, setPlayerTwoCards, shuffleCards, playRound}) => {
+const Games = ({playerWins, cards, playerOneCards, playerTwoCards, setPlayerOneCards, setPlayerTwoCards, shuffleCards, playRound}) => {
 
     shuffleCards(cards)
 
     // const attributeSelection = 'smartest'
 
-    const handleClick = (event) =>{
+    const handleClick = (event, playerWins) =>{
+        // if (playerWins === false) {
         const attributeSelection = event.target.id
         console.log(attributeSelection)
         const tempPlayerOneCards = [...playerOneCards]
@@ -16,6 +17,10 @@ const Cards = ({cards, playerOneCards, playerTwoCards, setPlayerOneCards, setPla
         setPlayerOneCards(tempPlayerOneCards)
         setPlayerTwoCards(tempPlayerTwoCards)
         return
+        // } else if (playerWins === true) {
+        //     alert('Game is over!')
+        // }
+        
     };
 
     const cardItems1 = playerOneCards.map((card, index) => {
@@ -41,4 +46,4 @@ const Cards = ({cards, playerOneCards, playerTwoCards, setPlayerOneCards, setPla
 
 
 
-export default Cards;
+export default Games;

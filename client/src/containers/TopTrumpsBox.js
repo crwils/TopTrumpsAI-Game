@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import Cards from '../components/Games';
+import Games from '../components/Games';
 import CardItem from '../components/CardItem'
 import CreateCardComponent from '../components/CreateCardComponent';
 import HeaderComponent from '../components/HeaderComponent';
@@ -84,15 +84,18 @@ function TopTrumpsBox(){
         // ChangeRound()
         if(player1Array.length === 0 && player2Array.length === 0) {
             setPlayerWins(true)
-            setWhoWins('It\'s a draw!')
+            // alert('It\'s a draw!')
+            // setWhoWins('It\'s a draw!')
         }else if (player1Array.length === 0){
             setPlayerWins(true)
-            setWhoWins('Player Two Wins!')
-            return
+            // alert('Player Two Wins!')
+            // setWhoWins('Player Two Wins!')
+            // return
         }else if(player2Array.length === 0){
             setPlayerWins(true)
-            setWhoWins('Player One Wins!')
-            return
+            // alert('Player One Wins!')
+            // setWhoWins('Player One Wins!')
+            // return
         }
     };
 
@@ -120,11 +123,22 @@ function TopTrumpsBox(){
     return(
         
         (playerWins ? 
-        <h1>{whoWins}</h1> :      
+        <div className="tt__box--header">
+        {/* <h1>{whoWins}</h1> */}
+        <h1>Top Trumps Game!</h1>
+        <HeaderComponent />
+        <Games playerWins={playerWins} playerOneCards={playerOneCards} 
+        playerTwoCards={playerTwoCards} 
+        setPlayerOneCards={setPlayerOneCards} 
+        setPlayerTwoCards={setPlayerTwoCards} 
+        cards={cards} shuffleCards={shuffleCards} 
+        playRound={playRound}/>
+        <CreateCardComponent />
+        </div> :        
         <div className="tt__box--header">
             <h1>Top Trumps Game!</h1>
             <HeaderComponent />
-            <Cards playerOneCards={playerOneCards} 
+            <Games playerWins={playerWins} playerOneCards={playerOneCards} 
             playerTwoCards={playerTwoCards} 
             setPlayerOneCards={setPlayerOneCards} 
             setPlayerTwoCards={setPlayerTwoCards} 
