@@ -17,6 +17,7 @@ function TopTrumpsBox(){
     const [playerWins, setPlayerWins] = useState(false)
     const [whoWins, setWhoWins] = useState(null)
     const [player1Turn, setPlayer1Turn] = useState(true)
+    const [roundCounter, setRoundCounter] = useState(0)
 
     let highestMostLovable = 0;
     let highestSmartest = 0;
@@ -60,7 +61,7 @@ function TopTrumpsBox(){
             if(!player1Turn){
                 decideHighestAttribute();
                 // aiSelect(highestMostLovable, highestSmartest, highestFattest, highestBiggestNerd, highestGreatestAnarchist, highestWalkOfFame, playerTwoCards)
-                handleComputerSelect(aiSelect(highestMostLovable, highestSmartest, highestFattest, highestBiggestNerd, highestGreatestAnarchist, highestWalkOfFame, playerTwoCards))
+                setTimeout(() => {handleComputerSelect(aiSelect(highestMostLovable, highestSmartest, highestFattest, highestBiggestNerd, highestGreatestAnarchist, highestWalkOfFame, playerTwoCards))}, 5000)
             }
         }
     }, [playerOneCards, playerTwoCards])
@@ -92,6 +93,10 @@ function TopTrumpsBox(){
     };
 
     function playRound(player1Array, player2Array, attribute){
+        let temporaryCounterVariable = roundCounter
+        temporaryCounterVariable += 1
+        setRoundCounter(temporaryCounterVariable)
+        console.log('roundCounter', roundCounter)
         decideWinner(player1Array, player2Array, attribute)
         // ChangeRound()
         if(player1Array.length === 0){
@@ -206,7 +211,7 @@ function TopTrumpsBox(){
         console.log(attributeSelection)
         const tempPlayerOneCards = [...playerOneCards]
         const tempPlayerTwoCards = [...playerTwoCards]
-        playRound(tempPlayerOneCards, tempPlayerTwoCards, attributeSelection)
+        setTimeout(playRound(tempPlayerOneCards, tempPlayerTwoCards, attributeSelection), 5000)
         setPlayerOneCards(tempPlayerOneCards)
         setPlayerTwoCards(tempPlayerTwoCards)
         return
