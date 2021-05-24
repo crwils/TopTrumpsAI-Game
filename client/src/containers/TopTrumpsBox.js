@@ -5,7 +5,6 @@ import HeaderComponent from '../components/HeaderComponent';
 import SimpsonsService from '../services/GamesService';
 import './main-page.css';
 
-
 function TopTrumpsBox(){
     const [cards, setCards] = useState([]);
     const [playerOneCards, setPlayerOneCards] = useState([])
