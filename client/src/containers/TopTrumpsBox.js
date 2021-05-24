@@ -11,6 +11,7 @@ function TopTrumpsBox(){
     const [playerTwoCards, setPlayerTwoCards] = useState([])
     const [playerWins, setPlayerWins] = useState(false)
     const [drawArray, setDrawArray] = useState([])
+    const [isFlipped, setIsFlipped] = useState(false);
     // const attributeSelection = 'smartest'
 
     useEffect (() => {
@@ -129,7 +130,7 @@ function TopTrumpsBox(){
         <div className="tt__box--header">
         <h1>Top Trumps Game!</h1>
         <HeaderComponent />
-        <Games drawArray={drawArray} playerOneCards={playerOneCards} 
+        <Games isFlipped={isFlipped} setIsFlipped={setIsFlipped} drawArray={drawArray} playerOneCards={playerOneCards} 
         playerTwoCards={playerTwoCards} 
         setPlayerOneCards={setPlayerOneCards} 
         setPlayerTwoCards={setPlayerTwoCards} 
@@ -143,7 +144,7 @@ function TopTrumpsBox(){
         <div className="tt__box--header">
             <h1>Top Trumps Game!</h1>
             <HeaderComponent />
-            <Games drawArray={drawArray} playerOneCards={playerOneCards} 
+            <Games isFlipped={isFlipped} setIsFlipped={setIsFlipped} drawArray={drawArray} playerOneCards={playerOneCards} 
             playerTwoCards={playerTwoCards} 
             setPlayerOneCards={setPlayerOneCards} 
             setPlayerTwoCards={setPlayerTwoCards} 
