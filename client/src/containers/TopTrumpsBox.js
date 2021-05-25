@@ -16,6 +16,7 @@ function TopTrumpsBox(){
     const [drawArray, setDrawArray] = useState([])
     const [isFlipped, setIsFlipped] = useState(false)
     const [chosenAttribute, setChosenAttribute] = useState(null)
+    const [aiDifficulty, setAiDifficulty] = useState(2)
 
     
 
@@ -27,7 +28,7 @@ function TopTrumpsBox(){
     let highestWalkOfFame = 0;
     
     // const aiDifficulty = Math.floor(Math.random() * 2)
-    const aiDifficulty = 1
+   
     // console.log(aiDifficulty)
     // const attributeSelection = 'smartest'
 
@@ -286,6 +287,11 @@ function TopTrumpsBox(){
         }, 6000)
     };
 
+    function chooseDifficulty(event){
+        setAiDifficulty(event.target.value)
+        console.log(aiDifficulty)
+    }
+
 
     
 
@@ -315,8 +321,15 @@ function TopTrumpsBox(){
             setPlayerTwoCards={setPlayerTwoCards} 
             cards={cards} shuffleCards={shuffleCards} 
             playRound={playRound} handleFlipClick={handleFlipClick} roundCounter={roundCounter} player1Turn= {player1Turn} chosenAttribute={chosenAttribute} setChosenAttribute={setChosenAttribute}/>
-            <div className="btn">
-            <button onClick={playAgainClick}>Restart Game</button>
+        <div>   
+            <select defaultValue="" onChange={chooseDifficulty}>
+                <option value={2}>Easy</option>    
+                <option value={1}>Moderate</option>    
+                <option value={0}>Hard</option>    
+            </select> 
+        </div>         
+            <div className="btn">  
+                <button onClick={playAgainClick}>Restart Game</button>
             </div>
             <CreateCardComponent />
         </div>)
