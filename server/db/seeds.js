@@ -29,109 +29,121 @@ db.simpsons.insertMany ([
         most_lovable: 74,
         smartest: 74,
         fattest: 64, 
-        biggest_nerd: 80,
+        biggest_nerd: 60,
         greatest_anarchist: 48,
-        walk_of_fame: 70
+        walk_of_fame: 10,
+        image: "/server/db/images/skinner.jpeg"
     },
     { 
         name: "Groundskeeper Willie",
-        most_lovable: 62,
+        most_lovable: 74,
         smartest: 48,
         fattest: 70, 
         biggest_nerd: 66,
         greatest_anarchist: 80,
-        walk_of_fame: 64
+        walk_of_fame: 10,
+        image: "/server/db/images/willie.jpeg"
     },
-    // { 
-    //     name: "Milhouse Van Houten",
-    //     most_lovable: 78,
-    //     smartest: 84,
-    //     fattest: 74, 
-    //     biggest_nerd: 88,
-    //     greatest_anarchist: 68,
-    //     walk_of_fame: 62
-    // },
-    // {
-    //     name: "Santa's Little Helper",
-    //     most_lovable: 96,
-    //     smartest: 44,
-    //     fattest: 42, 
-    //     biggest_nerd: 60,
-    //     greatest_anarchist: 50,
-    //     walk_of_fame: 66
-    // },
-    // {
-    //     name: "Krusty the Clown",
-    //     most_lovable: 70,
-    //     smartest: 86,
-    //     fattest: 92, 
-    //     biggest_nerd: 54,
-    //     greatest_anarchist: 86,
-    //     walk_of_fame: 78
-    // },
-    // {
-    //     name: "Martin",
-    //     most_lovable: 80,
-    //     smartest: 80,
-    //     fattest: 90, 
-    //     biggest_nerd: 70,
-    //     greatest_anarchist: 72,
-    //     walk_of_fame: 52
-    // },
-    // {
-    //     name: "Patty & Selma Bouvier",
-    //     most_lovable: 50,
-    //     smartest: 90,
-    //     fattest: 86, 
-    //     biggest_nerd: 50,
-    //     greatest_anarchist: 92,
-    //     walk_of_fame: 88
-    // },
-    // {
-    //     name: "Sherri and Terri",
-    //     most_lovable: 54,
-    //     smartest: 82,
-    //     fattest: 58, 
-    //     biggest_nerd: 76,
-    //     greatest_anarchist: 66,
-    //     walk_of_fame: 58
-    // },
-    // {
-    //     name: "Itchy & Scratchy",
-    //     most_lovable: 72,
-    //     smartest: 52,
-    //     fattest: 60, 
-    //     biggest_nerd: 56,
-    //     greatest_anarchist: 84,
-    //     walk_of_fame: 76
-    // },
-    // {
-    //     name: "Maggie Simpson",
-    //     most_lovable: 100,
-    //     smartest: 540,
-    //     fattest: 46, 
-    //     biggest_nerd: 74,
-    //     greatest_anarchist: 60,
-    //     walk_of_fame: 92
-    // },
-    // {
-    //     name: "Snowball II",
-    //     most_lovable: 88,
-    //     smartest: 42,
-    //     fattest: 52, 
-    //     biggest_nerd: 58,
-    //     greatest_anarchist: 52,
-    //     walk_of_fame: 56
-    // },
-    // {
-    //     name: "Homer Simpson",
-    //     most_lovable: 92,
-    //     smartest: 76,
-    //     fattest: 94, 
-    //     biggest_nerd: 48,
-    //     greatest_anarchist: 94,
-    //     walk_of_fame: 98
-    // },
+    { 
+        name: "Milhouse Van Houten",
+        most_lovable: 78,
+        smartest: 48,
+        fattest: 74, 
+        biggest_nerd: 88,
+        greatest_anarchist: 68,
+        walk_of_fame: 10,
+        image: "/server/db/images/milhouse.jpeg"
+    },
+    {
+        name: "Santa's Little Helper",
+        most_lovable: 96,
+        smartest: 44,
+        fattest: 74, 
+        biggest_nerd: 60,
+        greatest_anarchist: 50,
+        walk_of_fame: 10,
+        image: "/server/db/images/santaslittlehelper.jpeg"
+    },
+    {
+        name: "Krusty the Clown",
+        most_lovable: 70,
+        smartest: 86,
+        fattest: 92, 
+        biggest_nerd: 54,
+        greatest_anarchist: 86,
+        walk_of_fame: 10,
+        image: "/server/db/images/krusty.jpeg"
+    },
+    {
+        name: "Martin",
+        most_lovable: 80,
+        smartest: 80,
+        fattest: 90, 
+        biggest_nerd: 70,
+        greatest_anarchist: 72,
+        walk_of_fame: 10,
+        image: "/server/db/images/martin.jpeg"    
+    },
+    {
+        name: "Patty & Selma Bouvier",
+        most_lovable: 50,
+        smartest: 90,
+        fattest: 86, 
+        biggest_nerd: 50,
+        greatest_anarchist: 92,
+        walk_of_fame: 88,
+        image: "/server/db/images/patty&selma.jpeg"
+    },
+    {
+        name: "Sherri and Terri",
+        most_lovable: 54,
+        smartest: 82,
+        fattest: 58, 
+        biggest_nerd: 76,
+        greatest_anarchist: 66,
+        walk_of_fame: 58,
+        image: "/server/db/images/sherri&terri.jpeg"
+    },
+    {
+        name: "Itchy & Scratchy",
+        most_lovable: 72,
+        smartest: 52,
+        fattest: 60, 
+        biggest_nerd: 56,
+        greatest_anarchist: 84,
+        walk_of_fame: 76,
+        image: "/server/db/images/itchy&scratchy.jpeg"
+    },
+    {
+        name: "Maggie Simpson",
+        most_lovable: 100,
+        smartest: 540,
+        fattest: 46, 
+        biggest_nerd: 74,
+        greatest_anarchist: 60,
+        walk_of_fame: 92,
+        image: "/server/db/images/maggie.jpeg"
+    },
+    {
+        name: "Snowball II",
+        most_lovable: 88,
+        smartest: 42,
+        fattest: 52, 
+        biggest_nerd: 58,
+        greatest_anarchist: 52,
+        walk_of_fame: 56,
+        image: "/server/db/images/snowball.jpeg"
+    },
+    {
+        name: "Homer Simpson",
+        most_lovable: 92,
+        smartest: 76,
+        fattest: 94, 
+        biggest_nerd: 48,
+        greatest_anarchist: 94,
+        walk_of_fame: 98,
+        image: "/server/db/images/homer.jpeg"
+    },
     // {
     //     name: "Nelson Muntz",
     //     most_lovable: 32,
@@ -139,7 +151,8 @@ db.simpsons.insertMany ([
     //     fattest: 67, 
     //     biggest_nerd: 89,
     //     greatest_anarchist: 56,
-    //     walk_of_fame: 39
+    //     walk_of_fame: 39,
+    //     image: "/server/db/images/nelson.jpeg"
     // },
     // {
     //     name: "Apu Nahasapeemapetilon",
@@ -148,7 +161,8 @@ db.simpsons.insertMany ([
     //     fattest: 78, 
     //     biggest_nerd: 52,
     //     greatest_anarchist: 88,
-    //     walk_of_fame: 68
+    //     walk_of_fame: 68,
+    //     image: "/server/db/images/apu.jpeg"
     // },
     // {
     //     name: "Abraham 'Grampa' Simpson",
@@ -157,7 +171,8 @@ db.simpsons.insertMany ([
     //     fattest: 66, 
     //     biggest_nerd: 76,
     //     greatest_anarchist: 78,
-    //     walk_of_fame: 86
+    //     walk_of_fame: 86,
+    //     image: "/server/db/images/grampa.jpeg"
     // },
     // {
     //     name: "C. Montgomery Burns",
@@ -166,7 +181,8 @@ db.simpsons.insertMany ([
     //     fattest: 40, 
     //     biggest_nerd: 78,
     //     greatest_anarchist: 90,
-    //     walk_of_fame: 84
+    //     walk_of_fame: 84,
+    //     image: "/server/db/images/burns.jpeg"
     // },
     // {
     //     name: "Moe Szyslak",
@@ -175,7 +191,8 @@ db.simpsons.insertMany ([
     //     fattest: 44, 
     //     biggest_nerd: 72,
     //     greatest_anarchist: 82,
-    //     walk_of_fame: 82
+    //     walk_of_fame: 82,
+    //     image: "/server/db/images/moe.jpeg"
     // },
     // {
     //     name: "Todd & Rod Flanders",
@@ -184,7 +201,8 @@ db.simpsons.insertMany ([
     //     fattest: 80, 
     //     biggest_nerd: 96,
     //     greatest_anarchist: 44,
-    //     walk_of_fame: 48
+    //     walk_of_fame: 48,
+    //     image: "/server/db/images/todd&rod.jpeg"
     // },
     // {
     //     name: "Marge Simpson",
@@ -193,7 +211,8 @@ db.simpsons.insertMany ([
     //     fattest: 68, 
     //     biggest_nerd: 46,
     //     greatest_anarchist: 62,
-    //     walk_of_fame: 90
+    //     walk_of_fame: 90,
+    //     image: "/server/db/images/marge.jpeg"
     // },
     // {
     //     name: "Otto",
@@ -202,7 +221,8 @@ db.simpsons.insertMany ([
     //     fattest: 62, 
     //     biggest_nerd: 84,
     //     greatest_anarchist: 76,
-    //     walk_of_fame: 60
+    //     walk_of_fame: 60,
+    //     image: "/server/db/images/otto.jpeg"
     // },
     // {
     //     name: "Edna Krabappel",
@@ -211,7 +231,8 @@ db.simpsons.insertMany ([
     //     fattest: 56, 
     //     biggest_nerd: 62,
     //     greatest_anarchist: 60,
-    //     walk_of_fame: 44
+    //     walk_of_fame: 44,
+    //     image: "/server/db/images/edna.jpeg"
     // },
     // {
     //     name: "Barney Gumble",
@@ -220,7 +241,8 @@ db.simpsons.insertMany ([
     //     fattest: 96, 
     //     biggest_nerd: 86,
     //     greatest_anarchist: 74,
-    //     walk_of_fame: 80
+    //     walk_of_fame: 80,
+    //     image: "/server/db/images/barney.jpeg"
     // },
     // {
     //     name: "Lenny & Carl",
@@ -229,7 +251,8 @@ db.simpsons.insertMany ([
     //     fattest: 54, 
     //     biggest_nerd: 94,
     //     greatest_anarchist: 56,
-    //     walk_of_fame: 54
+    //     walk_of_fame: 54,
+    //     image: "/server/db/images/lenny&carl.jpeg"
     // },
     // {
     //     name: "Bart Simpson",
@@ -238,7 +261,8 @@ db.simpsons.insertMany ([
     //     fattest: 50, 
     //     biggest_nerd: 44,
     //     greatest_anarchist: 98,
-    //     walk_of_fame: 96
+    //     walk_of_fame: 96,
+    //     image: "/server/db/images/bart.jpeg"
     // },
     // {
     //     name: "Lisa Simpson",
@@ -247,7 +271,8 @@ db.simpsons.insertMany ([
     //     fattest: 48, 
     //     biggest_nerd: 42,
     //     greatest_anarchist: 96,
-    //     walk_of_fame: 94
+    //     walk_of_fame: 94,
+    //     image: "/server/db/images/lisa.jpeg"
     // },
     // {
     //     name: "Sideshow Bob",
@@ -256,7 +281,8 @@ db.simpsons.insertMany ([
     //     fattest: 76, 
     //     biggest_nerd: 90,
     //     greatest_anarchist: 54,
-    //     walk_of_fame: 40
+    //     walk_of_fame: 40,
+    //     image: "/server/db/images/sideshowbob.jpeg"
     // },
     // {
     //     name: "Dr. Julius Hibbert",
@@ -265,7 +291,8 @@ db.simpsons.insertMany ([
     //     fattest: 88, 
     //     biggest_nerd: 64,
     //     greatest_anarchist: 64,
-    //     walk_of_fame: 46
+    //     walk_of_fame: 46,
+    //     image: "/server/db/images/drhibbert.jpeg"
     // },
     // {
     //     name: "Chief Wiggum",
@@ -274,7 +301,8 @@ db.simpsons.insertMany ([
     //     fattest: 98, 
     //     biggest_nerd: 82,
     //     greatest_anarchist: 46,
-    //     walk_of_fame: 72
+    //     walk_of_fame: 72,
+    //     image: "/server/db/images/chief.jpeg"
     // },
     // {
     //     name: "Ned Flanders",
@@ -283,7 +311,8 @@ db.simpsons.insertMany ([
     //     fattest: 84, 
     //     biggest_nerd: 98,
     //     greatest_anarchist: 62,
-    //     walk_of_fame: 74
+    //     walk_of_fame: 74,
+    //     image: "/server/db/images/ned.jpeg"
     // },
     // {
     //     name: "Waylon Smithers",
@@ -292,6 +321,7 @@ db.simpsons.insertMany ([
     //     fattest: 83, 
     //     biggest_nerd: 92,
     //     greatest_anarchist: 58,
-    //     walk_of_fame: 42
+    //     walk_of_fame: 42,
+    //     image: "/server/db/images/waylon.jpeg"
     // },
 ]);

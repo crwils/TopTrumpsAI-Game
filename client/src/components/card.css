@@ -1,5 +1,14 @@
+p {
+    cursor: pointer;
+}
+
 p:hover{
     background-color: #F3F3F3;
+}
+
+p:active{
+    color: rgb(0, 255, 21);
+    cursor: pointer;
 }
 
 :root {
@@ -12,6 +21,7 @@ p:hover{
 * {
     margin: 0;
     padding: 0;
+    justify-content: center;
 }
 
 body {
@@ -56,6 +66,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-shadow: 5px 5px 5px rgb(49, 49, 49);
 }
 
 .card__face--front h2 {
@@ -156,5 +167,19 @@ body {
 }
 
 .card-item {
-    padding: 50px;
+    padding: 30px;
+}
+
+.card-counters {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.player-1-card {
+    padding-right: 400px;
+}
+
+.player-2-card {
+    padding-right: 400px;
 }

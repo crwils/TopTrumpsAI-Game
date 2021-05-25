@@ -1,14 +1,9 @@
 import React, {useState, useEffect} from 'react';
-import Cards from '../components/Games';
-import CardItem from '../components/CardItem'
+import Games from '../components/Games';
 import CreateCardComponent from '../components/CreateCardComponent';
 import HeaderComponent from '../components/HeaderComponent';
-import SimpsonsService, {getCard} from '../services/GamesService';
+import SimpsonsService from '../services/GamesService';
 import './main-page.css';
-
-
-// hello
-
 
 function TopTrumpsBox(){
     const [cards, setCards] = useState([]);
@@ -18,6 +13,8 @@ function TopTrumpsBox(){
     const [whoWins, setWhoWins] = useState(null)
     const [player1Turn, setPlayer1Turn] = useState(true)
     const [roundCounter, setRoundCounter] = useState(0)
+    const [drawArray, setDrawArray] = useState([])
+    const [isFlipped, setIsFlipped] = useState(false);
     
 
     let highestMostLovable = 0;
@@ -27,6 +24,8 @@ function TopTrumpsBox(){
     let highestGreatestAnarchist = 0;
     let highestWalkOfFame = 0;
     
+    
+    // const attributeSelection = 'smartest'
 
     useEffect (() => {
         SimpsonsService.getCard()
@@ -36,7 +35,7 @@ function TopTrumpsBox(){
     useEffect(() => {
         const temporaryPlayerOneCards = [];
         const temporaryPlayerTwoCards = [];
-        decideHighestAttribute();
+        // decideHighestAttribute(); READD FOR AI
         cards.map((card, index) => {
             if(index === 0 || index%2 === 0){
                 temporaryPlayerOneCards.push(card)
@@ -46,48 +45,76 @@ function TopTrumpsBox(){
                 // return setPlayerTwoCards(tempVariables)
             }
         });
-        // console.log('temporaryPlayerOne', temporaryPlayerOneCards)
-        // console.log('temporaryPlayerTwo',temporaryPlayerTwoCards)
+ 
         setPlayerOneCards([...temporaryPlayerOneCards])
         setPlayerTwoCards([...temporaryPlayerTwoCards])
     }, [cards])
 
     // AI use effect 
-    useEffect(() => {
-        if(!whoWins){
-            if(!player1Turn){
-                decideHighestAttribute();
-                // aiSelect(highestMostLovable, highestSmartest, highestFattest, highestBiggestNerd, highestGreatestAnarchist, highestWalkOfFame, playerTwoCards)
-                setTimeout(() => {handleComputerSelect(aiSelect(highestMostLovable, highestSmartest, highestFattest, highestBiggestNerd, highestGreatestAnarchist, highestWalkOfFame, playerTwoCards))}, 2000)
-            }
-        }
-    }, [playerTwoCards])
+    // useEffect(() => {
+    //     if(!whoWins){
+    //         if(!player1Turn){
+    //             decideHighestAttribute();
+    //             // aiSelect(highestMostLovable, highestSmartest, highestFattest, highestBiggestNerd, highestGreatestAnarchist, highestWalkOfFame, playerTwoCards)
+    //             setTimeout(() => {handleComputerSelect(aiSelect(highestMostLovable, highestSmartest, highestFattest, highestBiggestNerd, highestGreatestAnarchist, highestWalkOfFame, playerTwoCards))}, 2000)
+    //         }
+    //     }
+    // }, [playerTwoCards])
 
     // Decides which card is being picked DO NOT CHANGE!!!
     const indexNumber = 0; 
 
-    // value comparison and winner deciding function 
     function decideWinner(player1Array, player2Array, attribute){
-        if(player1Array[0] !== undefined && player2Array[0] !== undefined){
-            if (player1Array[0][attribute] > player2Array[0][attribute]){
-                player1Array.push(player1Array[0])
-                player1Array.push(player2Array[0])
-                player2Array.splice(indexNumber, 1)
-                player1Array.splice(indexNumber, 1)
-                if(!player1Turn){
-                    changeTurn()
-                }
-            }else{
-                player2Array.push(player2Array[0])
-                player2Array.push(player1Array[0])
-                player1Array.splice(indexNumber, 1)
-                player2Array.splice(indexNumber, 1)
-                if(player1Turn){
-                    changeTurn()
-                }
-            }
+        // needs to be factored in
+        // if(player1Array[0] !== undefined && player2Array[0] !== undefined){ NEED TO BE IN FOR AI
+
+            if ((player1Array.length && player2Array.length) > 0) {
+                if (player1Array[0][attribute] === player2Array[0][attribute])  {
+                    
+                    setDrawArray(drawArray => [...drawArray, player1Array[0]]) // add new draw careds
+                    setDrawArray(drawArray => [...drawArray, player2Array[0]]) // add new draw careds
+
+                    player2Array.splice(indexNumber, 1)
+                    player1Array.splice(indexNumber, 1)
+
+                } else if (player1Array[0][attribute] > player2Array[0][attribute]){
+                    player1Array.push(player1Array[0])
+                    player1Array.push(player2Array[0])
+                    player2Array.splice(indexNumber, 1)
+                    player1Array.splice(indexNumber, 1)
+                    drawArray.forEach(card => {player1Array.push(card)})
+                    setDrawArray([])
+                    // if(!player1Turn){
+                    //     changeTurn()
+                    // }
+                    }else if (player2Array[0][attribute] > player1Array[0][attribute]) {
+                        player2Array.push(player2Array[0])
+                        player2Array.push(player1Array[0])
+                        player1Array.splice(indexNumber, 1)
+                        player2Array.splice(indexNumber, 1)
+                        drawArray.forEach(card => {player2Array.push(card)})
+                        setDrawArray([])
+                        // if(player1Turn){
+                        //     changeTurn()
+                        // }
+                        }else {
+                            return alert("Game is over!")
+                        }}
+                        // not sure if below is needed
+                        console.log('player1ArrayAfter: ', player1Array)
+                        console.log('player2ArrayAfter: ', player2Array)
+                        console.log('drawArrayAfter', drawArray)
+            // }
         }
-    };
+    // };
+                    
+               
+            
+                
+            
+        
+
+        
 
     function playRound(player1Array, player2Array, attribute){
         let temporaryCounterVariable = roundCounter
@@ -96,17 +123,22 @@ function TopTrumpsBox(){
         console.log('roundCounter', roundCounter)
         decideWinner(player1Array, player2Array, attribute)
         // ChangeRound()
-        if(player1Array.length === 0){
+        if(player1Array.length === 0 && player2Array.length === 0) {
             setPlayerWins(true)
-            setWhoWins('Player Two')
-            return
-        }
-        if(player2Array.length === 0 ){
+            alert('It\'s a draw!')
+            // setWhoWins('It\'s a draw!')
+        }else if (player1Array.length === 0){
             setPlayerWins(true)
-            setWhoWins('Player One')
-            return
-        }
-    };
+            alert('Player Two Wins!')
+            // setWhoWins('Player Two Wins!')
+            // return
+        }else if(player2Array.length === 0){
+            setPlayerWins(true)
+            alert('Player One Wins!')
+            // setWhoWins('Player One Wins!')
+            // return
+        }}
+    // };
 
     function shuffleCards(cardArray){
         if(cardArray.length !==0){
@@ -128,6 +160,14 @@ function TopTrumpsBox(){
             return
         }
     };
+
+    function playAgainClick(){
+    SimpsonsService.getCard()
+    .then(cards => setCards(cards))
+    setDrawArray([])
+    setIsFlipped(false)
+    setPlayerWins(false)
+    }
 
     // AI Below
     function changeTurn(){
@@ -215,19 +255,37 @@ function TopTrumpsBox(){
     };
 
 
+    
+
     return(
         
         (playerWins ? 
-        <h1>{whoWins} has won </h1> :      
+        <div className="tt__box--header">
+        <h1>Top Trumps Game!</h1>
+        <HeaderComponent />
+        <Games playerWins={playerWins} isFlipped={isFlipped} setIsFlipped={setIsFlipped} drawArray={drawArray} playerOneCards={playerOneCards} 
+        playerTwoCards={playerTwoCards} 
+        setPlayerOneCards={setPlayerOneCards} 
+        setPlayerTwoCards={setPlayerTwoCards} 
+        cards={cards} shuffleCards={shuffleCards} 
+        playRound={playRound}/>
+        <div className="btn">
+        <button onClick={playAgainClick}>Play Again</button>
+        </div>
+        <CreateCardComponent />
+        </div> :        
         <div className="tt__box--header">
             <h1>Top Trumps Game!</h1>
             <HeaderComponent />
-            <Cards playerOneCards={playerOneCards} 
+            <Games playerWins={playerWins} isFlipped={isFlipped} setIsFlipped={setIsFlipped} drawArray={drawArray} playerOneCards={playerOneCards} 
             playerTwoCards={playerTwoCards} 
             setPlayerOneCards={setPlayerOneCards} 
             setPlayerTwoCards={setPlayerTwoCards} 
             cards={cards} shuffleCards={shuffleCards} 
             playRound={playRound}/>
+            <div className="btn">
+            <button onClick={playAgainClick}>Restart Game</button>
+            </div>
             <CreateCardComponent />
         </div>)
 
