@@ -1,7 +1,8 @@
 import React from 'react';
 import './card.css';
 import pp from './images/pp.jpg';
-import './test.css';
+import simpsons from './images/simpsonslogo.png';
+// import './test.css';
 
 const Player2CardItem = ({ card, handleClick, isFlipped, flip, setFlip }) => { 
     
@@ -15,6 +16,7 @@ const Player2CardItem = ({ card, handleClick, isFlipped, flip, setFlip }) => {
                     onAnimationEnd={() => setFlip(0)}>
                         <div className="card__face card__face--front">
                             <h2>Top Trumps</h2>
+                            {/* <img src={simpsons} alt="" /> */}
                         </div>
                         <div className="card__face card__face--back">
                             <div className="card__content">

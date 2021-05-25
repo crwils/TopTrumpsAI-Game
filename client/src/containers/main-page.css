@@ -1,5 +1,5 @@
 .tt__box--header {
-    padding-top: 20px;
+    padding-top: 30px;
     background-color: darkslategray;
     color: white;
 }
@@ -19,12 +19,12 @@ button:hover {
   }
   
 button {
-cursor: pointer; 
-color: white;
-background-color: #FE4880;
-overflow: hidden; 
-border-radius: 50px;
-padding: 10px;
-margin: 30px;
-font-weight: bolder;
+    cursor: pointer; 
+    color: white;
+    background-color: #FE4880;
+    overflow: hidden; 
+    border-radius: 50px;
+    padding: 10px;
+    margin: 30px;
+    font-weight: bolder;
 }

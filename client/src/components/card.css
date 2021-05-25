@@ -56,7 +56,7 @@ body {
         transform: rotateY(180deg);
     }
     /* 50% {
-        transform: rotate3d(1, 1, 1, 45deg)
+        transform: rotate3d(1, 1, 1, 180deg)
     } */
     60% {
         transform: rotateY(180deg);
@@ -101,7 +101,7 @@ body {
 
 .card__header {
     position: relative;
-    padding: 30px 30px 40px;
+    padding: 50px 30px 40px;
 }
 
 .card__header:after {
@@ -137,6 +137,7 @@ body {
 }
 
 .card__body {
+    background-color: var(--light);
     padding: 30px;
     display: flex;
     justify-content: space-between;

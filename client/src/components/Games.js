@@ -12,10 +12,10 @@ const Games = ({ flip, setFlip, playerWins, isFlipped, setIsFlipped, drawArray, 
     // }
     const handleClick = (event) => {
 
-        setTimeout(() => {
+        // setTimeout(() => {
             setFlip(1)
             // handleFlipClick(true)
-        }, 2000);
+        // }, 2000);
 
         setTimeout(() => {
             // setFlip(2)

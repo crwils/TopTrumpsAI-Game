@@ -1,21 +1,22 @@
 import React, { useState } from 'react';
 import './card.css';
 import pp from './images/pp.jpg';
-import './test.css';
+import simpsons from './images/simpsonslogo.png';
+// import './test.css';
 
 const CardItem = ({ playerWins, card, handleClick, handleClick2, isFlipped, setIsFlipped }) => {
 
 
 
     return (
-        (!playerWins ?
         <div>
             <div className="card">
-                <div id="card__inner">
+                <div className="card__inner">
                     <div className="card__face card__face--back">
                         <h2>Top Trumps</h2>
+                        {/* <img src={simpsons} alt="" /> */}
                     </div>
-                    <div className="card__face card__face--front">
+                    <div className="card__face card__face--">
                         <div className="card__content">
                             <div className="card__header">
                                 <img src={pp} className="pp" alt="" />
@@ -43,10 +44,8 @@ const CardItem = ({ playerWins, card, handleClick, handleClick2, isFlipped, setI
                     </div>
                 </div>
             </div>
-
-            <script src="main.js"> </script>
         </div>
-        : null)
+     
     )
 };
 
