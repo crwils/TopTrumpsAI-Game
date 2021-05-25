@@ -2,7 +2,7 @@ import React from 'react';
 import CardItem from './CardItem';
 import Player2CardItem from './Player2CardItem'
 
-const Games = ({ playerWins, isFlipped, setIsFlipped, drawArray, cards, playerOneCards, playerTwoCards, setPlayerOneCards, setPlayerTwoCards, shuffleCards, playRound, handleFlipClick}) => {
+const Games = ({ flip, setFlip, playerWins, isFlipped, setIsFlipped, drawArray, cards, playerOneCards, playerTwoCards, setPlayerOneCards, setPlayerTwoCards, shuffleCards, playRound, handleFlipClick}) => {
 
     shuffleCards(cards)
 
@@ -11,12 +11,15 @@ const Games = ({ playerWins, isFlipped, setIsFlipped, drawArray, cards, playerOn
     //         setIsFlipped(value)
     // }
     const handleClick = (event) => {
+
         setTimeout(() => {
-            handleFlipClick(true)
+            setFlip(1)
+            // handleFlipClick(true)
         }, 2000);
 
         setTimeout(() => {
-            handleFlipClick(false)
+            // setFlip(2)
+            // handleFlipClick(false)
             const attributeSelection = event.target.id
             console.log(attributeSelection)
 
@@ -27,14 +30,14 @@ const Games = ({ playerWins, isFlipped, setIsFlipped, drawArray, cards, playerOn
             setPlayerOneCards(tempPlayerOneCards)
             setPlayerTwoCards(tempPlayerTwoCards)
         
-        }, 6000)
+        }, 7000)
         };
 
     const cardItems1 = playerOneCards.map((card, index) => {
         return <CardItem playerWins={playerWins} isFlipped={isFlipped} setIsFlipped={setIsFlipped} card={card} key={index} handleClick={handleClick} />
     })
     const cardItems2 = playerTwoCards.map((card, index) => {
-        return <Player2CardItem isFlipped={isFlipped} setIsFlipped={setIsFlipped} card={card} key={index} />
+        return <Player2CardItem flip={flip} setFlip={setFlip} isFlipped={isFlipped} setIsFlipped={setIsFlipped} card={card} key={index} />
     })
 
     const numberOfCards = (array) => {

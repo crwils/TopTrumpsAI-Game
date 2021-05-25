@@ -15,6 +15,7 @@ function TopTrumpsBox(){
     const [roundCounter, setRoundCounter] = useState(0)
     const [drawArray, setDrawArray] = useState([])
     const [isFlipped, setIsFlipped] = useState(false);
+    const [flip, setFlip] = useState(0)
     
 
     let highestMostLovable = 0;
@@ -247,11 +248,12 @@ function TopTrumpsBox(){
 
     const handleComputerSelect = (attribute) =>{
         setTimeout(() => {
-            handleFlipClick(true)
+            // handleFlipClick(true)
+            setFlip(1)
         }, 2000);
 
         setTimeout(() => {
-        handleFlipClick(false)
+            // handleFlipClick(false)
             const attributeSelection = attribute
             console.log(attributeSelection)
             const tempPlayerOneCards = [...playerOneCards]
@@ -272,7 +274,7 @@ function TopTrumpsBox(){
         <div className="tt__box--header">
         <h1>Top Trumps Game!</h1>
         <HeaderComponent />
-        <Games playerWins={playerWins} isFlipped={isFlipped} setIsFlipped={setIsFlipped} drawArray={drawArray} playerOneCards={playerOneCards} 
+        <Games flip={flip} setFlip={setFlip} playerWins={playerWins} isFlipped={isFlipped} setIsFlipped={setIsFlipped} drawArray={drawArray} playerOneCards={playerOneCards} 
         playerTwoCards={playerTwoCards} 
         setPlayerOneCards={setPlayerOneCards} 
         setPlayerTwoCards={setPlayerTwoCards} 
@@ -286,7 +288,7 @@ function TopTrumpsBox(){
         <div className="tt__box--header">
             <h1>Top Trumps Game!</h1>
             <HeaderComponent />
-            <Games playerWins={playerWins} isFlipped={isFlipped} setIsFlipped={setIsFlipped} drawArray={drawArray} playerOneCards={playerOneCards} 
+            <Games flip={flip} setFlip={setFlip} playerWins={playerWins} isFlipped={isFlipped} setIsFlipped={setIsFlipped} drawArray={drawArray} playerOneCards={playerOneCards} 
             playerTwoCards={playerTwoCards} 
             setPlayerOneCards={setPlayerOneCards} 
             setPlayerTwoCards={setPlayerTwoCards} 

@@ -46,8 +46,21 @@ body {
     position: relative;
 }
 
-.card__inner.is-flipped {
-    transform: rotateY(180deg);
+.card__inner[flip='1'] {
+    /* transform: rotateY(180deg); */
+    animation: flip 5s 1;
+}
+
+@keyframes flip {
+    40% {
+        transform: rotateY(180deg);
+    }
+    /* 50% {
+        transform: rotate3d(1, 1, 1, 45deg)
+    } */
+    60% {
+        transform: rotateY(180deg);
+    }
 }
 
 .card__face {
