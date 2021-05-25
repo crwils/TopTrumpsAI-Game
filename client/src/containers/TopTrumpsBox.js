@@ -17,7 +17,6 @@ function TopTrumpsBox(){
     const [isFlipped, setIsFlipped] = useState(false);
     const [flip, setFlip] = useState(0)
     
-
     let highestMostLovable = 0;
     let highestSmartest = 0;
     let highestFattest = 0;
@@ -124,16 +123,16 @@ function TopTrumpsBox(){
         if(player1Array.length === 0 && player2Array.length === 0) {
             setPlayerWins(true)
             alert('It\'s a draw!')
-            // setWhoWins('It\'s a draw!')
+            // setWhoWins('Draw')
         }else if (player1Array.length === 0){
             setPlayerWins(true)
             alert('Player Two Wins!')
-            // setWhoWins('Player Two Wins!')
+            // setWhoWins('Player Two')
             // return
         }else if(player2Array.length === 0){
             setPlayerWins(true)
             alert('Player One Wins!')
-            // setWhoWins('Player One Wins!')
+            // setWhoWins('Player One')
             // return
         }}
     // };

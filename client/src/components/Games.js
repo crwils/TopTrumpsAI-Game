@@ -2,7 +2,7 @@ import React from 'react';
 import CardItem from './CardItem';
 import Player2CardItem from './Player2CardItem'
 
-const Games = ({ flip, setFlip, playerWins, isFlipped, setIsFlipped, drawArray, cards, playerOneCards, playerTwoCards, setPlayerOneCards, setPlayerTwoCards, shuffleCards, playRound, handleFlipClick}) => {
+const Games = ({ spin, flip, setFlip, playerWins, isFlipped, setIsFlipped, drawArray, cards, playerOneCards, playerTwoCards, setPlayerOneCards, setPlayerTwoCards, shuffleCards, playRound, handleFlipClick}) => {
 
     shuffleCards(cards)
 
@@ -30,7 +30,7 @@ const Games = ({ flip, setFlip, playerWins, isFlipped, setIsFlipped, drawArray, 
             setPlayerOneCards(tempPlayerOneCards)
             setPlayerTwoCards(tempPlayerTwoCards)
         
-        }, 7000)
+        }, 4000)
         };
 
     const cardItems1 = playerOneCards.map((card, index) => {

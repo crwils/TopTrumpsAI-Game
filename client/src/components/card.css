@@ -167,9 +167,9 @@ body {
 }
 
 .card__display {
-    display: flex;
-    flex-direction: row;
-}
+    /* /* display: flex;
+    flex-direction: row; */
+} 
 
 .card__details__flex {
     display: flex;

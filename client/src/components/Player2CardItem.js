@@ -4,14 +4,13 @@ import pp from './images/pp.jpg';
 import simpsons from './images/simpsonslogo.png';
 // import './test.css';
 
-const Player2CardItem = ({ card, handleClick, isFlipped, flip, setFlip }) => { 
+const Player2CardItem = ({ card, handleClick, isFlipped, flip, setFlip}) => { 
     
     return (
 
                 <div className="card">
                     <div 
                     className="card__inner"
-                    // onClick={() => setFlip(1)}
                     flip={flip}
                     onAnimationEnd={() => setFlip(0)}>
                         <div className="card__face card__face--front">
