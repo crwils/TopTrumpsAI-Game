@@ -15,7 +15,7 @@ const Player2CardItem = ({ card, handleClick, isFlipped }) => {
                             <h2>Top Trumps</h2>
                         </div>
                     </div>
-                </div>
+                </div> 
             </div>
             :
             <div className="card">
