@@ -35,7 +35,7 @@ function TopTrumpsBox(){
     useEffect(() => {
         const temporaryPlayerOneCards = [];
         const temporaryPlayerTwoCards = [];
-        // decideHighestAttribute(); READD FOR AI
+        decideHighestAttribute(); 
         cards.map((card, index) => {
             if(index === 0 || index%2 === 0){
                 temporaryPlayerOneCards.push(card)
@@ -65,8 +65,7 @@ function TopTrumpsBox(){
     const indexNumber = 0; 
 
     function decideWinner(player1Array, player2Array, attribute){
-        // needs to be factored in
-        // if(player1Array[0] !== undefined && player2Array[0] !== undefined){ NEED TO BE IN FOR AI
+        if(player1Array[0] !== undefined && player2Array[0] !== undefined){ 
 
             if ((player1Array.length && player2Array.length) > 0) {
                 if (player1Array[0][attribute] === player2Array[0][attribute])  {
@@ -100,11 +99,8 @@ function TopTrumpsBox(){
                         }else {
                             return alert("Game is over!")
                         }}
-                        // not sure if below is needed
-                        // console.log('player1ArrayAfter: ', player1Array)
-                        // console.log('player2ArrayAfter: ', player2Array)
-                        // console.log('drawArrayAfter', drawArray)
-            // }
+
+            }
         }
     // };
                     
