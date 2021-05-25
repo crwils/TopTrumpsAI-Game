@@ -51,10 +51,10 @@ const Games = ({ playerWins, isFlipped, setIsFlipped, drawArray, cards, playerOn
         };
 
     const cardItems1 = playerOneCards.map((card, index) => {
-        return <CardItem playerWins={playerWins} isFlipped={isFlipped} setIsFlipped={setIsFlipped} card={card} key={index} handleClick={handleClick} />
+        return <CardItem playerWins={playerWins} isFlipped={isFlipped} setIsFlipped={setIsFlipped} card={card} key={index} handleClick={handleClick} chosenAttribute={chosenAttribute}/>
     })
     const cardItems2 = playerTwoCards.map((card, index) => {
-        return <Player2CardItem isFlipped={isFlipped} setIsFlipped={setIsFlipped} card={card} key={index} />
+        return <Player2CardItem isFlipped={isFlipped} setIsFlipped={setIsFlipped} card={card} key={index} chosenAttribute={chosenAttribute}/>
     })
 
     const numberOfCards = (array) => {

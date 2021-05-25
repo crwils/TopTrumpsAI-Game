@@ -16,6 +16,7 @@ function TopTrumpsBox(){
     const [drawArray, setDrawArray] = useState([])
     const [isFlipped, setIsFlipped] = useState(false)
     const [chosenAttribute, setChosenAttribute] = useState(null)
+
     
 
     let highestMostLovable = 0;
@@ -62,6 +63,7 @@ function TopTrumpsBox(){
                 setTimeout(() => {handleComputerSelect(aiSelect(highestMostLovable, highestSmartest, highestFattest, highestBiggestNerd, highestGreatestAnarchist, highestWalkOfFame, playerTwoCards))}, 1000)
             }
         }
+    
     }, [playerTwoCards])
 
     // Decides which card is being picked DO NOT CHANGE!!!
@@ -106,14 +108,7 @@ function TopTrumpsBox(){
             }
         }
     // };
-                    
-               
-            
-                
-            
-        
 
-        
 
     function playRound(player1Array, player2Array, attribute){
         setChosenAttribute(null)
