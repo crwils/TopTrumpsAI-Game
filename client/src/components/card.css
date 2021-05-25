@@ -87,6 +87,11 @@ body {
     font-size: 32px;
 }
 
+.card__logo {
+    width: auto;
+    height: 100px;
+}
+
 .card__face--back {
     /* background-color: var(--light);  */
     transform: rotateY(180deg);

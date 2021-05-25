@@ -14,8 +14,8 @@ const Player2CardItem = ({ card, handleClick, isFlipped, flip, setFlip, chosenAt
                     flip={flip}
                     onAnimationEnd={() => setFlip(0)}>
                         <div className="card__face card__face--front">
-                            <h2>Top Trumps</h2>
-                            {/* <img src={simpsons} alt="" /> */}
+                            {/* <h2>Top Trumps</h2> */}
+                            <img className="card__logo" src={simpsons} alt="" />
                         </div>
                         <div className="card__face card__face--back">
                             <div className="card__content">
