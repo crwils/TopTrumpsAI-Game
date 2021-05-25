@@ -183,3 +183,8 @@ body {
 .player-2-card {
     padding-right: 400px;
 }
+
+.round{
+    margin-top: 6%;
+    text-align: center;
+}

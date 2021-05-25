@@ -2,7 +2,7 @@ import React from 'react';
 import CardItem from './CardItem';
 import Player2CardItem from './Player2CardItem'
 
-const Games = ({ playerWins, isFlipped, setIsFlipped, drawArray, cards, playerOneCards, playerTwoCards, setPlayerOneCards, setPlayerTwoCards, shuffleCards, playRound, handleFlipClick}) => {
+const Games = ({ playerWins, isFlipped, setIsFlipped, drawArray, cards, playerOneCards, playerTwoCards, setPlayerOneCards, setPlayerTwoCards, shuffleCards, playRound, handleFlipClick, roundCounter}) => {
 
     shuffleCards(cards)
 
@@ -47,6 +47,10 @@ const Games = ({ playerWins, isFlipped, setIsFlipped, drawArray, cards, playerOn
                 <div className="card-item">
                     <h1>Player One</h1>
                     <b className="player-1-card">{cardItems1[0]}</b>
+                </div>
+                <div className="round">
+                    <h1>Round</h1>
+                    <h2>{roundCounter}</h2>
                 </div>
                 <div className="card-item" id="flip_card">
                     <h1>Player Two</h1>

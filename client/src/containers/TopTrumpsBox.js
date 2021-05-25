@@ -291,7 +291,7 @@ function TopTrumpsBox(){
             setPlayerOneCards={setPlayerOneCards} 
             setPlayerTwoCards={setPlayerTwoCards} 
             cards={cards} shuffleCards={shuffleCards} 
-            playRound={playRound} handleFlipClick={handleFlipClick}/>
+            playRound={playRound} handleFlipClick={handleFlipClick} roundCounter={roundCounter}/>
             <div className="btn">
             <button onClick={playAgainClick}>Restart Game</button>
             </div>
