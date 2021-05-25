@@ -52,7 +52,7 @@ function TopTrumpsBox(){
         setPlayerTwoCards([...temporaryPlayerTwoCards])
     }, [cards])
 
-    AI use effect 
+    // AI use effect 
     useEffect(() => {
         if(!whoWins){
             if(!player1Turn){
