@@ -14,7 +14,8 @@ function TopTrumpsBox(){
     const [player1Turn, setPlayer1Turn] = useState(true)
     const [roundCounter, setRoundCounter] = useState(0)
     const [drawArray, setDrawArray] = useState([])
-    const [isFlipped, setIsFlipped] = useState(false);
+    const [isFlipped, setIsFlipped] = useState(false)
+    const [chosenAttribute, setChosenAttribute] = useState(null)
     
 
     let highestMostLovable = 0;
@@ -24,7 +25,8 @@ function TopTrumpsBox(){
     let highestGreatestAnarchist = 0;
     let highestWalkOfFame = 0;
     
-    const aiDifficulty = Math.floor(Math.random() * 2)
+    // const aiDifficulty = Math.floor(Math.random() * 2)
+    const aiDifficulty = 1
     // console.log(aiDifficulty)
     // const attributeSelection = 'smartest'
 
@@ -114,6 +116,7 @@ function TopTrumpsBox(){
         
 
     function playRound(player1Array, player2Array, attribute){
+        setChosenAttribute(null)
         let temporaryCounterVariable = roundCounter
         temporaryCounterVariable += 1
         setRoundCounter(temporaryCounterVariable)
@@ -158,13 +161,35 @@ function TopTrumpsBox(){
         }
     };
 
+    function databaseAttributeTranslator(attribute){
+        if(attribute === 'most_lovable'){
+            return 'Most Lovable'
+        }else if(attribute === 'smartest'){
+            return 'Smartest'
+        }else if(attribute === 'fattest'){
+            return 'Fattest'
+        }else if(attribute === 'biggest_nerd'){
+            return 'Biggest Nerd'
+        }else if(attribute === 'greatest_anarchist'){
+            return 'Greatest Anarchist'
+        }else if(attribute === 'walk_of_fame'){
+            return 'Walk Of Fame'
+        }else{
+            return null
+        }
+    }
+    
+    
+
     function playAgainClick(){
-    SimpsonsService.getCard()
-    .then(cards => setCards(cards))
-    setDrawArray([])
-    setIsFlipped(false)
-    setPlayerWins(false)
-    setPlayer1Turn(true)
+        SimpsonsService.getCard()
+        .then(cards => setCards(cards))
+        setDrawArray([])
+        setIsFlipped(false)
+        setPlayerWins(false)
+        setPlayer1Turn(true)
+        setChosenAttribute(null)
+        setRoundCounter(0)
     }
 
     const handleFlipClick = (value) => {
@@ -175,8 +200,10 @@ function TopTrumpsBox(){
     function changeTurn(){
         if(player1Turn){
             setPlayer1Turn(false)
+            setChosenAttribute(null)
         } else {
             setPlayer1Turn(true)
+            setChosenAttribute(null)
         }
         return
     }
@@ -246,14 +273,15 @@ function TopTrumpsBox(){
     }
 
     const handleComputerSelect = (attribute) =>{
+        const attributeSelection = attribute
+        console.log(attributeSelection)
+        setChosenAttribute(databaseAttributeTranslator(attributeSelection))
         setTimeout(() => {
             handleFlipClick(true)
         }, 2000);
 
         setTimeout(() => {
         handleFlipClick(false)
-            const attributeSelection = attribute
-            console.log(attributeSelection)
             const tempPlayerOneCards = [...playerOneCards]
             const tempPlayerTwoCards = [...playerTwoCards]
             playRound(tempPlayerOneCards, tempPlayerTwoCards, attributeSelection)
@@ -277,7 +305,7 @@ function TopTrumpsBox(){
         setPlayerOneCards={setPlayerOneCards} 
         setPlayerTwoCards={setPlayerTwoCards} 
         cards={cards} shuffleCards={shuffleCards} 
-        playRound={playRound}/>
+        playRound={playRound} databaseAttributeTranslator={databaseAttributeTranslator}/>
         <div className="btn">
         <button onClick={playAgainClick}>Play Again</button>
         </div>
@@ -291,7 +319,7 @@ function TopTrumpsBox(){
             setPlayerOneCards={setPlayerOneCards} 
             setPlayerTwoCards={setPlayerTwoCards} 
             cards={cards} shuffleCards={shuffleCards} 
-            playRound={playRound} handleFlipClick={handleFlipClick} roundCounter={roundCounter}/>
+            playRound={playRound} handleFlipClick={handleFlipClick} roundCounter={roundCounter} player1Turn= {player1Turn} chosenAttribute={chosenAttribute} setChosenAttribute={setChosenAttribute}/>
             <div className="btn">
             <button onClick={playAgainClick}>Restart Game</button>
             </div>
@@ -302,3 +330,4 @@ function TopTrumpsBox(){
 };
 
 export default TopTrumpsBox;
+

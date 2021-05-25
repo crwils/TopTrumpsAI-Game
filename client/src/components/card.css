@@ -193,3 +193,7 @@ body {
     border-radius: 25px;
     background-color: black;
 }
+
+#selected-card{
+    text-align: center;
+}
