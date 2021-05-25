@@ -1,9 +1,16 @@
 import React from 'react';
+import ttlogo from './images/ttlogo.png';
+import homerthumbsup from './images/homerthumbsup.png';
 
-function HeaderComponent(){
+function HeaderComponent() {
 
-    return(
-        <h1> </h1>
+    return (
+        <header className="tt__box--header">
+            <img src={ttlogo} alt="" />
+            <div className="homer-item">
+                  <img src={homerthumbsup} alt="" />
+            </div>
+        </header>
     );
 
 };

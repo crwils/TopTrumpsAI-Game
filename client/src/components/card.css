@@ -22,6 +22,7 @@ p:active{
     margin: 0;
     padding: 0;
     justify-content: center;
+    color: white;
 }
 
 body {
@@ -31,10 +32,11 @@ body {
 }
 
 .card {
-    margin: 100px auto 0;
+    margin: 10px auto 0;
     width: 300px;
     height: 400px;
     perspective: 1000px;
+    padding-top: 10px;
 }
 
 .card__inner {
@@ -88,8 +90,9 @@ body {
 }
 
 .card__logo {
-    width: auto;
-    height: 100px;
+    width: 200px;
+    max-width: 100%;
+    height: auto;
 }
 
 .card__face--back {
@@ -125,6 +128,7 @@ body {
 .pp {
     display: block;
     width: 90px;
+    max-width: 100%;
     height: 90px;
     margin: 0 auto 30px;
     border-radius: 50%;
@@ -171,46 +175,81 @@ body {
     padding: 0 30px;
 }
 
-.card__display {
-    /* /* display: flex;
-    flex-direction: row; */
-} 
-
 .card__details__flex {
     display: flex;
 }
 
 .card-box {
     display: flex;
-    justify-content:center;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    /* padding-top: 20px; */
+    width: 100%;
+    height: 100%;
+    position: relative;
 }
 
-.card-item {
-    padding: 30px;
+.homer-item {
+    /* width:100%; */
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    bottom:0;
+}
+
+.homer-item img {
+    height: auto;
+    width: 250px;
+    position: relative;
+    display: block;
 }
 
 .card-counters {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    padding-top: 15px;
 }
 
-.player-1-card {
-    padding-right: 400px;
+.card-counters b {
+    color: #212121;
+}
+
+.card-counters h3 {
+    color: #212121;
+}
+
+.card-item {
+    padding-right: 50px;
+    padding-left: 50px;
+}
+
+
+/* .player-1-card {
+    padding-right: 10%;
+    max-width: 100%;
 }
 
 .player-2-card {
-    padding-right: 400px;
-}
+    padding-right: 10%;
+    max-width: 100%;
+} */
 
 .round{
-    margin-top: 6%;
+    /* margin-top: 6%; */
+    justify-content: center;
     text-align: center;
-    border: solid white;
+    border: solid white 4px;
+    margin-left: 20px;
+    margin-right: 20px;
     height:10%;
-    padding: 0.5%;
+    min-width: 100px;
+    width: 100px;
+    padding-bottom: 0.5%;
+    padding-top: 0.5%;
     border-radius: 25px;
-    background-color: #fe4880;
+    background-color: hotpink;
 }
 
 #selected-card{
@@ -218,11 +257,19 @@ body {
 }
 
 .most-lovable-background-colour {
-    /* border: 3px solid black; */
-    border-left: 4px solid greenyellow;
-    border-right: 4px solid greenyellow;
+    /* border: 3px solid #FE4880; */
+    background-color: hotpink
+    /* border-left: 4px solid greenyellow;
+    border-right: 4px solid greenyellow; */
 }
 
-.no-background-colour{
-    
+.games-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.player-choice-block {
+    padding: 30px;
 }

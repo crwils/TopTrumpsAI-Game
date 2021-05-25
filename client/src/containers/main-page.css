@@ -1,11 +1,35 @@
 .tt__box--header {
-    padding-top: 30px;
-    background-color: darkslategray;
-    color: white;
+    display: flex;
+    /* background-color:#000000; */
+    justify-content: center;
+    padding: 30px 0;
+}
+
+.tt__box--header img {
+    width: 200px;
+    height: auto;
 }
 
 .tt__box--header h1 {
     text-align: center;
+}
+
+h1 { 
+    text-align: center;
+}
+
+.home-page {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .btn {
@@ -13,18 +37,37 @@
     justify-content: center;
 }
 
-button:hover {
+
+.home-start-button {
+    cursor: pointer;
+    height: 400px;
+    width: auto;
+}
+
+
+
+.main-page-button.span { position: relative; }
+
+.main-page-button.pressed { 
+    padding-top: 3px;
+    transform: translateY(4px);
+    box-shadow: 0 4px 0 rgb(183,0,0),
+      0 8px 6px rgba(0,0,0,.45);
+  }
+
+.play-button:hover {
     background-color: white;
-    color: #FE4880;
+    color: hotpink;
 }
   
-button {
+.play-button {
     cursor: pointer; 
+    border: solid white 3px;
     color: white;
-    background-color: #FE4880;
+    background-color: hotpink;
     overflow: hidden; 
-    border-radius: 50px;
+    border-radius: 20px;
     padding: 10px;
-    margin: 30px;
+    /* margin: 30px; */
     font-weight: bolder;
 }

@@ -1,5 +1,5 @@
 import React, {useState, useEffect, Fragment} from 'react';
-import './App.css';
+import ttlogo from './components/images/ttlogo.png';
 import TopTrumpsBox from './containers/TopTrumpsBox';
 
 
@@ -14,7 +14,16 @@ function App() {
 
   return (
     <>
-          {gameStarted ? <TopTrumpsBox /> : <button onClick={handleStartGameButtonClick}>Start Game</button>}
+          {gameStarted ? <TopTrumpsBox /> 
+          : 
+          
+          <main className="home-page">
+            <img className="home-start-button" onClick={handleStartGameButtonClick} src={ttlogo} alt="" />
+          
+            {/* <div className="home-page-div">
+            <button className="main-page-button" onClick={handleStartGameButtonClick}><span>Start Game</span></button>
+            </div> */}
+          </main>}
     </>
   );
 };
