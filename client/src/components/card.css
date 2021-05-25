@@ -79,7 +79,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 5px 5px 5px rgb(49, 49, 49);
+    box-shadow: 5px 5px 5px rgb(49, 49, 49); 
 }
 
 .card__face--front h2 {
@@ -88,7 +88,7 @@ body {
 }
 
 .card__face--back {
-    background-color: var(--light);
+    /* background-color: var(--light);  */
     transform: rotateY(180deg);
 }
 
@@ -113,7 +113,7 @@ body {
     right: 0;
     bottom: 0;
     z-index: -1;
-    border-radius: 0 0 50% 0;
+    /* border-radius: 0 0 50% 0; */
     background-image: linear-gradient(to bottom left, var(--primary) 10%, var(--secondary) 115%);
 }
 

@@ -12,11 +12,7 @@ const CardItem = ({ playerWins, card, handleClick, handleClick2, isFlipped, setI
         <div>
             <div className="card">
                 <div className="card__inner">
-                    <div className="card__face card__face--back">
-                        <h2>Top Trumps</h2>
-                        {/* <img src={simpsons} alt="" /> */}
-                    </div>
-                    <div className="card__face card__face--">
+                <div className="card__face card__face--front">
                         <div className="card__content">
                             <div className="card__header">
                                 <img src={pp} className="pp" alt="" />
@@ -41,6 +37,10 @@ const CardItem = ({ playerWins, card, handleClick, handleClick2, isFlipped, setI
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div className="card__face card__face--back">
+                        <h2>Top Trumps</h2>
+                        {/* <img src={simpsons} alt="" /> */}
                     </div>
                 </div>
             </div>
