@@ -2,23 +2,21 @@ import React from 'react';
 import CardItem from './CardItem';
 import Player2CardItem from './Player2CardItem'
 
-const Games = ({ playerWins, isFlipped, setIsFlipped, drawArray, cards, playerOneCards, playerTwoCards, setPlayerOneCards, setPlayerTwoCards, shuffleCards, playRound }) => {
+const Games = ({ playerWins, isFlipped, setIsFlipped, drawArray, cards, playerOneCards, playerTwoCards, setPlayerOneCards, setPlayerTwoCards, shuffleCards, playRound, handleFlipClick}) => {
 
     shuffleCards(cards)
 
     // const attributeSelection = 'smartest'
-    const handleFlipClick = (value) => {
-        // setTimeout(() => {
-            setIsFlipped(value)
-    // }, 2000);
-    }
+    // const handleFlipClick = (value) => {
+    //         setIsFlipped(value)
+    // }
     const handleClick = (event) => {
         setTimeout(() => {
             handleFlipClick(true)
         }, 2000);
 
         setTimeout(() => {
-            // handleFlipClick(false)
+            handleFlipClick(false)
             const attributeSelection = event.target.id
             console.log(attributeSelection)
 
@@ -29,7 +27,7 @@ const Games = ({ playerWins, isFlipped, setIsFlipped, drawArray, cards, playerOn
             setPlayerOneCards(tempPlayerOneCards)
             setPlayerTwoCards(tempPlayerTwoCards)
         
-        }, 2000)
+        }, 6000)
         };
 
     const cardItems1 = playerOneCards.map((card, index) => {

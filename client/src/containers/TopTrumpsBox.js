@@ -24,7 +24,8 @@ function TopTrumpsBox(){
     let highestGreatestAnarchist = 0;
     let highestWalkOfFame = 0;
     
-    
+    const aiDifficulty = Math.floor(Math.random() * 2)
+    // console.log(aiDifficulty)
     // const attributeSelection = 'smartest'
 
     useEffect (() => {
@@ -51,15 +52,15 @@ function TopTrumpsBox(){
     }, [cards])
 
     // AI use effect 
-    // useEffect(() => {
-    //     if(!whoWins){
-    //         if(!player1Turn){
-    //             decideHighestAttribute();
-    //             // aiSelect(highestMostLovable, highestSmartest, highestFattest, highestBiggestNerd, highestGreatestAnarchist, highestWalkOfFame, playerTwoCards)
-    //             setTimeout(() => {handleComputerSelect(aiSelect(highestMostLovable, highestSmartest, highestFattest, highestBiggestNerd, highestGreatestAnarchist, highestWalkOfFame, playerTwoCards))}, 2000)
-    //         }
-    //     }
-    // }, [playerTwoCards])
+    useEffect(() => {
+        if(!playerWins){
+            if(!player1Turn){
+                decideHighestAttribute();
+                // aiSelect(highestMostLovable, highestSmartest, highestFattest, highestBiggestNerd, highestGreatestAnarchist, highestWalkOfFame, playerTwoCards)
+                setTimeout(() => {handleComputerSelect(aiSelect(highestMostLovable, highestSmartest, highestFattest, highestBiggestNerd, highestGreatestAnarchist, highestWalkOfFame, playerTwoCards))}, 1000)
+            }
+        }
+    }, [playerTwoCards])
 
     // Decides which card is being picked DO NOT CHANGE!!!
     const indexNumber = 0; 
@@ -163,6 +164,11 @@ function TopTrumpsBox(){
     setDrawArray([])
     setIsFlipped(false)
     setPlayerWins(false)
+    setPlayer1Turn(true)
+    }
+
+    const handleFlipClick = (value) => {
+        setIsFlipped(value)
     }
 
     // AI Below
@@ -233,21 +239,28 @@ function TopTrumpsBox(){
         // console.log('Computer smartest', playerTwoCards[0].smartest)
         // console.log("ai choice", aiSelection)
         // console.log('after sort', sortingArray)
-        const aiSelection = sortingArray[0].name
+        const aiSelection = sortingArray[aiDifficulty].name
         console.log('aiSelection', aiSelection)
         return aiSelection
         
     }
 
     const handleComputerSelect = (attribute) =>{
-        const attributeSelection = attribute
-        console.log(attributeSelection)
-        const tempPlayerOneCards = [...playerOneCards]
-        const tempPlayerTwoCards = [...playerTwoCards]
-        playRound(tempPlayerOneCards, tempPlayerTwoCards, attributeSelection)
-        setPlayerOneCards(tempPlayerOneCards)
-        setPlayerTwoCards(tempPlayerTwoCards)
-        return
+        setTimeout(() => {
+            handleFlipClick(true)
+        }, 2000);
+
+        setTimeout(() => {
+        handleFlipClick(false)
+            const attributeSelection = attribute
+            console.log(attributeSelection)
+            const tempPlayerOneCards = [...playerOneCards]
+            const tempPlayerTwoCards = [...playerTwoCards]
+            playRound(tempPlayerOneCards, tempPlayerTwoCards, attributeSelection)
+            setPlayerOneCards(tempPlayerOneCards)
+            setPlayerTwoCards(tempPlayerTwoCards)
+            return
+        }, 6000)
     };
 
 
@@ -278,7 +291,7 @@ function TopTrumpsBox(){
             setPlayerOneCards={setPlayerOneCards} 
             setPlayerTwoCards={setPlayerTwoCards} 
             cards={cards} shuffleCards={shuffleCards} 
-            playRound={playRound}/>
+            playRound={playRound} handleFlipClick={handleFlipClick}/>
             <div className="btn">
             <button onClick={playAgainClick}>Restart Game</button>
             </div>
