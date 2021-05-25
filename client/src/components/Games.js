@@ -29,7 +29,7 @@ const Games = ({ playerWins, isFlipped, setIsFlipped, drawArray, cards, playerOn
             setPlayerOneCards(tempPlayerOneCards)
             setPlayerTwoCards(tempPlayerTwoCards)
         
-        }, 4000)
+        }, 2000)
         };
 
     const cardItems1 = playerOneCards.map((card, index) => {
