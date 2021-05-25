@@ -4,7 +4,7 @@ import pp from './images/pp.jpg';
 import simpsons from './images/simpsonslogo.png';
 // import './test.css';
 
-const Player2CardItem = ({ card, handleClick, isFlipped, flip, setFlip}) => { 
+const Player2CardItem = ({ card, handleClick, isFlipped, flip, setFlip, chosenAttribute}) => { 
     
     return (
 
@@ -25,12 +25,12 @@ const Player2CardItem = ({ card, handleClick, isFlipped, flip, setFlip}) => {
                                 </div>
                                 <div className="card__body">
                                     <div>
-                                        <p onClick={handleClick} id='most_lovable'>Most Lovable: </p>
-                                        <p onClick={handleClick} id='smartest'>Smartest: </p>
-                                        <p onClick={handleClick} id='fattest'>Fattest: </p>
-                                        <p onClick={handleClick} id='biggest_nerd'>Biggest Nerd: </p>
-                                        <p onClick={handleClick} id='greatest_anarchist'>Greatest Anarchist: </p>
-                                        <p onClick={handleClick} id='walk_of_fame'>Walk of Fame Rating: </p>
+                                        <p onClick={handleClick} id='most_lovable' className={chosenAttribute ==='Most Lovable' ? 'most-lovable-background-colour' : 'no-background-colour'}>Most Lovable: </p>
+                                        <p onClick={handleClick} id='smartest' className={chosenAttribute ==='Smartest' ? 'most-lovable-background-colour' : 'no-background-colour'}>Smartest: </p>
+                                        <p onClick={handleClick} id='fattest' className={chosenAttribute ==='Fattest' ? 'most-lovable-background-colour' : 'no-background-colour'}>Fattest: </p>
+                                        <p onClick={handleClick} id='biggest_nerd' className={chosenAttribute ==='Biggest Nerd' ? 'most-lovable-background-colour' : 'no-background-colour'}>Biggest Nerd: </p>
+                                        <p onClick={handleClick} id='greatest_anarchist' className={chosenAttribute ==='Greatest Anarchist' ? 'most-lovable-background-colour' : 'no-background-colour'}>Greatest Anarchist: </p>
+                                        <p onClick={handleClick} id='walk_of_fame' className={chosenAttribute ==='Walk Of Fame' ? 'most-lovable-background-colour' : 'no-background-colour'}>Walk of Fame Rating: </p>
                                     </div>
                                     <div>
                                         <p onClick={handleClick} id='most_lovable'>{card.most_lovable}%</p>

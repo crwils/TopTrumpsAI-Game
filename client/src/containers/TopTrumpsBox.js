@@ -16,6 +16,9 @@ function TopTrumpsBox(){
     const [drawArray, setDrawArray] = useState([])
     const [isFlipped, setIsFlipped] = useState(false);
     const [flip, setFlip] = useState(0)
+    const [chosenAttribute, setChosenAttribute] = useState(null)
+    const [aiDifficulty, setAiDifficulty] = useState(2)
+
     
     let highestMostLovable = 0;
     let highestSmartest = 0;
@@ -24,7 +27,8 @@ function TopTrumpsBox(){
     let highestGreatestAnarchist = 0;
     let highestWalkOfFame = 0;
     
-    const aiDifficulty = Math.floor(Math.random() * 2)
+    // const aiDifficulty = Math.floor(Math.random() * 2)
+   
     // console.log(aiDifficulty)
     // const attributeSelection = 'smartest'
 
@@ -60,6 +64,7 @@ function TopTrumpsBox(){
                 setTimeout(() => {handleComputerSelect(aiSelect(highestMostLovable, highestSmartest, highestFattest, highestBiggestNerd, highestGreatestAnarchist, highestWalkOfFame, playerTwoCards))}, 1000)
             }
         }
+    
     }, [playerTwoCards])
 
     // Decides which card is being picked DO NOT CHANGE!!!
@@ -104,16 +109,10 @@ function TopTrumpsBox(){
             }
         }
     // };
-                    
-               
-            
-                
-            
-        
 
-        
 
     function playRound(player1Array, player2Array, attribute){
+        setChosenAttribute(null)
         let temporaryCounterVariable = roundCounter
         temporaryCounterVariable += 1
         setRoundCounter(temporaryCounterVariable)
@@ -158,13 +157,35 @@ function TopTrumpsBox(){
         }
     };
 
+    function databaseAttributeTranslator(attribute){
+        if(attribute === 'most_lovable'){
+            return 'Most Lovable'
+        }else if(attribute === 'smartest'){
+            return 'Smartest'
+        }else if(attribute === 'fattest'){
+            return 'Fattest'
+        }else if(attribute === 'biggest_nerd'){
+            return 'Biggest Nerd'
+        }else if(attribute === 'greatest_anarchist'){
+            return 'Greatest Anarchist'
+        }else if(attribute === 'walk_of_fame'){
+            return 'Walk Of Fame'
+        }else{
+            return null
+        }
+    }
+    
+    
+
     function playAgainClick(){
-    SimpsonsService.getCard()
-    .then(cards => setCards(cards))
-    setDrawArray([])
-    setIsFlipped(false)
-    setPlayerWins(false)
-    setPlayer1Turn(true)
+        SimpsonsService.getCard()
+        .then(cards => setCards(cards))
+        setDrawArray([])
+        setIsFlipped(false)
+        setPlayerWins(false)
+        setPlayer1Turn(true)
+        setChosenAttribute(null)
+        setRoundCounter(0)
     }
 
     const handleFlipClick = (value) => {
@@ -175,8 +196,10 @@ function TopTrumpsBox(){
     function changeTurn(){
         if(player1Turn){
             setPlayer1Turn(false)
+            setChosenAttribute(null)
         } else {
             setPlayer1Turn(true)
+            setChosenAttribute(null)
         }
         return
     }
@@ -246,6 +269,9 @@ function TopTrumpsBox(){
     }
 
     const handleComputerSelect = (attribute) =>{
+        const attributeSelection = attribute
+        console.log(attributeSelection)
+        setChosenAttribute(databaseAttributeTranslator(attributeSelection))
         setTimeout(() => {
             // handleFlipClick(true)
             setFlip(1)
@@ -253,8 +279,8 @@ function TopTrumpsBox(){
 
         setTimeout(() => {
             // handleFlipClick(false)
-            const attributeSelection = attribute
-            console.log(attributeSelection)
+            // const attributeSelection = attribute
+            // console.log(attributeSelection)
             const tempPlayerOneCards = [...playerOneCards]
             const tempPlayerTwoCards = [...playerTwoCards]
             playRound(tempPlayerOneCards, tempPlayerTwoCards, attributeSelection)
@@ -263,6 +289,11 @@ function TopTrumpsBox(){
             return
         }, 6000)
     };
+
+    function chooseDifficulty(event){
+        setAiDifficulty(event.target.value)
+        console.log(aiDifficulty)
+    }
 
 
     
@@ -278,7 +309,7 @@ function TopTrumpsBox(){
         setPlayerOneCards={setPlayerOneCards} 
         setPlayerTwoCards={setPlayerTwoCards} 
         cards={cards} shuffleCards={shuffleCards} 
-        playRound={playRound}/>
+        playRound={playRound} databaseAttributeTranslator={databaseAttributeTranslator}/>
         <div className="btn">
         <button onClick={playAgainClick}>Play Again</button>
         </div>
@@ -292,9 +323,16 @@ function TopTrumpsBox(){
             setPlayerOneCards={setPlayerOneCards} 
             setPlayerTwoCards={setPlayerTwoCards} 
             cards={cards} shuffleCards={shuffleCards} 
-            playRound={playRound} handleFlipClick={handleFlipClick}/>
-            <div className="btn">
-            <button onClick={playAgainClick}>Restart Game</button>
+            playRound={playRound} handleFlipClick={handleFlipClick} roundCounter={roundCounter} player1Turn= {player1Turn} chosenAttribute={chosenAttribute} setChosenAttribute={setChosenAttribute}/>
+        <div>   
+            <select defaultValue="" onChange={chooseDifficulty}>
+                <option value={2}>Easy</option>    
+                <option value={1}>Moderate</option>    
+                <option value={0}>Hard</option>    
+            </select> 
+        </div>         
+            <div className="btn">  
+                <button onClick={playAgainClick}>Restart Game</button>
             </div>
             <CreateCardComponent />
         </div>)
@@ -303,3 +341,4 @@ function TopTrumpsBox(){
 };
 
 export default TopTrumpsBox;
+

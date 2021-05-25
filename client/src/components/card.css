@@ -197,3 +197,27 @@ body {
 .player-2-card {
     padding-right: 400px;
 }
+
+.round{
+    margin-top: 6%;
+    text-align: center;
+    border: solid white;
+    height:10%;
+    padding: 0.5%;
+    border-radius: 25px;
+    background-color: #fe4880;
+}
+
+#selected-card{
+    text-align: center;
+}
+
+.most-lovable-background-colour {
+    /* border: 3px solid black; */
+    border-left: 4px solid greenyellow;
+    border-right: 4px solid greenyellow;
+}
+
+.no-background-colour{
+    
+}
