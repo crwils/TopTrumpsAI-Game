@@ -84,9 +84,9 @@ function TopTrumpsBox(){
                     player1Array.splice(indexNumber, 1)
                     drawArray.forEach(card => {player1Array.push(card)})
                     setDrawArray([])
-                    // if(!player1Turn){
-                    //     changeTurn()
-                    // }
+                    if(!player1Turn){
+                        changeTurn()
+                    }
                     }else if (player2Array[0][attribute] > player1Array[0][attribute]) {
                         player2Array.push(player2Array[0])
                         player2Array.push(player1Array[0])
@@ -94,16 +94,16 @@ function TopTrumpsBox(){
                         player2Array.splice(indexNumber, 1)
                         drawArray.forEach(card => {player2Array.push(card)})
                         setDrawArray([])
-                        // if(player1Turn){
-                        //     changeTurn()
-                        // }
+                        if(player1Turn){
+                            changeTurn()
+                        }
                         }else {
                             return alert("Game is over!")
                         }}
                         // not sure if below is needed
-                        console.log('player1ArrayAfter: ', player1Array)
-                        console.log('player2ArrayAfter: ', player2Array)
-                        console.log('drawArrayAfter', drawArray)
+                        // console.log('player1ArrayAfter: ', player1Array)
+                        // console.log('player2ArrayAfter: ', player2Array)
+                        // console.log('drawArrayAfter', drawArray)
             // }
         }
     // };

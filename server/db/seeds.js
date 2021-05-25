@@ -117,7 +117,7 @@ db.simpsons.insertMany ([
     {
         name: "Maggie Simpson",
         most_lovable: 100,
-        smartest: 540,
+        smartest: 54,
         fattest: 46, 
         biggest_nerd: 74,
         greatest_anarchist: 60,
