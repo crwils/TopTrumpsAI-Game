@@ -187,4 +187,9 @@ body {
 .round{
     margin-top: 6%;
     text-align: center;
+    border: solid white;
+    height:10%;
+    padding: 0.5%;
+    border-radius: 25px;
+    background-color: black;
 }
