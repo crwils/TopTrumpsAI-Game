@@ -26,7 +26,7 @@ db.football.insertMany ([
 db.simpsons.insertMany ([
     { 
         name: "Principal Skinner",
-        most_lovable: 74,
+        most_lovable: 75,
         smartest: 74,
         fattest: 64, 
         biggest_nerd: 60,
@@ -64,56 +64,56 @@ db.simpsons.insertMany ([
         walk_of_fame: 10,
         image: "./images/santaslittlehelper.jpeg"
     },
-    {
-        name: "Krusty the Clown",
-        most_lovable: 70,
-        smartest: 86,
-        fattest: 92, 
-        biggest_nerd: 54,
-        greatest_anarchist: 86,
-        walk_of_fame: 10,
-        image: "./images/krusty.jpeg"
-    },
-    {
-        name: "Martin",
-        most_lovable: 80,
-        smartest: 80,
-        fattest: 90, 
-        biggest_nerd: 70,
-        greatest_anarchist: 72,
-        walk_of_fame: 10,
-        image: "./images/martin.jpeg"    
-    },
-    {
-        name: "Patty & Selma Bouvier",
-        most_lovable: 50,
-        smartest: 90,
-        fattest: 86, 
-        biggest_nerd: 50,
-        greatest_anarchist: 92,
-        walk_of_fame: 88,
-        image: "./images/pattyselma.jpeg"
-    },
-    {
-        name: "Sherri and Terri",
-        most_lovable: 54,
-        smartest: 82,
-        fattest: 58, 
-        biggest_nerd: 76,
-        greatest_anarchist: 66,
-        walk_of_fame: 58,
-        image: "./images/sherri&terri.jpeg"
-    },
-    {
-        name: "Itchy & Scratchy",
-        most_lovable: 72,
-        smartest: 52,
-        fattest: 60, 
-        biggest_nerd: 56,
-        greatest_anarchist: 84,
-        walk_of_fame: 76,
-        image: "./images/itchy_scratchy.jpeg"
-    },
+    // // {
+    //     name: "Krusty the Clown",
+    //     most_lovable: 70,
+    //     smartest: 86,
+    //     fattest: 92, 
+    //     biggest_nerd: 54,
+    //     greatest_anarchist: 86,
+    //     walk_of_fame: 10,
+    //     image: "./images/krusty.jpeg"
+    // },
+    // {
+    //     name: "Martin",
+    //     most_lovable: 80,
+    //     smartest: 80,
+    //     fattest: 90, 
+    //     biggest_nerd: 70,
+    //     greatest_anarchist: 72,
+    //     walk_of_fame: 10,
+    //     image: "./images/martin.jpeg"    
+    // },
+    // {
+    //     name: "Patty & Selma Bouvier",
+    //     most_lovable: 50,
+    //     smartest: 90,
+    //     fattest: 86, 
+    //     biggest_nerd: 50,
+    //     greatest_anarchist: 92,
+    //     walk_of_fame: 88,
+    //     image: "./images/pattyselma.jpeg"
+    // },
+    // {
+    //     name: "Sherri and Terri",
+    //     most_lovable: 54,
+    //     smartest: 82,
+    //     fattest: 58, 
+    //     biggest_nerd: 76,
+    //     greatest_anarchist: 66,
+    //     walk_of_fame: 58,
+    //     image: "./images/sherri&terri.jpeg"
+    // },
+    // {
+    //     name: "Itchy & Scratchy",
+    //     most_lovable: 72,
+    //     smartest: 52,
+    //     fattest: 60, 
+    //     biggest_nerd: 56,
+    //     greatest_anarchist: 84,
+    //     walk_of_fame: 76,
+    //     image: "./images/itchy_scratchy.jpeg"
+    // },
     // {
     //     name: "Maggie Simpson",
     //     most_lovable: 100,
