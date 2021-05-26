@@ -5,7 +5,7 @@ import homerthumbsup from './images/homerthumbsup.png';
 
 import databaseAttributeTranslator from '../containers/TopTrumpsBox';
 
-const Games = ({ flip, setFlip, playerWins, isFlipped, setIsFlipped, drawArray, cards, playerOneCards, playerTwoCards, setPlayerOneCards, setPlayerTwoCards, shuffleCards, playRound, handleFlipClick, roundCounter, player1Turn, chosenAttribute, setChosenAttribute }) => {
+const Games = ({ flip, setFlip, playerWins, isFlipped, setIsFlipped, drawArray, cards, playerOneCards, playerTwoCards, setPlayerOneCards, setPlayerTwoCards, shuffleCards, playRound, handleFlipClick, roundCounter, player1Turn, chosenAttribute, setChosenAttribute, clicked, setClicked}) => {
 
     shuffleCards(cards)
 
@@ -32,6 +32,7 @@ const Games = ({ flip, setFlip, playerWins, isFlipped, setIsFlipped, drawArray, 
     }
 
     const handleClick = (event) => {
+        setClicked(true)
         const attributeSelection = event.target.id
         console.log(attributeSelection)
         setChosenAttribute(databaseAttributeTranslator(attributeSelection))
@@ -56,13 +57,14 @@ const Games = ({ flip, setFlip, playerWins, isFlipped, setIsFlipped, drawArray, 
             setPlayerTwoCards(tempPlayerTwoCards)
 
         }, 4000)
+        setClicked(false)
     };
 
     const cardItems1 = playerOneCards.map((card, index) => {
-        return <CardItem playerWins={playerWins} isFlipped={isFlipped} setIsFlipped={setIsFlipped} card={card} key={index} handleClick={handleClick} chosenAttribute={chosenAttribute} />
+        return <CardItem playerWins={playerWins} isFlipped={isFlipped} setIsFlipped={setIsFlipped} card={card} key={index} handleClick={handleClick} chosenAttribute={chosenAttribute} clicked={clicked}/>
     })
     const cardItems2 = playerTwoCards.map((card, index) => {
-        return <Player2CardItem flip={flip} setFlip={setFlip} isFlipped={isFlipped} setIsFlipped={setIsFlipped} card={card} key={index} chosenAttribute={chosenAttribute} />
+        return <Player2CardItem flip={flip} setFlip={setFlip} isFlipped={isFlipped} setIsFlipped={setIsFlipped} card={card} key={index} chosenAttribute={chosenAttribute} clicked={clicked}/>
     })
 
     const numberOfCards = (array) => {
@@ -73,8 +75,8 @@ const Games = ({ flip, setFlip, playerWins, isFlipped, setIsFlipped, drawArray, 
         <>
             <div className="games-block">
                 <div className="player-choice-block">
-                    {player1Turn ? <h3 id='selected-card'>Player One Selected: <br></br> {chosenAttribute}</h3> : <h3 id='selected-card'></h3>}
-                    {!player1Turn ? <h3 id='selected-card'>Player Two Selected: <br></br> {chosenAttribute}</h3> : <h3 id='selected-card'></h3>}
+                    {player1Turn ? <h3 id='selected-card'>Player One Selected: {chosenAttribute}</h3> : <h3 id='selected-card'></h3>}
+                    {!player1Turn ? <h3 id='selected-card'>Computer Selected: {chosenAttribute}</h3> : <h3 id='selected-card'></h3>}
                 </div>
 
                 <div className="card-box">
@@ -86,7 +88,7 @@ const Games = ({ flip, setFlip, playerWins, isFlipped, setIsFlipped, drawArray, 
                     <h3>Round</h3>
                     <h1>{roundCounter}</h1>
                     </div>
-                    <div className="card-item" id="flip_card">
+                    <div className="card-item">
                         <h1>Player 2</h1>
                         <b className="player-2-card">{cardItems2[0]}</b>
                     </div>

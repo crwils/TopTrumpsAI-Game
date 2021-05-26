@@ -5,19 +5,20 @@ import HeaderComponent from '../components/HeaderComponent';
 import SimpsonsService from '../services/GamesService';
 import './main-page.css';
 
-function TopTrumpsBox() {
+function TopTrumpsBox({aiDifficulty}) {
     const [cards, setCards] = useState([]);
     const [playerOneCards, setPlayerOneCards] = useState([])
     const [playerTwoCards, setPlayerTwoCards] = useState([])
     const [playerWins, setPlayerWins] = useState(false)
     const [whoWins, setWhoWins] = useState(null)
     const [player1Turn, setPlayer1Turn] = useState(true)
-    const [roundCounter, setRoundCounter] = useState(0)
+    const [roundCounter, setRoundCounter] = useState(1)
     const [drawArray, setDrawArray] = useState([])
     const [isFlipped, setIsFlipped] = useState(false);
     const [flip, setFlip] = useState(0)
     const [chosenAttribute, setChosenAttribute] = useState(null)
-    const [aiDifficulty, setAiDifficulty] = useState(2)
+    const [clicked, setClicked] = useState(false)
+   
 
 
     let highestMostLovable = 0;
@@ -271,6 +272,7 @@ function TopTrumpsBox() {
     }
 
     const handleComputerSelect = (attribute) => {
+        setClicked(true)
         const attributeSelection = attribute
         console.log(attributeSelection)
         setChosenAttribute(databaseAttributeTranslator(attributeSelection))
@@ -290,14 +292,8 @@ function TopTrumpsBox() {
             setPlayerTwoCards(tempPlayerTwoCards)
             return
         }, 6000)
+        setClicked(false)
     };
-
-    function chooseDifficulty(event) {
-        setAiDifficulty(event.target.value)
-        console.log(aiDifficulty)
-    }
-
-
 
 
     return (
@@ -314,7 +310,7 @@ function TopTrumpsBox() {
                     setPlayerOneCards={setPlayerOneCards}
                     setPlayerTwoCards={setPlayerTwoCards}
                     cards={cards} shuffleCards={shuffleCards}
-                    playRound={playRound} databaseAttributeTranslator={databaseAttributeTranslator} />
+                    playRound={playRound} databaseAttributeTranslator={databaseAttributeTranslator} clicked={clicked} setClicked={setClicked}/>
                 <CreateCardComponent />
             </main>
 
@@ -329,14 +325,7 @@ function TopTrumpsBox() {
                         setPlayerOneCards={setPlayerOneCards}
                         setPlayerTwoCards={setPlayerTwoCards}
                         cards={cards} shuffleCards={shuffleCards}
-                        playRound={playRound} handleFlipClick={handleFlipClick} roundCounter={roundCounter} player1Turn={player1Turn} chosenAttribute={chosenAttribute} setChosenAttribute={setChosenAttribute} />
-                    <div>
-                        <select defaultValue="" onChange={chooseDifficulty}>
-                            <option value={2}>Easy</option>
-                            <option value={1}>Moderate</option>
-                            <option value={0}>Hard</option>
-                        </select>
-                    </div>
+                        playRound={playRound} handleFlipClick={handleFlipClick} roundCounter={roundCounter} player1Turn={player1Turn} chosenAttribute={chosenAttribute} setChosenAttribute={setChosenAttribute} clicked={clicked} setClicked={setClicked}/>
                     <CreateCardComponent />
             </main>
 

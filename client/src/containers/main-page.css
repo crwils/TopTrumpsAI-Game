@@ -5,6 +5,10 @@
     padding: 30px 0;
 }
 
+select {
+    color: black;
+}
+
 .tt__box--header img {
     width: 200px;
     height: auto;
@@ -44,9 +48,9 @@ h1 {
     width: auto;
 }
 
-
-
-.main-page-button.span { position: relative; }
+.main-page-button.span { 
+    position: relative; 
+}
 
 .main-page-button.pressed { 
     padding-top: 3px;
@@ -70,4 +74,71 @@ h1 {
     padding: 10px;
     /* margin: 30px; */
     font-weight: bolder;
+}
+
+.custom-select {
+    display: flex;
+    justify-content: center;
+    width: 300px;
+    position: relative;
+    font-family: Arial;
+}
+
+
+.custom-select select {
+display: none; /*hide original SELECT element: */
+}
+
+.select-selected {
+background-color: DodgerBlue;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+position: absolute;
+content: "";
+top: 14px;
+right: 10px;
+width: 0;
+height: 0;
+border: 6px solid transparent;
+border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+border-color: transparent transparent #fff transparent;
+top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+color: #ffffff;
+padding: 8px 16px;
+border: 1px solid transparent;
+border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+position: absolute;
+background-color: DodgerBlue;
+top: 100%;
+left: 0;
+right: 0;
+z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+background-color: rgba(0, 0, 0, 0.1);
+}
+
+.custom-select {
+    color: black;
 }

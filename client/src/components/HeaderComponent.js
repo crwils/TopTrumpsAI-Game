@@ -8,7 +8,7 @@ function HeaderComponent() {
         <header className="tt__box--header">
             <img src={ttlogo} alt="" />
             <div className="homer-item">
-                  <img src={homerthumbsup} alt="" />
+                  {/* <img src={homerthumbsup} alt="" /> */}
             </div>
         </header>
     );

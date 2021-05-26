@@ -1,10 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap');
+
 p {
     cursor: pointer;
 }
 
-p:hover{
+/* p:hover{
     background-color: #F3F3F3;
-}
+} */
 
 p:active{
     color: rgb(0, 255, 21);
@@ -82,7 +84,10 @@ body {
     align-items: center;
     justify-content: center;
     box-shadow: 5px 5px 5px rgb(49, 49, 49); 
+    /* box-shadow: 10px 10px 10px rgb(0, 255, 13);  */
 }
+
+
 
 .card__face--front h2 {
     color: #FFF;
@@ -208,8 +213,9 @@ body {
 .card-counters {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     padding-top: 15px;
+
 }
 
 .card-counters b {
@@ -218,11 +224,19 @@ body {
 
 .card-counters h3 {
     color: #212121;
+    padding-left: 200px;
+    padding-right: 200px;
 }
 
 .card-item {
-    padding-right: 50px;
-    padding-left: 50px;
+    padding-right: 25px;
+    padding-left: 25px;
+    position: relative;
+    width: 300px;
+}
+
+.card-item h1 {
+    font-family: Bungee Outline;
 }
 
 
@@ -272,4 +286,5 @@ body {
 
 .player-choice-block {
     padding: 30px;
+    text-align: left;
 }
