@@ -142,7 +142,7 @@ db.simpsons.insertMany ([
         biggest_nerd: 48,
         greatest_anarchist: 94,
         walk_of_fame: 98,
-        image: "/server/db/images/homer.jpeg"
+        image: "/images/homer.jpeg"
     },
     {
         name: "Nelson Muntz",
@@ -152,7 +152,7 @@ db.simpsons.insertMany ([
         biggest_nerd: 89,
         greatest_anarchist: 56,
         walk_of_fame: 39,
-        image: "/server/db/images/nelson.jpeg"
+        image: "/images/nelson.jpeg"
     },
     {
         name: "Apu Nahasapeemapetilon",
@@ -162,7 +162,7 @@ db.simpsons.insertMany ([
         biggest_nerd: 52,
         greatest_anarchist: 88,
         walk_of_fame: 68,
-        image: "/server/db/images/apu.jpeg"
+        image: "/images/apu.jpeg"
     },
     {
         name: "Abraham 'Grampa' Simpson",
@@ -172,7 +172,7 @@ db.simpsons.insertMany ([
         biggest_nerd: 76,
         greatest_anarchist: 78,
         walk_of_fame: 86,
-        image: "/server/db/images/grampa.jpeg"
+        image: "/images/grampa.jpeg"
     },
     {
         name: "C. Montgomery Burns",
@@ -182,7 +182,7 @@ db.simpsons.insertMany ([
         biggest_nerd: 78,
         greatest_anarchist: 90,
         walk_of_fame: 84,
-        image: "/server/db/images/burns.jpeg"
+        image: "/images/burns.jpeg"
     },
     {
         name: "Moe Szyslak",
@@ -192,7 +192,7 @@ db.simpsons.insertMany ([
         biggest_nerd: 72,
         greatest_anarchist: 82,
         walk_of_fame: 82,
-        image: "/server/db/images/moe.jpeg"
+        image: "/images/moe.jpeg"
     },
     {
         name: "Todd & Rod Flanders",
@@ -202,7 +202,7 @@ db.simpsons.insertMany ([
         biggest_nerd: 96,
         greatest_anarchist: 44,
         walk_of_fame: 48,
-        image: "/server/db/images/todd&rod.jpeg"
+        image: "/images/todd&rod.jpeg"
     },
     {
         name: "Marge Simpson",
@@ -212,7 +212,7 @@ db.simpsons.insertMany ([
         biggest_nerd: 46,
         greatest_anarchist: 62,
         walk_of_fame: 90,
-        image: "/server/db/images/marge.jpeg"
+        image: "/images/marge.jpeg"
     },
     {
         name: "Otto",
@@ -222,7 +222,7 @@ db.simpsons.insertMany ([
         biggest_nerd: 84,
         greatest_anarchist: 76,
         walk_of_fame: 60,
-        image: "/server/db/images/otto.jpeg"
+        image: "/images/otto.jpeg"
     }
     // {
     //     name: "Edna Krabappel",
@@ -232,7 +232,7 @@ db.simpsons.insertMany ([
     //     biggest_nerd: 62,
     //     greatest_anarchist: 60,
     //     walk_of_fame: 44,
-    //     image: "/server/db/images/edna.jpeg"
+    //     image: "/images/edna.jpeg"
     // },
     // {
     //     name: "Barney Gumble",
@@ -242,7 +242,7 @@ db.simpsons.insertMany ([
     //     biggest_nerd: 86,
     //     greatest_anarchist: 74,
     //     walk_of_fame: 80,
-    //     image: "/server/db/images/barney.jpeg"
+    //     image: "/images/barney.jpeg"
     // },
     // {
     //     name: "Lenny & Carl",
@@ -252,7 +252,7 @@ db.simpsons.insertMany ([
     //     biggest_nerd: 94,
     //     greatest_anarchist: 56,
     //     walk_of_fame: 54,
-    //     image: "/server/db/images/lenny&carl.jpeg"
+    //     image: "/images/lenny&carl.jpeg"
     // },
     // {
     //     name: "Bart Simpson",
@@ -262,7 +262,7 @@ db.simpsons.insertMany ([
     //     biggest_nerd: 44,
     //     greatest_anarchist: 98,
     //     walk_of_fame: 96,
-    //     image: "/server/db/images/bart.jpeg"
+    //     image: "/images/bart.jpeg"
     // },
     // {
     //     name: "Lisa Simpson",
@@ -272,7 +272,7 @@ db.simpsons.insertMany ([
     //     biggest_nerd: 42,
     //     greatest_anarchist: 96,
     //     walk_of_fame: 94,
-    //     image: "/server/db/images/lisa.jpeg"
+    //     image: "/images/lisa.jpeg"
     // },
     // {
     //     name: "Sideshow Bob",
@@ -282,7 +282,7 @@ db.simpsons.insertMany ([
     //     biggest_nerd: 90,
     //     greatest_anarchist: 54,
     //     walk_of_fame: 40,
-    //     image: "/server/db/images/sideshowbob.jpeg"
+    //     image: "/images/sideshowbob.jpeg"
     // },
     // {
     //     name: "Dr. Julius Hibbert",
@@ -292,7 +292,7 @@ db.simpsons.insertMany ([
     //     biggest_nerd: 64,
     //     greatest_anarchist: 64,
     //     walk_of_fame: 46,
-    //     image: "/server/db/images/drhibbert.jpeg"
+    //     image: "/images/drhibbert.jpeg"
     // },
     // {
     //     name: "Chief Wiggum",
@@ -302,7 +302,7 @@ db.simpsons.insertMany ([
     //     biggest_nerd: 82,
     //     greatest_anarchist: 46,
     //     walk_of_fame: 72,
-    //     image: "/server/db/images/chief.jpeg"
+    //     image: "/images/chief.jpeg"
     // },
     // {
     //     name: "Ned Flanders",
@@ -312,7 +312,7 @@ db.simpsons.insertMany ([
     //     biggest_nerd: 98,
     //     greatest_anarchist: 62,
     //     walk_of_fame: 74,
-    //     image: "/server/db/images/ned.jpeg"
+    //     image: "/images/ned.jpeg"
     // },
     // {
     //     name: "Waylon Smithers",
@@ -322,6 +322,6 @@ db.simpsons.insertMany ([
     //     biggest_nerd: 92,
     //     greatest_anarchist: 58,
     //     walk_of_fame: 42,
-    //     image: "/server/db/images/smithers.jpeg"
+    //     image: "/images/smithers.jpeg"
     // },
 ]);
