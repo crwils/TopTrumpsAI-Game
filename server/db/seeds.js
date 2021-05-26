@@ -224,104 +224,104 @@ db.simpsons.insertMany ([
         walk_of_fame: 60,
         image: "/images/otto.jpeg"
     }
-    // {
-    //     name: "Edna Krabappel",
-    //     most_lovable: 48,
-    //     smartest: 64,
-    //     fattest: 56, 
-    //     biggest_nerd: 62,
-    //     greatest_anarchist: 60,
-    //     walk_of_fame: 44,
-    //     image: "/images/edna.jpeg"
-    // },
-    // {
-    //     name: "Barney Gumble",
-    //     most_lovable: 86,
-    //     smartest: 50,
-    //     fattest: 96, 
-    //     biggest_nerd: 86,
-    //     greatest_anarchist: 74,
-    //     walk_of_fame: 80,
-    //     image: "/images/barney.jpeg"
-    // },
-    // {
-    //     name: "Lenny & Carl",
-    //     most_lovable: 82,
-    //     smartest: 60,
-    //     fattest: 54, 
-    //     biggest_nerd: 94,
-    //     greatest_anarchist: 56,
-    //     walk_of_fame: 54,
-    //     image: "/images/lenny&carl.jpeg"
-    // },
-    // {
-    //     name: "Bart Simpson",
-    //     most_lovable: 90,
-    //     smartest: 72,
-    //     fattest: 50, 
-    //     biggest_nerd: 44,
-    //     greatest_anarchist: 98,
-    //     walk_of_fame: 96,
-    //     image: "/images/bart.jpeg"
-    // },
-    // {
-    //     name: "Lisa Simpson",
-    //     most_lovable: 98,
-    //     smartest: 98,
-    //     fattest: 48, 
-    //     biggest_nerd: 42,
-    //     greatest_anarchist: 96,
-    //     walk_of_fame: 94,
-    //     image: "/images/lisa.jpeg"
-    // },
-    // {
-    //     name: "Sideshow Bob",
-    //     most_lovable: 82,
-    //     smartest: 62,
-    //     fattest: 76, 
-    //     biggest_nerd: 90,
-    //     greatest_anarchist: 54,
-    //     walk_of_fame: 40,
-    //     image: "/images/sideshowbob.jpeg"
-    // },
-    // {
-    //     name: "Dr. Julius Hibbert",
-    //     most_lovable: 58,
-    //     smartest: 66,
-    //     fattest: 88, 
-    //     biggest_nerd: 64,
-    //     greatest_anarchist: 64,
-    //     walk_of_fame: 46,
-    //     image: "/images/drhibbert.jpeg"
-    // },
-    // {
-    //     name: "Chief Wiggum",
-    //     most_lovable: 76,
-    //     smartest: 40,
-    //     fattest: 98, 
-    //     biggest_nerd: 82,
-    //     greatest_anarchist: 46,
-    //     walk_of_fame: 72,
-    //     image: "/images/chief.jpeg"
-    // },
-    // {
-    //     name: "Ned Flanders",
-    //     most_lovable: 50,
-    //     smartest: 88,
-    //     fattest: 84, 
-    //     biggest_nerd: 98,
-    //     greatest_anarchist: 62,
-    //     walk_of_fame: 74,
-    //     image: "/images/ned.jpeg"
-    // },
-    // {
-    //     name: "Waylon Smithers",
-    //     most_lovable: 56,
-    //     smartest: 42,
-    //     fattest: 83, 
-    //     biggest_nerd: 92,
-    //     greatest_anarchist: 58,
-    //     walk_of_fame: 42,
-    //     image: "/images/smithers.jpeg"
-    // },
+    {
+        name: "Edna Krabappel",
+        most_lovable: 48,
+        smartest: 64,
+        fattest: 56, 
+        biggest_nerd: 62,
+        greatest_anarchist: 60,
+        walk_of_fame: 44,
+        image: "/images/edna.jpeg"
+    },
+    {
+        name: "Barney Gumble",
+        most_lovable: 86,
+        smartest: 50,
+        fattest: 96, 
+        biggest_nerd: 86,
+        greatest_anarchist: 74,
+        walk_of_fame: 80,
+        image: "/images/barney.jpeg"
+    },
+    {
+        name: "Lenny & Carl",
+        most_lovable: 82,
+        smartest: 60,
+        fattest: 54, 
+        biggest_nerd: 94,
+        greatest_anarchist: 56,
+        walk_of_fame: 54,
+        image: "/images/lenny&carl.jpeg"
+    },
+    {
+        name: "Bart Simpson",
+        most_lovable: 90,
+        smartest: 72,
+        fattest: 50, 
+        biggest_nerd: 44,
+        greatest_anarchist: 98,
+        walk_of_fame: 96,
+        image: "/images/bart.jpeg"
+    },
+    {
+        name: "Lisa Simpson",
+        most_lovable: 98,
+        smartest: 98,
+        fattest: 48, 
+        biggest_nerd: 42,
+        greatest_anarchist: 96,
+        walk_of_fame: 94,
+        image: "/images/lisa.jpeg"
+    },
+    {
+        name: "Sideshow Bob",
+        most_lovable: 82,
+        smartest: 62,
+        fattest: 76, 
+        biggest_nerd: 90,
+        greatest_anarchist: 54,
+        walk_of_fame: 40,
+        image: "/images/sideshowbob.jpeg"
+    },
+    {
+        name: "Dr. Julius Hibbert",
+        most_lovable: 58,
+        smartest: 66,
+        fattest: 88, 
+        biggest_nerd: 64,
+        greatest_anarchist: 64,
+        walk_of_fame: 46,
+        image: "/images/drhibbert.jpeg"
+    },
+    {
+        name: "Chief Wiggum",
+        most_lovable: 76,
+        smartest: 40,
+        fattest: 98, 
+        biggest_nerd: 82,
+        greatest_anarchist: 46,
+        walk_of_fame: 72,
+        image: "/images/chief.jpeg"
+    },
+    {
+        name: "Ned Flanders",
+        most_lovable: 50,
+        smartest: 88,
+        fattest: 84, 
+        biggest_nerd: 98,
+        greatest_anarchist: 62,
+        walk_of_fame: 74,
+        image: "/images/ned.jpeg"
+    },
+    {
+        name: "Waylon Smithers",
+        most_lovable: 56,
+        smartest: 42,
+        fattest: 83, 
+        biggest_nerd: 92,
+        greatest_anarchist: 58,
+        walk_of_fame: 42,
+        image: "/images/smithers.jpeg"
+    }
 ]);
