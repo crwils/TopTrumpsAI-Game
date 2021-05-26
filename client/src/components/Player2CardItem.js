@@ -4,7 +4,7 @@ import pp from './images/pp.jpg';
 import simpsons from './images/simpsonslogo.png';
 // import './test.css';
 
-const Player2CardItem = ({ player1Turn, card, handleClick, isFlipped, flip, setFlip, chosenAttribute, clicked}) => { 
+const Player2CardItem = ({ setClicked, player1Turn, card, handleClick, isFlipped, flip, setFlip, chosenAttribute, clicked}) => { 
     
     return (
 
@@ -12,7 +12,9 @@ const Player2CardItem = ({ player1Turn, card, handleClick, isFlipped, flip, setF
                     <div 
                     className="card__inner"
                     flip={flip}
-                    onAnimationEnd={() => setFlip(0)}>
+                    onAnimationEnd={() => {
+                        setFlip(0)
+                        setClicked(false)}}>
                         <div className={!player1Turn ? 'card__face card__face--front-selected': 'card__face card__face--front'}>
                             {/* <h2>Top Trumps</h2> */}
                             <img className="card__logo" src={simpsons} alt="" />

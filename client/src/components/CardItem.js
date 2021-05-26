@@ -20,20 +20,20 @@ const CardItem = ({player1Turn, playerWins, card, handleClick, handleClick2, isF
                             </div>
                             <div className="card__body">
                                 <div>
-                                    <p onClick={!clicked ? handleClick : undefined } className={chosenAttribute ==='Most Lovable' ? 'most-lovable-background-colour' : 'no-background-colour'} id='most_lovable'>Most Lovable: </p>
-                                    <p onClick={!clicked ? handleClick : undefined }  id='smartest' className={chosenAttribute ==='Smartest' ? 'most-lovable-background-colour' : 'no-background-colour'}>Smartest: </p>
-                                    <p onClick={!clicked ? handleClick : undefined } id='fattest' className={chosenAttribute ==='Fattest' ? 'most-lovable-background-colour' : 'no-background-colour'}>Fattest: </p>
-                                    <p onClick={!clicked ? handleClick : undefined } id='biggest_nerd' className={chosenAttribute ==='Biggest Nerd' ? 'most-lovable-background-colour' : 'no-background-colour'}>Biggest Nerd: </p>
-                                    <p onClick={!clicked ? handleClick : undefined } id='greatest_anarchist' className={chosenAttribute ==='Greatest Anarchist' ? 'most-lovable-background-colour' : 'no-background-colour'}>Greatest Anarchist: </p>
-                                    <p onClick={!clicked ? handleClick : undefined } id='walk_of_fame' className={chosenAttribute ==='Walk Of Fame' ? 'most-lovable-background-colour' : 'no-background-colour'}>Walk of Fame Rating: </p>
+                                    <p onClick={handleClick} className={chosenAttribute ==='Most Lovable' ? 'most-lovable-background-colour' : 'no-background-colour'} id='most_lovable'>Most Lovable: </p>
+                                    <p onClick={handleClick} id='smartest' className={chosenAttribute ==='Smartest' ? 'most-lovable-background-colour' : 'no-background-colour'}>Smartest: </p>
+                                    <p onClick={handleClick} id='fattest' className={chosenAttribute ==='Fattest' ? 'most-lovable-background-colour' : 'no-background-colour'}>Fattest: </p>
+                                    <p onClick={handleClick} id='biggest_nerd' className={chosenAttribute ==='Biggest Nerd' ? 'most-lovable-background-colour' : 'no-background-colour'}>Biggest Nerd: </p>
+                                    <p onClick={handleClick} id='greatest_anarchist' className={chosenAttribute ==='Greatest Anarchist' ? 'most-lovable-background-colour' : 'no-background-colour'}>Greatest Anarchist: </p>
+                                    <p onClick={handleClick} id='walk_of_fame' className={chosenAttribute ==='Walk Of Fame' ? 'most-lovable-background-colour' : 'no-background-colour'}>Walk of Fame Rating: </p>
                                 </div>
                                 <div>
-                                    <p onClick={!clicked ? handleClick : undefined } id='most_lovable'>{card.most_lovable}%</p>
-                                    <p onClick={!clicked ? handleClick : undefined } id='smartest'>{card.smartest}%</p>
-                                    <p onClick={!clicked ? handleClick : undefined } id='fattest'>{card.fattest}%</p>
-                                    <p onClick={!clicked ? handleClick : undefined } id='biggest_nerd'>{card.biggest_nerd}%</p>
-                                    <p onClick={!clicked ? handleClick : undefined } id='greatest_anarchist'>{card.greatest_anarchist}%</p>
-                                    <p onClick={!clicked ? handleClick : undefined } id='walk_of_fame'>{card.walk_of_fame}%</p>
+                                    <p onClick={handleClick} id='most_lovable'>{card.most_lovable}%</p>
+                                    <p onClick={handleClick} id='smartest'>{card.smartest}%</p>
+                                    <p onClick={handleClick} id='fattest'>{card.fattest}%</p>
+                                    <p onClick={handleClick} id='biggest_nerd'>{card.biggest_nerd}%</p>
+                                    <p onClick={handleClick} id='greatest_anarchist'>{card.greatest_anarchist}%</p>
+                                    <p onClick={handleClick} id='walk_of_fame'>{card.walk_of_fame}%</p>
                                 </div>
                             </div>
                         </div>

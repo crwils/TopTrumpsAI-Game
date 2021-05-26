@@ -30,25 +30,20 @@ const Games = ({ flip, setFlip, playerWins, isFlipped, setIsFlipped, drawArray, 
             return null
         }
     }
+    // let tempClicked = false
 
     const handleClick = (event) => {
-        setClicked(true)
+        if (!clicked){
+            setClicked(true)
+
         const attributeSelection = event.target.id
         console.log(attributeSelection)
+
         setChosenAttribute(databaseAttributeTranslator(attributeSelection))
-        // setTimeout(() => {
+ 
         setFlip(1)
-        // handleFlipClick(true)
-        // }, 2000);
-
-        // setTimeout(() => {
-        // setFlip(2)
-        // handleFlipClick(false)
-
 
         setTimeout(() => {
-            // handleFlipClick(false)
-
             const tempPlayerOneCards = [...playerOneCards]
             const tempPlayerTwoCards = [...playerTwoCards]
             playRound(tempPlayerOneCards, tempPlayerTwoCards, attributeSelection)
@@ -57,14 +52,14 @@ const Games = ({ flip, setFlip, playerWins, isFlipped, setIsFlipped, drawArray, 
             setPlayerTwoCards(tempPlayerTwoCards)
 
         }, 4000)
-        setClicked(false)
+    }
     };
 
     const cardItems1 = playerOneCards.map((card, index) => {
         return <CardItem player1Turn={player1Turn} playerWins={playerWins} isFlipped={isFlipped} setIsFlipped={setIsFlipped} card={card} key={index} handleClick={handleClick} chosenAttribute={chosenAttribute} clicked={clicked}/>
     })
     const cardItems2 = playerTwoCards.map((card, index) => {
-        return <Player2CardItem player1Turn={player1Turn} flip={flip} setFlip={setFlip} isFlipped={isFlipped} setIsFlipped={setIsFlipped} card={card} key={index} chosenAttribute={chosenAttribute} clicked={clicked}/>
+        return <Player2CardItem setClicked={setClicked} player1Turn={player1Turn} flip={flip} setFlip={setFlip} isFlipped={isFlipped} setIsFlipped={setIsFlipped} card={card} key={index} chosenAttribute={chosenAttribute} clicked={clicked}/>
     })
 
     const numberOfCards = (array) => {
