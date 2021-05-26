@@ -310,7 +310,7 @@ function TopTrumpsBox({ aiDifficulty }) {
                 </div>
                 <div className="homer--img--block">
                     {whoWins === 'Player One' ? <img className="homer--img" src={homerwoohoo} alt="" /> : <img className="homer--img--point" src={homeryoulose} alt="" />}
-                    <h1> {whoWins === 'Player One' ? "You Win!" : "You lose!"}</h1>
+                    <h1> {whoWins === 'Player One' ? "YOU WIN!" : "YOU LOSE!"}</h1>
                 </div>
             </main>
 
