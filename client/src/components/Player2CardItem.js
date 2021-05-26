@@ -23,7 +23,7 @@ const Player2CardItem = ({ setClicked, player1Turn, card, handleClick, isFlipped
                             <div className="card__content">
                                 <div className="card__header">
                                     <img src={pp} className="pp" alt="" />
-                                    <h2>{card.name}</h2>
+                                    <h2 className="char-name">{card.name}</h2>
                                 </div>
                                 <div className="card__body">
                                     <div>
