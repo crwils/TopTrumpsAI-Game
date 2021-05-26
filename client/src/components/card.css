@@ -210,6 +210,10 @@ body {
     position: relative;
 }
 
+.vs-h1 {
+    padding-top: 15px;
+}
+
 .homer-item {
     /* width:100%; */
     position: absolute;
@@ -250,8 +254,15 @@ body {
     width: 300px;
 }
 
-.player-name {
+.player-name1 {
     font-family: Bungee Outline;
+    text-align: right;
+    padding-top: 15px;
+}
+.player-name2 {
+    font-family: Bungee Outline;
+    text-align: left;
+    padding-top: 15px;
 }
 
 
@@ -285,7 +296,7 @@ body {
     padding: 10 10px;
     padding-top: 7px;
     margin-top: 23px;
-    width: 200px;
+    width: 230px;
     height: 30px;
     background-color: white;
     justify-content: center;
@@ -305,7 +316,7 @@ body {
     padding: 10 10px;
     margin-top: 23px;
     padding-top: 7px;
-    width: 200px;
+    width: 230px;
     height: 30px;
     background-color: white;
     justify-content: center;

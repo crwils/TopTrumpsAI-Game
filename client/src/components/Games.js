@@ -72,7 +72,7 @@ const Games = ({ flip, setFlip, playerWins, isFlipped, setIsFlipped, drawArray, 
                 <div className="round">
                     {/* <h3 className="roundItems1">{chosenAttribute}</h3> */}
                     {player1Turn ? <h3 className="roundItems1"> {chosenAttribute}</h3> : <h3 className='roundItems1'></h3>}
-                    <h3 className="roundItems2">Round: {roundCounter}</h3>
+                    <h3 className="roundItems2">ROUND {roundCounter}</h3>
                     {/* <h3 className="roundItems3">{chosenAttribute}</h3> */}
                     {!player1Turn ? <h3 className="roundItems3"> {chosenAttribute}</h3> : <h3 className='roundItems3'></h3>}
                 </div>
@@ -84,11 +84,14 @@ const Games = ({ flip, setFlip, playerWins, isFlipped, setIsFlipped, drawArray, 
                 </div> */}
                 <div className="card-box">
                     <div className="card-item">
-                        <h1 className="player-name">Player 1</h1>
+                        <h1 className="player-name1">PLAYER 1</h1>
                         <b className="player-1-card" >{cardItems1[0]}</b>
                     </div>
+                    <div>
+                    <h1 className="vs-h1">VS</h1>
+                    </div>
                     <div className="card-item">
-                        <h1 className="player-name">Player 2</h1>
+                        <h1 className="player-name2">COMPUTER</h1>
                         <b className="player-2-card">{cardItems2[0]}</b>
                     </div>
                 </div>
