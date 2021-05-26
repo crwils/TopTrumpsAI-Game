@@ -88,7 +88,7 @@ const Games = ({ flip, setFlip, playerWins, isFlipped, setIsFlipped, drawArray, 
                         <b className="player-1-card" >{cardItems1[0]}</b>
                     </div>
                     <div>
-                    <h1 className="vs-h1">VS</h1>
+                        <h1 className="vs-h1">VS</h1>
                     </div>
                     <div className="card-item">
                         <h1 className="player-name2">COMPUTER</h1>
@@ -97,17 +97,17 @@ const Games = ({ flip, setFlip, playerWins, isFlipped, setIsFlipped, drawArray, 
                 </div>
             </div>
             <div className="card-counters-div">
-            <div className="card-counters">
-                {/* <div className="card-counter-item"> */}
-                <b>CARDS: {numberOfCards(cardItems1)}</b>
-                {/* </div> */}
-                {/* <div className="card-counter-item"> */}
-                <h3>DRAW PILE: {numberOfCards(drawArray)}</h3>
-                {/* </div> */}
-                {/* <div className="card-counter-item"> */}
-                <b>CARDS: {numberOfCards(cardItems2)}</b>
-                {/* </div> */}
-            </div>
+                <div className="card-counters">
+                    {/* <div className="card-counter-item"> */}
+                    <b>CARDS: {numberOfCards(cardItems1)}</b>
+                    {/* </div> */}
+                    {/* <div className="card-counter-item"> */}
+                    <h3>DRAW PILE: {numberOfCards(drawArray)}</h3>
+                    {/* </div> */}
+                    {/* <div className="card-counter-item"> */}
+                    <b>CARDS: {numberOfCards(cardItems2)}</b>
+                    {/* </div> */}
+                </div>
             </div>
 
         </>

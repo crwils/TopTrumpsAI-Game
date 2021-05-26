@@ -318,14 +318,15 @@ function TopTrumpsBox({ aiDifficulty }) {
             :
             <main>
                 <HeaderComponent playAgainClick={playAgainClick} />
-
+                <div className="btn2">
+                    <button className="play-button" onClick={playAgainClick}>RESTART</button>
+                </div>
                 <Games flip={flip} setFlip={setFlip} playerWins={playerWins} isFlipped={isFlipped} setIsFlipped={setIsFlipped} drawArray={drawArray} playerOneCards={playerOneCards}
                     playerTwoCards={playerTwoCards}
                     setPlayerOneCards={setPlayerOneCards}
                     setPlayerTwoCards={setPlayerTwoCards}
                     cards={cards} shuffleCards={shuffleCards}
                     playRound={playRound} handleFlipClick={handleFlipClick} roundCounter={roundCounter} player1Turn={player1Turn} chosenAttribute={chosenAttribute} setChosenAttribute={setChosenAttribute} clicked={clicked} setClicked={setClicked} />
- 
             </main>
 
         )

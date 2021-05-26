@@ -61,18 +61,19 @@ h1 {
   }
 
 .play-button:hover {
-    background-color: white;
-    color: hotpink;
+    background-color: rgba(255, 50, 50, 0.986);
+    color: rgb(255, 255, 255);
+    /* box-shadow: 5px 5px 5px rgb(12, 12, 12), */
 }
   
 .play-button {
     cursor: pointer; 
-    border: solid white 3px;
-    color: white;
-    background-color: hotpink;
+    /* border: solid rgb(54, 54, 54) 3px; */
+    color: rgb(14, 14, 14);
+    background-color: rgb(255, 41, 41);
     overflow: hidden; 
-    /* border-radius: 20px; */
-    padding: 10px;
+    border-radius: 20px;
+    padding: 6px;
     /* margin: 30px; */
     font-weight: bolder;
 }
@@ -80,70 +81,29 @@ h1 {
 .custom-select {
     display: flex;
     justify-content: center;
-    width: 300px;
     position: relative;
     font-family: Arial;
+    padding-top: 20px;
+    text-align: center;
 }
 
-
-.custom-select select {
-display: none; /*hide original SELECT element: */
+.select {
+    width: 400px;
+    height: 40px;
+    font-weight: bolder;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 25px;
 }
 
-.select-selected {
-background-color: DodgerBlue;
+select {
+    width: 400px; 
+    text-align-last:center;
 }
 
-/* Style the arrow inside the select element: */
-.select-selected:after {
-position: absolute;
-content: "";
-top: 14px;
-right: 10px;
-width: 0;
-height: 0;
-border: 6px solid transparent;
-border-color: #fff transparent transparent transparent;
+.select option {
+    text-align: center;
 }
-
-/* Point the arrow upwards when the select box is open (active): */
-.select-selected.select-arrow-active:after {
-border-color: transparent transparent #fff transparent;
-top: 7px;
-}
-
-/* style the items (options), including the selected item: */
-.select-items div,.select-selected {
-color: #ffffff;
-padding: 8px 16px;
-border: 1px solid transparent;
-border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-cursor: pointer;
-}
-
-/* Style items (options): */
-.select-items {
-position: absolute;
-background-color: DodgerBlue;
-top: 100%;
-left: 0;
-right: 0;
-z-index: 99;
-}
-
-/* Hide the items when the select box is closed: */
-.select-hide {
-display: none;
-}
-
-.select-items div:hover, .same-as-selected {
-background-color: rgba(0, 0, 0, 0.1);
-}
-
-.custom-select {
-    color: black;
-}
-
 .homer--img {
     width: 400px;
     height: auto;
@@ -175,4 +135,10 @@ background-color: rgba(0, 0, 0, 0.1);
     width: 300px;
     height: auto;
     padding-top: 30px;
+}
+
+
+.btn2 {
+    margin-bottom: 5px 0;
+    display: flex;
 }

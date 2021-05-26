@@ -244,6 +244,8 @@ body {
     border-radius: 20px;
     /* bottom: 0%; */
     box-shadow: 8px 8px 8px rgb(255, 159, 207);
+    min-width: 550px;
+    max-width: 600px;
     width: 55%;
     position: absolute;
 
@@ -305,7 +307,7 @@ body {
     min-width: 100px;
     /* width: 100px; */
     /* padding-bottom: 0.5%; */
-    padding-top: 20px;
+    padding-top: 15px;
     padding-bottom: 5px;
     border-radius: 25px;
     background-color: transparent;

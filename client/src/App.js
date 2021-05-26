@@ -27,13 +27,12 @@ function App() {
           <img className="home-start-button" onClick={handleStartGameButtonClick} src={ttlogo} alt="" />
           
           <div className="custom-select" >
-            <select onChange={chooseDifficulty}>
-              <option value="default" selected disabled>Select difficulty</option>
+            <select className="select" onChange={chooseDifficulty}>
+              <option value="default" selected disabled>Select Difficulty</option>
               <option value={2}>Easy</option>
               <option value={1}>Moderate</option>
               <option value={0}>Hard</option>
             </select>
-            
           </div>
         </main>}
     </>
