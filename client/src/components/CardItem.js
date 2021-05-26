@@ -4,7 +4,7 @@ import pp from './images/pp.jpg';
 import simpsons from './images/simpsonslogo.png';
 // import './test.css';
 
-const CardItem = ({ playerWins, card, handleClick, handleClick2, isFlipped, setIsFlipped, chosenAttribute, clicked}) => {
+const CardItem = ({player1Turn, playerWins, card, handleClick, handleClick2, isFlipped, setIsFlipped, chosenAttribute, clicked}) => {
 
 
 
@@ -12,7 +12,7 @@ const CardItem = ({ playerWins, card, handleClick, handleClick2, isFlipped, setI
         <div>
             <div className="card">
                 <div className="card__inner">
-                <div className="card__face card__face--front">
+                <div className={player1Turn ? 'card__face card__face--front-selected': 'card__face card__face--front'}>
                         <div className="card__content">
                             <div className="card__header">
                                 <img src={pp} className="pp" alt="" />

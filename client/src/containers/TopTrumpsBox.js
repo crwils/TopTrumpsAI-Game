@@ -310,7 +310,7 @@ function TopTrumpsBox({aiDifficulty}) {
                     setPlayerOneCards={setPlayerOneCards}
                     setPlayerTwoCards={setPlayerTwoCards}
                     cards={cards} shuffleCards={shuffleCards}
-                    playRound={playRound} databaseAttributeTranslator={databaseAttributeTranslator} clicked={clicked} setClicked={setClicked}/>
+                    playRound={playRound} databaseAttributeTranslator={databaseAttributeTranslator} clicked={clicked} setClicked={setClicked} player1Turn={player1Turn}/>
                 <CreateCardComponent />
             </main>
 

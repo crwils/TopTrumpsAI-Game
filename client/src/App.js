@@ -33,6 +33,7 @@ function App() {
               <option value={1}>Moderate</option>
               <option value={0}>Hard</option>
             </select>
+            
           </div>
         </main>}
     </>

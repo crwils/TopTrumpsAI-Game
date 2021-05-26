@@ -58,13 +58,14 @@ const Games = ({ flip, setFlip, playerWins, isFlipped, setIsFlipped, drawArray, 
 
         }, 4000)
         setClicked(false)
+    }
     };
 
     const cardItems1 = playerOneCards.map((card, index) => {
-        return <CardItem playerWins={playerWins} isFlipped={isFlipped} setIsFlipped={setIsFlipped} card={card} key={index} handleClick={handleClick} chosenAttribute={chosenAttribute} clicked={clicked}/>
+        return <CardItem player1Turn={player1Turn} playerWins={playerWins} isFlipped={isFlipped} setIsFlipped={setIsFlipped} card={card} key={index} handleClick={handleClick} chosenAttribute={chosenAttribute} clicked={clicked}/>
     })
     const cardItems2 = playerTwoCards.map((card, index) => {
-        return <Player2CardItem flip={flip} setFlip={setFlip} isFlipped={isFlipped} setIsFlipped={setIsFlipped} card={card} key={index} chosenAttribute={chosenAttribute} clicked={clicked}/>
+        return <Player2CardItem player1Turn={player1Turn} flip={flip} setFlip={setFlip} isFlipped={isFlipped} setIsFlipped={setIsFlipped} card={card} key={index} chosenAttribute={chosenAttribute} clicked={clicked}/>
     })
 
     const numberOfCards = (array) => {
@@ -82,7 +83,7 @@ const Games = ({ flip, setFlip, playerWins, isFlipped, setIsFlipped, drawArray, 
                 <div className="card-box">
                     <div className="card-item">
                         <h1>Player 1</h1>
-                        <b className="player-1-card">{cardItems1[0]}</b>
+                        <b className="player-1-card" >{cardItems1[0]}</b>
                     </div>
                     <div className="round">
                     <h3>Round</h3>

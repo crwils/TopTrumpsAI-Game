@@ -87,7 +87,14 @@ body {
     /* box-shadow: 10px 10px 10px rgb(0, 255, 13);  */
 }
 
-
+.card__face--front-selected{
+    background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* box-shadow: 5px 5px 5px rgb(49, 49, 49);  */
+    box-shadow:5px 5px 5px rgb(0, 255, 13); 
+}
 
 .card__face--front h2 {
     color: #FFF;
@@ -103,6 +110,13 @@ body {
 .card__face--back {
     /* background-color: var(--light);  */
     transform: rotateY(180deg);
+    /* box-shadow: 5px 5px 5px rgb(0, 255, 13);  */
+}
+
+.card__face--back-selected {
+    /* background-color: var(--light);  */
+    transform: rotateY(180deg);
+    box-shadow: 5px 5px 5px rgb(0, 255, 13); 
 }
 
 .card__content {
