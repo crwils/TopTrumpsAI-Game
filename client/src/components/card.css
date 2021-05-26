@@ -1,0 +1,366 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap');
+
+p {
+    cursor: pointer;
+}
+
+/* p:hover{
+    background-color: #F3F3F3;
+} */
+
+p:active{
+    color: rgb(0, 255, 21);
+    cursor: pointer;
+}
+
+:root {
+    --primary: #FFCE00;
+    --secondary: #FE4880;
+    --dark: #212121;
+    --light: #F3F3F3;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    color: white;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    width: 100%;
+    min-height: 100vh;
+}
+
+.card {
+    margin: 10px auto 0;
+    width: 300px;
+    height: 400px;
+    perspective: 1000px;
+    padding-top: 10px;
+}
+
+.card__inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    position: relative;
+}
+
+.card__inner[flip='1'] {
+    /* transform: rotateY(180deg); */
+    animation: flip 5s 1;
+}
+
+@keyframes flip {
+    40% {
+        transform: rotateY(180deg);
+    }
+    /* 50% {
+        transform: rotate3d(1, 1, 1, 180deg)
+    } */
+    60% {
+        transform: rotateY(180deg);
+    }
+}
+
+.card__face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0px 3px 18px 3px rgba(0, 0, 0, 0.2);
+}
+
+.card__face--front {
+    background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 5px 5px rgb(49, 49, 49); 
+    /* box-shadow: 10px 10px 10px rgb(0, 255, 13);  */
+}
+
+.card__face--front-selected{
+    background-image: linear-gradient(to bottom right, var(--primary), var(--secondary));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* box-shadow: 5px 5px 5px rgb(49, 49, 49);  */
+    box-shadow: 8px 8px 8px rgb(21, 255, 0);
+}
+
+.card__face--front h2 {
+    color: #FFF;
+    font-size: 32px;
+}
+
+.card__logo {
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+}
+
+.card__face--back {
+    /* background-color: var(--light);  */
+    transform: rotateY(180deg);
+    /* box-shadow: 5px 5px 5px rgb(0, 255, 13);  */
+}
+
+.card__face--back-selected {
+    /* background-color: var(--light);  */
+    transform: rotateY(180deg);
+    /* box-shadow: 5px 5px 5px rgb(0, 255, 13);  */
+    box-shadow: 8px 8px 8px rgb(21, 255, 0);
+}
+
+.card__content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card__header {
+    position: relative;
+    padding: 50px 30px 40px;
+}
+
+.card__header:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    /* border-radius: 0 0 50% 0; */
+    background-image: linear-gradient(to bottom left, var(--primary) 10%, var(--secondary) 115%);
+}
+
+.pp {
+    display: block;
+    width: 90px;
+    max-width: 100%;
+    height: 90px;
+    margin: 0 auto 30px;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 5px solid #fff;
+    object-fit: cover;
+}
+
+.card__header h2 {
+    color: rgb(255, 255, 255);
+    font-size:  16px;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.card__body {
+    /* background-color: var(--light); */
+    background-color: white;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card__body h3 {
+    color: var(--dark);
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.card__body p {
+    color: var(--dark);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.card_details p {
+    color: white;
+}
+
+.char__bio {
+    font-size: 12px;
+    word-wrap: normal;
+    padding: 0 30px;
+}
+
+.card__details__flex {
+    display: flex;
+}
+
+.card-box {
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+    /* padding-top: 20px; */
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.vs-h1 {
+    padding-top: 15px;
+}
+
+.homer-item {
+    /* width:100%; */
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    bottom:0;
+}
+
+.homer-item img {
+    height: auto;
+    width: 250px;
+    position: relative;
+    display: block;
+}
+
+.card-counters {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-top: 65px;
+}
+
+.card-counters b {
+    color: #212121;
+}
+
+.card-counters h3 {
+    color: #212121;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+
+.card-item {
+    padding-right: 25px;
+    padding-left: 25px;
+    position: relative;
+    width: 300px;
+}
+
+.player-name1 {
+    font-family: Bungee Outline;
+    text-align: right;
+    padding-top: 15px;
+}
+.player-name2 {
+    font-family: Bungee Outline;
+    text-align: left;
+    padding-top: 15px;
+}
+
+
+/* .player-1-card {
+    padding-right: 10%;
+    max-width: 100%;
+}
+
+.player-2-card {
+    padding-right: 10%;
+    max-width: 100%;
+} */
+
+.round{
+    /* margin-top: 6%; */
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    /* border: solid white 4px; */
+    /* margin-right: 20px; */
+    /* height:20%; */
+    min-width: 100px;
+    /* width: 100px; */
+    /* padding-bottom: 0.5%; */
+    padding-top: 0.5%;
+    border-radius: 25px;
+    background-color: transparent;
+}
+
+.roundItems1 {
+    padding: 10 10px;
+    padding-top: 7px;
+    margin-top: 23px;
+    width: 230px;
+    height: 30px;
+    background-color: white;
+    justify-content: center;
+    color: dodgerblue;
+    /* border: solid hotpink 4px 0; */
+}
+
+.roundItems2 {
+    padding: 10px 10px;
+    border: solid white 4px;
+    justify-content: center;
+    font-size: 40px;
+    background-color: hotpink;
+}
+
+.roundItems3 {
+    padding: 10 10px;
+    margin-top: 23px;
+    padding-top: 7px;
+    width: 230px;
+    height: 30px;
+    background-color: white;
+    justify-content: center;
+    color: dodgerblue;
+    /* border: solid hotpink 4px; */
+}
+
+#selected-card{
+    text-align: center;
+}
+
+.most-lovable-background-colour {
+    /* border: 3px solid #FE4880; */
+    background-color:  rgb(0, 255, 13); 
+    /* border-left: 4px solid greenyellow;
+    border-right: 4px solid greenyellow; */
+}
+
+.games-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.player-choice-block {
+    padding: 10px;
+    text-align: left;
+    border: solid white 5px;
+    /* padding: 5px; */
+    margin: 20px;
+    border-radius: 40px;
+}
+
+.player-choice-block h3 {
+    font-size:medium;
+}
+
+.char-name {
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.round-move-display {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content:center;
+}
