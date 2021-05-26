@@ -76,7 +76,7 @@ const Games = ({ flip, setFlip, playerWins, isFlipped, setIsFlipped, drawArray, 
 
                 <div className="card-box">
                     <div className="card-item">
-                        <h1>Player 1</h1>
+                        <h1 className="player-name">Player 1</h1>
                         <b className="player-1-card" >{cardItems1[0]}</b>
                     </div>
                     <div className="round">
@@ -84,7 +84,7 @@ const Games = ({ flip, setFlip, playerWins, isFlipped, setIsFlipped, drawArray, 
                     <h1>{roundCounter}</h1>
                     </div>
                     <div className="card-item">
-                        <h1>Player 2</h1>
+                        <h1 className="player-name">Player 2</h1>
                         <b className="player-2-card">{cardItems2[0]}</b>
                     </div>
                 </div>
