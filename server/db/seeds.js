@@ -102,7 +102,7 @@ db.simpsons.insertMany ([
         biggest_nerd: 76,
         greatest_anarchist: 66,
         walk_of_fame: 58,
-        image: "./images/sherri&terri.jpeg"
+        image: "./images/sherri_terri.jpeg"
     },
     {
         name: "Itchy & Scratchy",
@@ -112,7 +112,7 @@ db.simpsons.insertMany ([
         biggest_nerd: 56,
         greatest_anarchist: 84,
         walk_of_fame: 76,
-        image: "./images/itchy&scratchy.jpeg"
+        image: "./images/itchy_scratchy.jpeg"
     },
     {
         name: "Maggie Simpson",
@@ -223,7 +223,7 @@ db.simpsons.insertMany ([
         greatest_anarchist: 76,
         walk_of_fame: 60,
         image: "/images/otto.jpeg"
-    }
+    },
     {
         name: "Edna Krabappel",
         most_lovable: 48,
@@ -252,7 +252,7 @@ db.simpsons.insertMany ([
         biggest_nerd: 94,
         greatest_anarchist: 56,
         walk_of_fame: 54,
-        image: "/images/lenny&carl.jpeg"
+        image: "/images/lenny_carl.jpeg"
     },
     {
         name: "Bart Simpson",
@@ -292,7 +292,7 @@ db.simpsons.insertMany ([
         biggest_nerd: 64,
         greatest_anarchist: 64,
         walk_of_fame: 46,
-        image: "/images/drhibbert.jpeg"
+        image: "/images/hibbert.jpeg"
     },
     {
         name: "Chief Wiggum",
