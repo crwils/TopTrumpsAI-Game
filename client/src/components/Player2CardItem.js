@@ -1,6 +1,5 @@
 import React from 'react';
 import './card.css';
-import pp from './images/pp.jpg';
 import simpsons from './images/simpsonslogo.png';
 // import './test.css';
 
@@ -22,7 +21,7 @@ const Player2CardItem = ({ setClicked, player1Turn, card, handleClick, isFlipped
                         <div className={!player1Turn ? 'card__face card__face--back-selected': 'card__face card__face--back'}>
                             <div className="card__content">
                                 <div className="card__header">
-                                    <img src={pp} className="pp" alt="" />
+                                    <img src={card.image} className="pp" alt="" />
                                     <h2 className="char-name">{card.name}</h2>
                                 </div>
                                 <div className="card__body">

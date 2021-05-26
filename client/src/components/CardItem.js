@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './card.css';
-import pp from './images/pp.jpg';
-import simpsons from './images/simpsonslogo.png';
+// import simpsons from './images/simpsonslogo.png';
 // import './test.css';
 
 const CardItem = ({player1Turn, playerWins, card, handleClick, handleClick2, isFlipped, setIsFlipped, chosenAttribute, clicked}) => {
@@ -15,7 +14,7 @@ const CardItem = ({player1Turn, playerWins, card, handleClick, handleClick2, isF
                 <div className={player1Turn ? 'card__face card__face--front-selected': 'card__face card__face--front'}>
                         <div className="card__content">
                             <div className="card__header">
-                                <img src={pp} className="pp" alt="" />
+                                <img src={card.image} className="pp" alt=""  />
                                 <h2 className="char-name">{card.name}</h2>
                             </div>
                             <div className="card__body">
@@ -45,7 +44,6 @@ const CardItem = ({player1Turn, playerWins, card, handleClick, handleClick2, isF
                 </div>
             </div>
         </div>
-     
     )
 };
 
