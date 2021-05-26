@@ -58,7 +58,6 @@ const Games = ({ flip, setFlip, playerWins, isFlipped, setIsFlipped, drawArray, 
 
         }, 4000)
         setClicked(false)
-    }
     };
 
     const cardItems1 = playerOneCards.map((card, index) => {
