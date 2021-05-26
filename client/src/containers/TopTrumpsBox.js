@@ -325,9 +325,7 @@ function TopTrumpsBox({ aiDifficulty }) {
                     setPlayerTwoCards={setPlayerTwoCards}
                     cards={cards} shuffleCards={shuffleCards}
                     playRound={playRound} handleFlipClick={handleFlipClick} roundCounter={roundCounter} player1Turn={player1Turn} chosenAttribute={chosenAttribute} setChosenAttribute={setChosenAttribute} clicked={clicked} setClicked={setClicked} />
-            <div className="btn">
-                    <button className="play-button" onClick={playAgainClick}>Restart Game</button>
-                </div>
+ 
             </main>
 
         )

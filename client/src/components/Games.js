@@ -96,16 +96,18 @@ const Games = ({ flip, setFlip, playerWins, isFlipped, setIsFlipped, drawArray, 
                     </div>
                 </div>
             </div>
+            <div className="card-counters-div">
             <div className="card-counters">
                 {/* <div className="card-counter-item"> */}
-                <b>Cards left: {numberOfCards(cardItems1)}</b>
+                <b>CARDS: {numberOfCards(cardItems1)}</b>
                 {/* </div> */}
                 {/* <div className="card-counter-item"> */}
-                <h3>Draw Pile: {numberOfCards(drawArray)}</h3>
+                <h3>DRAW PILE: {numberOfCards(drawArray)}</h3>
                 {/* </div> */}
                 {/* <div className="card-counter-item"> */}
-                <b>Cards left: {numberOfCards(cardItems2)}</b>
+                <b>CARDS: {numberOfCards(cardItems2)}</b>
                 {/* </div> */}
+            </div>
             </div>
 
         </>
