@@ -166,7 +166,8 @@ body {
 }
 
 .card__body {
-    background-color: var(--light);
+    /* background-color: var(--light); */
+    background-color: white;
     padding: 30px;
     display: flex;
     justify-content: space-between;
