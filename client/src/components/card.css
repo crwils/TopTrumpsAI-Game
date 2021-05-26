@@ -264,7 +264,7 @@ body {
 .card-counters-div {
     display: flex;
     justify-content: center;
-    padding-top: 95px;
+    padding-top: 55px;
 }
 
 .card-item {
@@ -322,6 +322,8 @@ body {
     background-color: white;
     justify-content: center;
     color: dodgerblue;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
     /* border: solid hotpink 4px 0; */
 }
 
@@ -342,6 +344,8 @@ body {
     background-color: white;
     justify-content: center;
     color: dodgerblue;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
     /* border: solid hotpink 4px; */
 }
 
