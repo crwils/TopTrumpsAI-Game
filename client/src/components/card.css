@@ -267,18 +267,50 @@ body {
 
 .round{
     /* margin-top: 6%; */
+    display: flex;
     justify-content: center;
     text-align: center;
-    border: solid white 4px;
-    margin-left: 20px;
-    margin-right: 20px;
-    height:10%;
+    /* border: solid white 4px; */
+    /* margin-right: 20px; */
+    /* height:20%; */
     min-width: 100px;
-    width: 100px;
-    padding-bottom: 0.5%;
+    /* width: 100px; */
+    /* padding-bottom: 0.5%; */
     padding-top: 0.5%;
     border-radius: 25px;
+    background-color: transparent;
+}
+
+.roundItems1 {
+    padding: 10 10px;
+    padding-top: 7px;
+    margin-top: 23px;
+    width: 200px;
+    height: 30px;
+    background-color: white;
+    justify-content: center;
+    color: dodgerblue;
+    /* border: solid hotpink 4px 0; */
+}
+
+.roundItems2 {
+    padding: 10px 10px;
+    border: solid white 4px;
+    justify-content: center;
+    font-size: 40px;
     background-color: hotpink;
+}
+
+.roundItems3 {
+    padding: 10 10px;
+    margin-top: 23px;
+    padding-top: 7px;
+    width: 200px;
+    height: 30px;
+    background-color: white;
+    justify-content: center;
+    color: dodgerblue;
+    /* border: solid hotpink 4px; */
 }
 
 #selected-card{
@@ -314,4 +346,10 @@ body {
 
 .char-name {
     font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+
+.round-move-display {
+    display: flex;
+    /* flex-direction: row; */
+    justify-content:center;
 }
