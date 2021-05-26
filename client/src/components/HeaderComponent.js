@@ -10,7 +10,7 @@ function HeaderComponent() {
             <img src={ttlogo} alt="" />
             
         </header>
-        <hr />
+    
         </>
     );
 

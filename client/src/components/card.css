@@ -288,7 +288,8 @@ body {
     min-width: 100px;
     /* width: 100px; */
     /* padding-bottom: 0.5%; */
-    padding-top: 0.5%;
+    padding-top: 20px;
+    padding-bottom: 5px;
     border-radius: 25px;
     background-color: transparent;
 }

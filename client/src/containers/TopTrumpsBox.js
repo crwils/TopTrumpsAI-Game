@@ -306,28 +306,28 @@ function TopTrumpsBox({ aiDifficulty }) {
 
             <main>
                 <HeaderComponent playAgainClick={playAgainClick} />
-                <div className="btn">
-                    <button className="play-button" onClick={playAgainClick}>Play Again</button>
-                </div>
                 <div className="homer--img--block">
                     {whoWins === 'Player One' ? <img className="homer--img" src={homerwoohoo} alt="" /> : <img className="homer--img--point" src={homeryoulose} alt="" />}
                     <h1> {whoWins === 'Player One' ? "YOU WIN!" : "YOU LOSE!"}</h1>
+                </div>
+                <div className="btn">
+                    <button className="play-button" onClick={playAgainClick}>Play Again</button>
                 </div>
             </main>
 
             :
             <main>
                 <HeaderComponent playAgainClick={playAgainClick} />
-                <div className="btn">
-                    <button className="play-button" onClick={playAgainClick}>Restart Game</button>
-                </div>
+
                 <Games flip={flip} setFlip={setFlip} playerWins={playerWins} isFlipped={isFlipped} setIsFlipped={setIsFlipped} drawArray={drawArray} playerOneCards={playerOneCards}
                     playerTwoCards={playerTwoCards}
                     setPlayerOneCards={setPlayerOneCards}
                     setPlayerTwoCards={setPlayerTwoCards}
                     cards={cards} shuffleCards={shuffleCards}
                     playRound={playRound} handleFlipClick={handleFlipClick} roundCounter={roundCounter} player1Turn={player1Turn} chosenAttribute={chosenAttribute} setChosenAttribute={setChosenAttribute} clicked={clicked} setClicked={setClicked} />
-              
+            <div className="btn">
+                    <button className="play-button" onClick={playAgainClick}>Restart Game</button>
+                </div>
             </main>
 
         )
