@@ -1,6 +1,6 @@
 import React from 'react';
 import ttlogo from './images/ttlogo.png';
-import homerthumbsup from './images/homerthumbsup.png';
+// import homerthumbsup from './images/homerthumbsup.png';
 
 function HeaderComponent() {
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import CardItem from './CardItem';
 import Player2CardItem from './Player2CardItem'
-import homerthumbsup from './images/homerthumbsup.png';
+// import homerthumbsup from './images/homerthumbsup.png';
 
 import databaseAttributeTranslator from '../containers/TopTrumpsBox';
 

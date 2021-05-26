@@ -4,8 +4,10 @@ import CreateCardComponent from '../components/CreateCardComponent';
 import HeaderComponent from '../components/HeaderComponent';
 import SimpsonsService from '../services/GamesService';
 import './main-page.css';
+import homerwoohoo from '../components/images/homerwoohoo.png';
+import homeryoulose from '../components/images/homeryoulose.png';
 
-function TopTrumpsBox({aiDifficulty}) {
+function TopTrumpsBox({ aiDifficulty }) {
     const [cards, setCards] = useState([]);
     const [playerOneCards, setPlayerOneCards] = useState([])
     const [playerTwoCards, setPlayerTwoCards] = useState([])
@@ -18,7 +20,8 @@ function TopTrumpsBox({aiDifficulty}) {
     const [flip, setFlip] = useState(0)
     const [chosenAttribute, setChosenAttribute] = useState(null)
     const [clicked, setClicked] = useState(false)
-   
+
+
 
 
     let highestMostLovable = 0;
@@ -123,17 +126,17 @@ function TopTrumpsBox({aiDifficulty}) {
         // ChangeRound()
         if (player1Array.length === 0 && player2Array.length === 0) {
             setPlayerWins(true)
-            alert('It\'s a draw!')
-            // setWhoWins('Draw')
+            // alert('It\'s a draw!')
+            setWhoWins('Draw')
         } else if (player1Array.length === 0) {
             setPlayerWins(true)
-            alert('Player Two Wins!')
-            // setWhoWins('Player Two')
+            // alert('Player Two Wins!')
+            setWhoWins('Player Two')
             // return
         } else if (player2Array.length === 0) {
             setPlayerWins(true)
-            alert('Player One Wins!')
-            // setWhoWins('Player One')
+            // alert('Player One Wins!')
+            setWhoWins('Player One')
             // return
         }
     }
@@ -305,28 +308,25 @@ function TopTrumpsBox({aiDifficulty}) {
                 <div className="btn">
                     <button className="play-button" onClick={playAgainClick}>Play Again</button>
                 </div>
+                <div className="homer--img--block">
+                    {whoWins === 'Player One' ? <img className="homer--img" src={homerwoohoo} alt="" /> : <img className="homer--img--point" src={homeryoulose} alt="" />}
+                    <h1> {whoWins === 'Player One' ? "You Win!" : "You lose!"}</h1>
+                </div>
+            </main>
+
+            :
+            <main>
+                <HeaderComponent playAgainClick={playAgainClick} />
+                <div className="btn">
+                    <button className="play-button" onClick={playAgainClick}>Restart Game</button>
+                </div>
                 <Games flip={flip} setFlip={setFlip} playerWins={playerWins} isFlipped={isFlipped} setIsFlipped={setIsFlipped} drawArray={drawArray} playerOneCards={playerOneCards}
                     playerTwoCards={playerTwoCards}
                     setPlayerOneCards={setPlayerOneCards}
                     setPlayerTwoCards={setPlayerTwoCards}
                     cards={cards} shuffleCards={shuffleCards}
-                    playRound={playRound} databaseAttributeTranslator={databaseAttributeTranslator} clicked={clicked} setClicked={setClicked} player1Turn={player1Turn}/>
+                    playRound={playRound} handleFlipClick={handleFlipClick} roundCounter={roundCounter} player1Turn={player1Turn} chosenAttribute={chosenAttribute} setChosenAttribute={setChosenAttribute} clicked={clicked} setClicked={setClicked} />
                 <CreateCardComponent />
-            </main>
-
-            :
-            <main>
-                    <HeaderComponent playAgainClick={playAgainClick} />
-                    <div className="btn">
-                        <button className="play-button" onClick={playAgainClick}>Restart Game</button>
-                    </div>
-                    <Games flip={flip} setFlip={setFlip} playerWins={playerWins} isFlipped={isFlipped} setIsFlipped={setIsFlipped} drawArray={drawArray} playerOneCards={playerOneCards}
-                        playerTwoCards={playerTwoCards}
-                        setPlayerOneCards={setPlayerOneCards}
-                        setPlayerTwoCards={setPlayerTwoCards}
-                        cards={cards} shuffleCards={shuffleCards}
-                        playRound={playRound} handleFlipClick={handleFlipClick} roundCounter={roundCounter} player1Turn={player1Turn} chosenAttribute={chosenAttribute} setChosenAttribute={setChosenAttribute} clicked={clicked} setClicked={setClicked}/>
-                    <CreateCardComponent />
             </main>
 
         )

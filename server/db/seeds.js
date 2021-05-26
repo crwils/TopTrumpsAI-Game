@@ -92,7 +92,7 @@ db.simpsons.insertMany ([
     //     biggest_nerd: 50,
     //     greatest_anarchist: 92,
     //     walk_of_fame: 88,
-    //     image: "/server/db/images/patty&selma.jpeg"
+    //     image: "/server/db/images/pattyselma.jpeg"
     // },
     // {
     //     name: "Sherri and Terri",
@@ -132,7 +132,7 @@ db.simpsons.insertMany ([
     //     biggest_nerd: 58,
     //     greatest_anarchist: 52,
     //     walk_of_fame: 56,
-    //     image: "/server/db/images/snowball.jpeg"
+    //     image: "/server/db/images/snowball2.jpeg"
     // },
     // {
     //     name: "Homer Simpson",
@@ -322,6 +322,6 @@ db.simpsons.insertMany ([
     //     biggest_nerd: 92,
     //     greatest_anarchist: 58,
     //     walk_of_fame: 42,
-    //     image: "/server/db/images/waylon.jpeg"
+    //     image: "/server/db/images/smithers.jpeg"
     // },
 ]);
