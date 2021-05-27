@@ -37,7 +37,6 @@ const Games = ({ flip, setFlip, playerWins, isFlipped, setIsFlipped, drawArray, 
             setClicked(true)
 
             const attributeSelection = event.target.id
-            console.log(attributeSelection)
 
             setChosenAttribute(databaseAttributeTranslator(attributeSelection))
 

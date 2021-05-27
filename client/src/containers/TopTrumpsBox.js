@@ -184,15 +184,16 @@ function TopTrumpsBox({ aiDifficulty }) {
 
 
     function playAgainClick() {
-        SimpsonsService.getCard()
-            .then(cards => setCards(cards))
-        setDrawArray([])
-        setIsFlipped(false)
-        setPlayerWins(false)
-        setPlayer1Turn(true)
-        setChosenAttribute(null)
-        setRoundCounter(1)
-        setFlip(0)
+        window.location.reload()
+        // SimpsonsService.getCard()
+        //     .then(cards => setCards(cards))
+        // setDrawArray([])
+        // setIsFlipped(false)
+        // setPlayerWins(false)
+        // setPlayer1Turn(true)
+        // setChosenAttribute(null)
+        // setRoundCounter(1)
+        // setFlip(0)
     }
 
     const handleFlipClick = (value) => {
