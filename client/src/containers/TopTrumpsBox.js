@@ -193,6 +193,7 @@ function TopTrumpsBox({ aiDifficulty }) {
         setChosenAttribute(null)
         setRoundCounter(0)
         setFlip(0)
+        // setRoundCounter(1)
     }
 
     const handleFlipClick = (value) => {
@@ -283,7 +284,7 @@ function TopTrumpsBox({ aiDifficulty }) {
         setTimeout(() => {
             // handleFlipClick(true)
             setFlip(1)
-        }, 2000);
+        }, 1000);
 
         setTimeout(() => {
             // handleFlipClick(false)

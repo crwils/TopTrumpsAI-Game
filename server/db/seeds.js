@@ -31,7 +31,7 @@ db.simpsons.insertMany ([
         fattest: 64, 
         biggest_nerd: 60,
         greatest_anarchist: 48,
-        walk_of_fame: 10,
+        walk_of_fame: 71,
         image: "./images/skinner.jpeg"
     },
     { 
@@ -41,7 +41,7 @@ db.simpsons.insertMany ([
         fattest: 70, 
         biggest_nerd: 66,
         greatest_anarchist: 80,
-        walk_of_fame: 10,
+        walk_of_fame: 92,
         image: "./images/willie.jpeg"
     },
     { 
@@ -51,7 +51,7 @@ db.simpsons.insertMany ([
         fattest: 74, 
         biggest_nerd: 88,
         greatest_anarchist: 68,
-        walk_of_fame: 10,
+        walk_of_fame: 66,
         image: './images/milhouse.jpeg'
     },
     {
@@ -61,7 +61,7 @@ db.simpsons.insertMany ([
         fattest: 74, 
         biggest_nerd: 60,
         greatest_anarchist: 50,
-        walk_of_fame: 10,
+        walk_of_fame: 51,
         image: "./images/santaslittlehelper.jpeg"
     },
     {
@@ -71,7 +71,7 @@ db.simpsons.insertMany ([
         fattest: 92, 
         biggest_nerd: 54,
         greatest_anarchist: 86,
-        walk_of_fame: 10,
+        walk_of_fame: 76,
         image: "./images/krusty.jpeg"
     },
     {
@@ -81,7 +81,7 @@ db.simpsons.insertMany ([
         fattest: 90, 
         biggest_nerd: 70,
         greatest_anarchist: 72,
-        walk_of_fame: 10,
+        walk_of_fame: 83,
         image: "./images/martin.jpeg"    
     },
     {
@@ -91,7 +91,7 @@ db.simpsons.insertMany ([
         fattest: 86, 
         biggest_nerd: 50,
         greatest_anarchist: 92,
-        walk_of_fame: 88,
+        walk_of_fame: 15,
         image: "./images/pattyselma.jpeg"
     },
     {
@@ -101,7 +101,7 @@ db.simpsons.insertMany ([
         fattest: 58, 
         biggest_nerd: 76,
         greatest_anarchist: 66,
-        walk_of_fame: 58,
+        walk_of_fame: 10,
         image: "./images/sherri&terri.jpeg"
     },
     // {
@@ -111,7 +111,7 @@ db.simpsons.insertMany ([
     //     fattest: 60, 
     //     biggest_nerd: 56,
     //     greatest_anarchist: 84,
-    //     walk_of_fame: 76,
+    //     walk_of_fame: 10,
     //     image: "./images/itchy_scratchy.jpeg"
     // },
     // {
@@ -121,7 +121,7 @@ db.simpsons.insertMany ([
     //     fattest: 46, 
     //     biggest_nerd: 74,
     //     greatest_anarchist: 60,
-    //     walk_of_fame: 92,
+    //     walk_of_fame: 10,
     //     image: "./images/maggie.jpeg"
     // },
     // {
@@ -131,7 +131,7 @@ db.simpsons.insertMany ([
     //     fattest: 52, 
     //     biggest_nerd: 58,
     //     greatest_anarchist: 52,
-    //     walk_of_fame: 56,
+    //     walk_of_fame: 10,
     //     image: "./images/snowball2.jpeg"
     // },
     // {
@@ -141,7 +141,7 @@ db.simpsons.insertMany ([
     //     fattest: 94, 
     //     biggest_nerd: 48,
     //     greatest_anarchist: 94,
-    //     walk_of_fame: 98,
+    //     walk_of_fame: 10,
     //     image: "/images/homer.jpeg"
     // },
     // {
@@ -151,7 +151,7 @@ db.simpsons.insertMany ([
     //     fattest: 67, 
     //     biggest_nerd: 89,
     //     greatest_anarchist: 56,
-    //     walk_of_fame: 39,
+    //     walk_of_fame: 10,
     //     image: "/images/nelson.jpeg"
     // },
     // {
@@ -161,7 +161,7 @@ db.simpsons.insertMany ([
     //     fattest: 78, 
     //     biggest_nerd: 52,
     //     greatest_anarchist: 88,
-    //     walk_of_fame: 68,
+    //     walk_of_fame: 10,
     //     image: "/images/apu.jpeg"
     // },
     // {
@@ -171,7 +171,7 @@ db.simpsons.insertMany ([
     //     fattest: 66, 
     //     biggest_nerd: 76,
     //     greatest_anarchist: 78,
-    //     walk_of_fame: 86,
+    //     walk_of_fame: 10,
     //     image: "/images/grampa.jpeg"
     // },
     // {
@@ -181,7 +181,7 @@ db.simpsons.insertMany ([
     //     fattest: 40, 
     //     biggest_nerd: 78,
     //     greatest_anarchist: 90,
-    //     walk_of_fame: 84,
+    //     walk_of_fame: 10,
     //     image: "/images/burns.jpeg"
     // },
     // {
