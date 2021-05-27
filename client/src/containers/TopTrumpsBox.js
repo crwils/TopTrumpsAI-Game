@@ -191,9 +191,8 @@ function TopTrumpsBox({ aiDifficulty }) {
         setPlayerWins(false)
         setPlayer1Turn(true)
         setChosenAttribute(null)
-        setRoundCounter(0)
+        setRoundCounter(1)
         setFlip(0)
-        // setRoundCounter(1)
     }
 
     const handleFlipClick = (value) => {
