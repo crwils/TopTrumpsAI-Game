@@ -13,7 +13,7 @@ const Player2CardItem = ({ setClicked, player1Turn, card, flip, setFlip, chosenA
                         setFlip(0)
                         setClicked(false)}}>
                         <div className={!player1Turn ? 'card__face card__face--front-selected': 'card__face card__face--front'}>
-                            <img className="card__logo" src={simpsons} alt="" />
+                            <img className="card__logo" src={simpsons} alt="display image of character" />
                         </div>
                         <div className={!player1Turn ? 'card__face card__face--back-selected': 'card__face card__face--back'}>
                             <div className="card__content">
