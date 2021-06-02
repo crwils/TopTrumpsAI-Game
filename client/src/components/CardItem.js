@@ -10,7 +10,7 @@ const CardItem = ({player1Turn, playerWins, card, handleClick, handleClick2, isF
                 <div className={player1Turn ? 'card__face card__face--front-selected': 'card__face card__face--front'}>
                         <div className="card__content">
                             <div className="card__header">
-                                <img src={card.image} className="pp" alt="" />
+                                <img src={card.image} className="pp" alt="display image of character" />
                                 <h2 className="char-name">{card.name}</h2>
                             </div>
                             <div className="card__body">
