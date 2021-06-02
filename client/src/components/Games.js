@@ -4,7 +4,7 @@ import P2CardItem from './P2CardItem'
 import databaseAttributeTranslator from '../containers/TopTrumpsBox';
 
 
-const Games = ({ flip, setFlip, playerWins, isFlipped, setIsFlipped, drawArray, cards, playerOneCards, playerTwoCards, setPlayerOneCards, setPlayerTwoCards, shuffleCards, playRound, handleFlipClick, roundCounter, player1Turn, chosenAttribute, setChosenAttribute, clicked, setClicked }) => {
+const Games = ({ flip, setFlip, playerWins, isFlipped, setIsFlipped, drawArray, cards, playerOneCards, playerTwoCards, setPlayerOneCards, setPlayerTwoCards, shuffleCards, playRound, roundCounter, player1Turn, chosenAttribute, setChosenAttribute, clicked, setClicked }) => {
 
     shuffleCards(cards)
 
