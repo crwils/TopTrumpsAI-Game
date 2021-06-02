@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import Games from '../components/Games';
-import CreateCardComponent from '../components/CreateCardComponent';
 import HeaderComponent from '../components/HeaderComponent';
 import SimpsonsService from '../services/GamesService';
 import './main-page.css';
@@ -22,8 +21,6 @@ function TopTrumpsBox({ aiDifficulty }) {
     const [clicked, setClicked] = useState(false)
 
 
-
-
     let highestMostLovable = 0;
     let highestSmartest = 0;
     let highestFattest = 0;
@@ -31,10 +28,6 @@ function TopTrumpsBox({ aiDifficulty }) {
     let highestGreatestAnarchist = 0;
     let highestWalkOfFame = 0;
 
-    // const aiDifficulty = Math.floor(Math.random() * 2)
-
-    // console.log(aiDifficulty)
-    // const attributeSelection = 'smartest'
 
     useEffect(() => {
         SimpsonsService.getCard()
@@ -48,10 +41,8 @@ function TopTrumpsBox({ aiDifficulty }) {
         cards.map((card, index) => {
             if (index === 0 || index % 2 === 0) {
                 temporaryPlayerOneCards.push(card)
-                // return setPlayerOneCards(tempVariable)
             } else {
                 temporaryPlayerTwoCards.push(card)
-                // return setPlayerTwoCards(tempVariables)
             }
         });
 
@@ -64,14 +55,14 @@ function TopTrumpsBox({ aiDifficulty }) {
         if (!playerWins) {
             if (!player1Turn) {
                 decideHighestAttribute();
-                // aiSelect(highestMostLovable, highestSmartest, highestFattest, highestBiggestNerd, highestGreatestAnarchist, highestWalkOfFame, playerTwoCards)
                 setTimeout(() => { handleComputerSelect(aiSelect(highestMostLovable, highestSmartest, highestFattest, highestBiggestNerd, highestGreatestAnarchist, highestWalkOfFame, playerTwoCards)) }, 1000)
             }
         }
 
     }, [playerTwoCards])
 
-    // Decides which card is being picked DO NOT CHANGE!!!
+    
+    // Decides which card is being picked in decideWinner function - DO NOT CHANGE!!!
     const indexNumber = 0;
 
     function decideWinner(player1Array, player2Array, attribute) {
@@ -80,8 +71,8 @@ function TopTrumpsBox({ aiDifficulty }) {
             if ((player1Array.length && player2Array.length) > 0) {
                 if (player1Array[0][attribute] === player2Array[0][attribute]) {
 
-                    setDrawArray(drawArray => [...drawArray, player1Array[0]]) // add new draw careds
-                    setDrawArray(drawArray => [...drawArray, player2Array[0]]) // add new draw careds
+                    setDrawArray(drawArray => [...drawArray, player1Array[0]]) 
+                    setDrawArray(drawArray => [...drawArray, player2Array[0]]) 
 
                     player2Array.splice(indexNumber, 1)
                     player1Array.splice(indexNumber, 1)
@@ -91,29 +82,33 @@ function TopTrumpsBox({ aiDifficulty }) {
                     player1Array.push(player2Array[0])
                     player2Array.splice(indexNumber, 1)
                     player1Array.splice(indexNumber, 1)
+
                     drawArray.forEach(card => { player1Array.push(card) })
                     setDrawArray([])
+
                     if (!player1Turn) {
                         changeTurn()
                     }
+
                 } else if (player2Array[0][attribute] > player1Array[0][attribute]) {
                     player2Array.push(player2Array[0])
                     player2Array.push(player1Array[0])
                     player1Array.splice(indexNumber, 1)
                     player2Array.splice(indexNumber, 1)
+
                     drawArray.forEach(card => { player2Array.push(card) })
                     setDrawArray([])
+
                     if (player1Turn) {
                         changeTurn()
                     }
+
                 } else {
                     return alert("Game is over!")
                 }
             }
-
         }
     }
-    // };
 
 
     function playRound(player1Array, player2Array, attribute) {
@@ -123,24 +118,18 @@ function TopTrumpsBox({ aiDifficulty }) {
         setRoundCounter(temporaryCounterVariable)
         console.log('roundCounter', roundCounter)
         decideWinner(player1Array, player2Array, attribute)
-        // ChangeRound()
         if (player1Array.length === 0 && player2Array.length === 0) {
             setPlayerWins(true)
-            // alert('It\'s a draw!')
             setWhoWins('Draw')
         } else if (player1Array.length === 0) {
             setPlayerWins(true)
-            // alert('Player Two Wins!')
             setWhoWins('Player Two')
-            // return
         } else if (player2Array.length === 0) {
             setPlayerWins(true)
-            // alert('Player One Wins!')
             setWhoWins('Player One')
-            // return
         }
-    }
-    // };
+    };
+
 
     function shuffleCards(cardArray) {
         if (cardArray.length !== 0) {
@@ -163,6 +152,7 @@ function TopTrumpsBox({ aiDifficulty }) {
         }
     };
 
+
     function databaseAttributeTranslator(attribute) {
         if (attribute === 'most_lovable') {
             return 'Most Lovable'
@@ -179,26 +169,18 @@ function TopTrumpsBox({ aiDifficulty }) {
         } else {
             return null
         }
-    }
-
+    };
 
 
     function playAgainClick() {
         window.location.reload()
-        // SimpsonsService.getCard()
-        //     .then(cards => setCards(cards))
-        // setDrawArray([])
-        // setIsFlipped(false)
-        // setPlayerWins(false)
-        // setPlayer1Turn(true)
-        // setChosenAttribute(null)
-        // setRoundCounter(1)
-        // setFlip(0)
-    }
+    };
+
 
     const handleFlipClick = (value) => {
         setIsFlipped(value)
-    }
+    };
+
 
     // AI Below
     function changeTurn() {
@@ -210,39 +192,33 @@ function TopTrumpsBox({ aiDifficulty }) {
             setChosenAttribute(null)
         }
         return
-    }
+    };
+
 
     function decideHighestAttribute() {
 
         cards.map(card => {
             if (card.most_lovable > highestMostLovable) {
                 highestMostLovable = card.most_lovable
-                // console.log("Most Lovable", highestMostLovable)
             }
             if (card.smartest > highestSmartest) {
                 highestSmartest = card.smartest
-                // console.log("Smartest", highestSmartest)
             }
             if (card.fattest > highestFattest) {
                 highestFattest = card.fattest
-                // console.log("Fattest", highestFattest)
             }
             if (card.biggest_nerd > highestBiggestNerd) {
                 highestBiggestNerd = card.biggest_nerd
-                // console.log("Biggest Nerd", highestBiggestNerd)
             }
             if (card.greatest_anarchist > highestGreatestAnarchist) {
                 highestGreatestAnarchist = card.greatest_anarchist
-                // console.log("Greatest Anarchist", highestGreatestAnarchist)
             }
             if (card.walk_of_fame > highestWalkOfFame) {
                 highestWalkOfFame = card.walk_of_fame
-                // console.log("Walk Of Fame", highestWalkOfFame)
             }
-
         })
-
     }
+
 
     function aiSelect(highestMostLovable, highestSmartest, highestFattest, highestBiggestNerd, highestGreatestAnarchist, highestWalkOfFame, playerTwoCards) {
         const sortingArray = []
@@ -259,37 +235,27 @@ function TopTrumpsBox({ aiDifficulty }) {
         const walkOfFameGap = highestWalkOfFame - playerTwoCards[0].walk_of_fame;
         sortingArray.push({ name: "walk_of_fame", value: walkOfFameGap })
 
-
-        // console.log('before sort', sortingArray)
         sortingArray.sort(function (a, b) {
             return parseFloat(a.value) - parseFloat(b.value);
         })
-        // const aiSelection = sortingArray[0]
-        // console.log("player 2 turn:")
-        // console.log("highest smartest", highestSmartest)
-        // console.log('Computer smartest', playerTwoCards[0].smartest)
-        // console.log("ai choice", aiSelection)
-        // console.log('after sort', sortingArray)
+
         const aiSelection = sortingArray[aiDifficulty].name
         console.log('aiSelection', aiSelection)
         return aiSelection
 
     }
 
+    
     const handleComputerSelect = (attribute) => {
         setClicked(true)
         const attributeSelection = attribute
         console.log(attributeSelection)
         setChosenAttribute(databaseAttributeTranslator(attributeSelection))
         setTimeout(() => {
-            // handleFlipClick(true)
             setFlip(1)
         }, 1000);
 
         setTimeout(() => {
-            // handleFlipClick(false)
-            // const attributeSelection = attribute
-            // console.log(attributeSelection)
             const tempPlayerOneCards = [...playerOneCards]
             const tempPlayerTwoCards = [...playerTwoCards]
             playRound(tempPlayerOneCards, tempPlayerTwoCards, attributeSelection)
@@ -312,11 +278,12 @@ function TopTrumpsBox({ aiDifficulty }) {
                     <h1> {whoWins === 'Player One' ? "YOU WIN!" : "YOU LOSE!"}</h1>
                 </div>
                 <div className="btn">
-                    <button className="play-button" onClick={playAgainClick}>Play Again</button>
+                    <button className="play-button" onClick={playAgainClick}>PLAY AGAIN</button>
                 </div>
             </main>
 
             :
+
             <main>
                 <HeaderComponent playAgainClick={playAgainClick} />
                 <div className="btn2">
@@ -331,7 +298,6 @@ function TopTrumpsBox({ aiDifficulty }) {
             </main>
 
         )
-
     );
 };
 
