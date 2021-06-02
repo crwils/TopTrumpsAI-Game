@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './card.css';
 
-const CardItem = ({player1Turn, playerWins, card, handleClick, handleClick2, isFlipped, setIsFlipped, chosenAttribute, clicked}) => {
+const CardItem = ({player1Turn, card, handleClick, chosenAttribute}) => {
 
     return (
         <div>
