@@ -6,6 +6,7 @@ import './main-page.css';
 import homerwoohoo from '../components/images/homerwoohoo.png';
 import homeryoulose from '../components/images/homeryoulose.png';
 
+
 function TopTrumpsBox({ aiDifficulty }) {
     const [cards, setCards] = useState([]);
     const [playerOneCards, setPlayerOneCards] = useState([])
