@@ -2,7 +2,7 @@ import React from 'react';
 import './card.css';
 import simpsons from './images/simpsonslogo.png';
 
-const Player2CardItem = ({ setClicked, player1Turn, card, flip, setFlip, chosenAttribute}) => { 
+const P2CardItem = ({ setClicked, player1Turn, card, flip, setFlip, chosenAttribute}) => { 
     
     return (
                 <div className="card">
@@ -46,4 +46,4 @@ const Player2CardItem = ({ setClicked, player1Turn, card, flip, setFlip, chosenA
     )
 };
 
-export default Player2CardItem;
+export default P2CardItem;

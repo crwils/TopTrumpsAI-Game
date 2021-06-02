@@ -1,7 +1,7 @@
 import React from 'react';
 import './card.css';
 
-const CardItem = ({player1Turn, card, handleClick, chosenAttribute}) => {
+const P1CardItem = ({player1Turn, card, handleClick, chosenAttribute}) => {
 
     return (
         <div>
@@ -42,6 +42,6 @@ const CardItem = ({player1Turn, card, handleClick, chosenAttribute}) => {
     )
 };
 
-export default CardItem;
+export default P1CardItem;
 
 

@@ -1,6 +1,6 @@
 import React from 'react';
-import CardItem from './CardItem';
-import Player2CardItem from './Player2CardItem'
+import P1CardItem from './P1CardItem';
+import P2CardItem from './P2CardItem'
 import databaseAttributeTranslator from '../containers/TopTrumpsBox';
 
 
@@ -51,10 +51,10 @@ const Games = ({ flip, setFlip, playerWins, isFlipped, setIsFlipped, drawArray, 
 
 
     const cardItems1 = playerOneCards.map((card, index) => {
-        return <CardItem player1Turn={player1Turn} playerWins={playerWins} isFlipped={isFlipped} setIsFlipped={setIsFlipped} card={card} key={index} handleClick={handleClick} chosenAttribute={chosenAttribute} clicked={clicked} />
+        return <P1CardItem player1Turn={player1Turn} playerWins={playerWins} isFlipped={isFlipped} setIsFlipped={setIsFlipped} card={card} key={index} handleClick={handleClick} chosenAttribute={chosenAttribute} clicked={clicked} />
     })
     const cardItems2 = playerTwoCards.map((card, index) => {
-        return <Player2CardItem setClicked={setClicked} player1Turn={player1Turn} flip={flip} setFlip={setFlip} isFlipped={isFlipped} setIsFlipped={setIsFlipped} card={card} key={index} chosenAttribute={chosenAttribute} clicked={clicked} />
+        return <P2CardItem setClicked={setClicked} player1Turn={player1Turn} flip={flip} setFlip={setFlip} isFlipped={isFlipped} setIsFlipped={setIsFlipped} card={card} key={index} chosenAttribute={chosenAttribute} clicked={clicked} />
     })
 
 
