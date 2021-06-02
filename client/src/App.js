@@ -9,14 +9,19 @@ function App() {
 
   const [gameStarted, setGameStarted] = useState(false)
   const [aiDifficulty, setAiDifficulty] = useState(2)
+  const [difficultySelected, setDifficultySelected] = useState(false)
 
   const handleStartGameButtonClick = () => {
+    if (difficultySelected === false) {
+      return alert("Select difficulty to play!")
+    } else {
     setGameStarted(true)
+    }
   }
 
   function chooseDifficulty(event) {
+    setDifficultySelected(true)
     setAiDifficulty(event.target.value)
-    console.log(aiDifficulty)
   }
 
   return (
@@ -28,7 +33,7 @@ function App() {
           
           <div className="custom-select" >
             <select className="select" onChange={chooseDifficulty}>
-              <option value="default" selected disabled>Select Difficulty</option>
+              <option value="default" selected disabled required>Select Difficulty</option>
               <option value={2}>Easy</option>
               <option value={1}>Moderate</option>
               <option value={0}>Hard</option>
