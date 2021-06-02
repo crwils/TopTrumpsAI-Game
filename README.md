@@ -26,4 +26,4 @@ Run 'npm run server:dev' in server directory
 Run 'npm start' in client directory
 
 
-If your browser does not automatically open, go to http://localhost:5000/ to play.
+If your browser does not automatically open, go to http://localhost:3000/ to play.
