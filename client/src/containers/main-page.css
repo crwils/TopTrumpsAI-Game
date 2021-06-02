@@ -1,0 +1,144 @@
+.tt__box--header {
+    display: flex;
+    /* background-color:#000000; */
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 10px;
+}
+
+select {
+    color: black;
+}
+
+.tt__box--header img {
+    width: 200px;
+    height: auto;
+}
+
+.tt__box--header h1 {
+    text-align: center;
+}
+
+h1 { 
+    text-align: center;
+}
+
+.home-page {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.logo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+}
+
+
+.home-start-button {
+    cursor: pointer;
+    height: 300px;
+    width: auto;
+}
+
+.main-page-button.span { 
+    position: relative; 
+}
+
+.main-page-button.pressed { 
+    padding-top: 3px;
+    transform: translateY(4px);
+    box-shadow: 0 4px 0 rgb(183,0,0),
+      0 8px 6px rgba(0,0,0,.45);
+  }
+
+.play-button:hover {
+    background-color: rgba(255, 50, 50, 0.986);
+    color: rgb(255, 255, 255);
+    /* box-shadow: 5px 5px 5px rgb(12, 12, 12), */
+}
+  
+.play-button {
+    cursor: pointer; 
+    /* border: solid rgb(54, 54, 54) 3px; */
+    color: rgb(14, 14, 14);
+    background-color: rgb(255, 255, 255);
+    overflow: hidden; 
+    border-radius: 20px;
+    padding: 6px;
+    /* margin: 30px; */
+    font-weight: bolder;
+}
+
+.custom-select {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    font-family: Arial;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.select {
+    width: 400px;
+    height: 40px;
+    font-weight: bolder;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 25px;
+}
+
+select {
+    width: 400px; 
+    text-align-last:center;
+}
+
+.select option {
+    text-align: center;
+}
+.homer--img {
+    width: 400px;
+    height: auto;
+    padding-top: 30px;
+}
+
+.homer--img--block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 10px;
+}
+.homer--img--block h1 {
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    /* padding-top: 20px; */
+    background-color: hotpink;
+    border: solid white 4px;
+    /* padding: 5px; */
+    /* margin: 30px; */
+    border-radius: 40px;
+    padding: 15px;
+    width: 350px;
+}
+
+.homer--img--point {
+    width: 300px;
+    height: auto;
+    padding-top: 30px;
+}
+
+
+.btn2 {
+    margin-bottom: 5px 0;
+    display: flex;
+}

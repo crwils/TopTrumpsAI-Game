@@ -9,11 +9,8 @@ app.use(cors());
 MongoClient.connect('mongodb://localhost:27017')
   .then(client => {
     const db = client.db('top_trumps');
-    const footballCollection = db.collection('football');
-    const footballRouter = createRouter(footballCollection);
     const simpsonsCollection = db.collection('simpsons')
     const simpsonsRouter = createRouter(simpsonsCollection);
-    app.use('/api/football', footballRouter);
     app.use('/api/simpsons', simpsonsRouter);
   })
   .catch(console.error);

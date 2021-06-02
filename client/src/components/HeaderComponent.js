@@ -1,9 +1,17 @@
 import React from 'react';
+import ttlogo from './images/ttlogo.png';
+// import homerthumbsup from './images/homerthumbsup.png';
 
-function HeaderComponent(){
+function HeaderComponent() {
 
-    return(
-        <h1>Header Component Content</h1>
+    return (
+        <>
+        <header className="tt__box--header">
+            <img src={ttlogo} alt="" />
+            
+        </header>
+    
+        </>
     );
 
 };
