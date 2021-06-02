@@ -27,7 +27,3 @@ Run 'npm start' in client directory
 
 
 If your browser does not automatically open, go to http://localhost:5000/ to play.
-
-
-![Uploading Screenshot 2021-06-02 at 21.09.13.png…]()
-![Uploading Screenshot 2021-06-02 at 21.09.22.png…]()
