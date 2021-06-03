@@ -20,9 +20,13 @@ Run 'npm -D nodemon' in server directory
 
 Run 'npm run seeds' in server directory to seed the mongodb database
 
+
+
 Ensure below scripts are in server package.json module:
-    "server:dev": "nodemon server.js"
-    "seeds": "mongo < db/seeds.js"
+
+"server:dev": "nodemon server.js"
+
+"seeds": "mongo < db/seeds.js"
 
 
 
