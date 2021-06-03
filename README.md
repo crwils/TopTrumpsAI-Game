@@ -12,7 +12,7 @@ The game itself was simple however we decided to incorporate an AI computer play
 
 To install: 
 
-Run 'npm install' in both client and server directory Run 'NPM install' in server directory Run 'NPM run seeds' in server directory, which seeds mongoDB database
+Run 'npm install' in both client and server directory
 
 Run 'npm install express, bodyparser, cors, mongodb' in server directory
 
