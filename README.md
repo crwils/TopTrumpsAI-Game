@@ -18,8 +18,6 @@ Run 'npm install express, bodyparser, cors, mongodb' in server directory
 
 Run 'npm -D nodemon' in server directory
 
-Run 'npm run seeds' in server directory to seed the mongodb database
-
 
 
 Ensure below scripts are in server package.json module:
@@ -27,6 +25,9 @@ Ensure below scripts are in server package.json module:
 "server:dev": "nodemon server.js"
 
 "seeds": "mongo < db/seeds.js"
+
+
+Run 'npm run seeds' in server directory to seed the mongodb database
 
 
 
