@@ -4,7 +4,7 @@
 
 This was a group project undertaken as part of CodeClan's JavaScript module.
 
-Our chosen brief was a browser game web app, so we chose to build a Top Trumps game. 
+Our brief was a browser game web app, so we chose to build a Top Trumps game. 
 
 The game itself was simple however we decided to incorporate an AI computer player which made the game logic slightly more complex. 
 
