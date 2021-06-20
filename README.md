@@ -8,7 +8,7 @@ Our brief was to create a browser game web app, so we chose to build a Top Trump
 
 The game itself was simple however we decided to incorporate an AI computer player which made the game logic slightly more complex. 
 
-<br><br>
+<br>
 
 <img width="300" height="auto" alt="splashscreen" src="https://user-images.githubusercontent.com/76786476/122687822-72aa3880-d210-11eb-991c-ff3f8116841a.png">        <img width="300" height="auto" alt="mainscreen" src="https://user-images.githubusercontent.com/76786476/122687828-7dfd6400-d210-11eb-94ec-adcbf2326b75.png">
 <br><br>
@@ -20,8 +20,6 @@ Run 'npm install' in both client and server directory
 Run 'npm install express, bodyparser, cors, mongodb' in server directory
 
 Run 'npm -D nodemon' in server directory
-
-<br><br>
 
 Ensure below scripts are in server package.json module:
 
