@@ -2,15 +2,15 @@
 
 
 
-This was a group project undertaken as part of CodeClan's JavaScript module.
+This was a group project undertaken as part of CodeClan's JavaScript & React module.
 
-Our brief was a browser game web app, so we chose to build a Top Trumps game. 
+Our brief was to create a browser game web app, so we chose to build a Top Trumps-style card game. 
 
 The game itself was simple however we decided to incorporate an AI computer player which made the game logic slightly more complex. 
 
 
 
-To install: 
+<b><u>To install:</u> </b>
 
 Run 'npm install' in both client and server directory
 
@@ -31,7 +31,7 @@ Run 'npm run seeds' in server directory to seed the mongodb database
 
 
 
-To run game: 
+<b><u>To run game: </u> </b>
 
 Run 'npm run server:dev' in server directory 
 
