@@ -1,4 +1,4 @@
-#top-trumps-project
+<h1> Top Trumps Card Game </h1>
 
 This was a group project undertaken as part of CodeClan's JavaScript & React module.
 
