@@ -10,7 +10,7 @@ The game itself was simple however we decided to incorporate an AI computer play
 
 
 
-To install: 
+<b>To install: </b>
 
 Run 'npm install' in both client and server directory
 
