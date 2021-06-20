@@ -1,3 +1,5 @@
+#top-trumps-project
+
 This was a group project undertaken as part of CodeClan's JavaScript & React module.
 
 Our brief was to create a browser game web app, so we chose to build a Top Trumps-style card game. 
