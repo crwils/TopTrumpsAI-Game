@@ -9,8 +9,8 @@ Our brief was to create a browser game web app, so we chose to build a Top Trump
 The game itself was simple however we decided to incorporate an AI computer player which made the game logic slightly more complex. 
 
 
-<img width="1668" alt="splashscreen" src="https://user-images.githubusercontent.com/76786476/122687822-72aa3880-d210-11eb-991c-ff3f8116841a.png">
-<img width="1672" alt="mainscreen" src="https://user-images.githubusercontent.com/76786476/122687828-7dfd6400-d210-11eb-94ec-adcbf2326b75.png">
+<img width="800" height="auto" alt="splashscreen" src="https://user-images.githubusercontent.com/76786476/122687822-72aa3880-d210-11eb-991c-ff3f8116841a.png">
+<img width="800" height="auto" alt="mainscreen" src="https://user-images.githubusercontent.com/76786476/122687828-7dfd6400-d210-11eb-94ec-adcbf2326b75.png">
 
 
 <b><u>To install:</u> </b>
