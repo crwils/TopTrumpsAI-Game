@@ -30,7 +30,7 @@ Ensure below scripts are in server package.json module:
 
 Run 'npm run seeds' in server directory to seed the mongodb database
 
-<br><br>
+<br>
 
 <b><u>To run game: </u> </b>
 
