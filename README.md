@@ -1,4 +1,12 @@
-# Top Trumps Card Game
+<div align="center">
+  <a href="https://imgbb.com/"><img src="https://i.ibb.co/NT5wLcb/TOP-TRUMPS-LOGO-60.png" alt="TOP-TRUMPS-LOGO-60" border="0"></a>
+</div>
+
+<b><h1 align='center'> Top Trumps AI </h1></b>
+
+<h3 align='center'> Top Trumps Card Game With AI Computer Player </h3>
+
+<h5 align="center"> Group Project - <a href="https://codeclan.com/">CodeClan</a> (May 2021) </h5>
 
 <!-- ABOUT THE PROJECT -->
 <h2 id="about-the-project"> ✅ About the Project</h2>
